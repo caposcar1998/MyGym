@@ -1,3 +1,4 @@
+
 // Use Express
 var express = require("express");
 // Use body-parser
@@ -29,6 +30,10 @@ var server = app.listen(process.env.PORT || 8080, function () {
  */
 app.get("/api/status", function (req, res) {
     res.status(200).json({ status: "UP" });
+});
+
+app.get("/oauth/signup", function (req, res) {
+    res.status(200).json({ registered: "true" });
 });
 
 app.get("/hello", function (req, res) {
