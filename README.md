@@ -6,7 +6,7 @@ Proyecto Laboratorio web
 
 ### Frontend
 
-Corriendo con angular en puerto [5400](http://localhost:4200/)
+Corriendo con angular en puerto [4200](http://localhost:4200/)
 
 ```
 ng serve --open
@@ -20,3 +20,13 @@ Entrar a la carpeta api y correr:
 ```
 node server.js
 ```
+
+Base de datos
+
+
+![Base de datos]("./assets/BaseDatps.PNG")
+
+ORM
+
+[sequelize](https://sequelize.org/master/)
+[tutorial](https://www.youtube.com/watch?v=Crk_5Xy8GMA&ab_channel=PedroTech)

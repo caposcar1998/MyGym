@@ -1,0 +1,54 @@
+//// -- LEVEL 1
+//// -- Tables and References
+
+
+
+Table Usuarios as U {
+  id int [pk, increment]
+  nombre varchar
+  apellido varchar
+  edad int
+  tipoCuerpo varchar
+  diasGym int
+  horasGym int
+  intenisdad varchar
+  objetivo varchar
+  idAuth int
+  }
+  
+  
+Table Rutinas as R{
+  id int [pk, increment]
+  nombre varchar
+  intenisdad varchar
+  tiempo double
+  idUsuario int
+}
+
+Table EjerciciosRutinas{
+  id int [pk, increment]
+  peso varchar
+  repeticiones int
+  tiempo double
+  idRutina int
+  idEjercicio int
+}
+
+Table Ejercicios{
+  id int [pk, increment]
+  aparato varchar
+  tipoEjercicio varchar
+  parteCuerpo varchar
+  parteSecundariaCuerpo varchar
+  parteTerciariaCuerpo varchar
+  riesgo varchar
+  tiempoAproximado double
+}
+
+
+
+Ref: R.idUsuario > U.id
+Ref: EjerciciosRutinas.idRutina > R.id
+Ref: EjerciciosRutinas.idEjercicio > Ejercicios.id
+
+https://dbdiagram.io/d
