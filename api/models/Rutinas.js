@@ -29,6 +29,12 @@ module.exports = (sequelize, DataTypes) => {
                 model: "usuarios",
                 key: "id"
             },
+        },
+        foto:{
+            type:DataTypes.STRING
+        },
+        video:{
+            type:DataTypes.STRING
         }
         
        

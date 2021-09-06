@@ -45,6 +45,12 @@ module.exports = (sequelize, DataTypes) => {
                 model: "ejercicios",
                 key: "id"
             },
+        },
+        foto:{
+            type:DataTypes.STRING
+        },
+        video:{
+            type:DataTypes.STRING
         }
         
        

@@ -34,6 +34,12 @@ module.exports = (sequelize, DataTypes) => {
         },
         parteTerciaria:{
             type:DataTypes.INTEGER(11)
+        },
+        foto:{
+            type:DataTypes.STRING
+        },
+        video:{
+            type:DataTypes.STRING
         }
 
         
