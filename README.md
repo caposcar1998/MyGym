@@ -29,4 +29,5 @@ Base de datos
 ORM
 
 [sequelize](https://sequelize.org/master/)
+
 [tutorial](https://www.youtube.com/watch?v=Crk_5Xy8GMA&ab_channel=PedroTech)
