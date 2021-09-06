@@ -23,23 +23,24 @@ module.exports = (sequelize, DataTypes) => {
             }
         },
         partePrincipal:{
-            type:DataTypes.INTEGER(11),
+            type:DataTypes.STRING,
             allowNull: false,
             validate: {
                 noteEmpty: true
             },
         },
         parteSecundaria:{
-            type:DataTypes.INTEGER(11),
+            type:DataTypes.STRING,
         },
         parteTerciaria:{
-            type:DataTypes.INTEGER(11)
+            type:DataTypes.STRING,
         },
         foto:{
             type:DataTypes.STRING
         },
-        video:{
-            type:DataTypes.STRING
+        descripcion:{
+            type:DataTypes.TEXT,
+            allowNull:false,
         }
 
         
