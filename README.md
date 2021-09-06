@@ -24,7 +24,7 @@ node server.js
 Base de datos
 
 
-![Base de datos]("./assets/BaseDatps.PNG")
+![Base de datos](./assets/BaseDatos.PNG)
 
 ORM
 
