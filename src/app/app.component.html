@@ -1,6 +1,16 @@
-
-<app-side-menu></app-side-menu>
-<router-outlet></router-outlet>
-
-
-
+<div class="wrapper">
+    <div class="row">
+      <div class="col-sm">
+            <!-- Component SideMenu -->
+          <div class="sidemenu">
+            <app-side-menu></app-side-menu>
+          </div>
+      </div>
+      <div class="col-sm">
+          <!-- HomePage Content -->
+          <div class="content">
+                <router-outlet></router-outlet>
+          </div>
+      </div>
+    </div>
+  </div>
