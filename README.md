@@ -26,6 +26,8 @@ Base de datos
 
 ![Base de datos](./assets/BaseDatos.PNG)
 
+Correr en consola, en la tabla ejercicios script.sql para llenar base de datos con datos de ejercicios
+
 ORM
 
 [sequelize](https://sequelize.org/master/)
