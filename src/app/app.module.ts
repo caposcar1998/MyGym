@@ -11,9 +11,11 @@ import { OptionsComponent } from './side-menu/options/options.component';
 import { HomeComponent } from './home/home.component';
 import { Routes, RouterModule } from '@angular/router';
 import { ContentComponent } from './home/content/content.component';
+import { LandingPageComponent } from './components/landing-page/landing-page.component';
 
 const appRoutes: Routes = [
-	{ path: 'home', component: HomeComponent }
+	{ path: 'home', component: HomeComponent },
+  { path: '', component: LandingPageComponent }
 ];
 
 @NgModule({
