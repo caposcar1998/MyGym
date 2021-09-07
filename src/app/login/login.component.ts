@@ -16,7 +16,7 @@ export class MyErrorStateMatcher implements ErrorStateMatcher {
 })
 export class LoginComponent implements OnInit {
   loginForm: FormGroup | undefined;
-  username? = '';
+  email? = '';
   password? = '';
   isLoadingResults = false;
   matcher = new MyErrorStateMatcher();
@@ -25,7 +25,7 @@ export class LoginComponent implements OnInit {
 
   ngOnInit(): void {
     this.loginForm = this.formBuilder.group({
-      username : [null, Validators.required],
+      email : [null, Validators.required],
       password : [null, Validators.required]
     });
   }

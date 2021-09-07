@@ -34,14 +34,15 @@ export class AuthService {
     console.log(message);
   }
   constructor(private http: HttpClient, private tokenService: TokenService) { }
+
   login(loginData: any): Observable<any> {
     this.tokenService.removeToken();
     this.tokenService.removeRefreshToken();
     const body = new HttpParams()
-      .set('username', loginData.username)
+      .set('email', loginData.email)
       .set('password', loginData.password)
       .set('grant_type', 'password');
-  return this.http.post<any>(API_URL + 'oauth/token', body, HTTP_OPTIONS).pipe(tap(res => {
+  return this.http.post<any>(API_URL + 'login', body, HTTP_OPTIONS).pipe(tap(res => {
       this.tokenService.saveToken(res.access_token);
       console.log(res.access_token);
       this.tokenService.saveRefreshToken(res.refresh_token);
@@ -54,7 +55,7 @@ export class AuthService {
     const body = new HttpParams()
       .set('refresh_token', refreshData.refresh_token)
       .set('grant_type', 'refresh_token');
-  return this.http.post<any>(API_URL + 'oauth/token', body, HTTP_OPTIONS).pipe(tap(res => {
+  return this.http.post<any>(API_URL + 'refreshtoken', body, HTTP_OPTIONS).pipe(tap(res => {
       this.tokenService.saveToken(res.access_token);
       this.tokenService.saveRefreshToken(res.refresh_token);
   }),catchError(AuthService.handleError));
@@ -64,9 +65,9 @@ export class AuthService {
     this.tokenService.removeToken();
     this.tokenService.removeRefreshToken();
   }
-
+  // Método de registro de usuario, se hace petición
   register(data: any): Observable<any> {
-    return this.http.post<any>(API_URL + 'oauth/signup', data).pipe(tap( _ => AuthService.log('register')), catchError(AuthService.handleError));
+    return this.http.post<any>(API_URL + 'signup', data).pipe(tap( _ => AuthService.log('register')), catchError(AuthService.handleError));
   }
   secured(): Observable<any> {
     return this.http.get<any>(API_URL + 'secret')

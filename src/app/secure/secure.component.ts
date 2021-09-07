@@ -22,11 +22,21 @@ export class SecureComponent implements OnInit {
         console.log(data);
         this.isLoadingResults = false;
       });
-  }
+      this.sleep(2000);
+      this.router.navigate(['/home']).then(_ => console.log('Logout'));
+    }
 
   logout(): void {
     this.authService.logout();
     this.router.navigate(['/login']).then(_ => console.log('Logout'));
+  }
+
+  sleep(milliseconds) {
+    const date = Date.now();
+    let currentDate = null;
+    do {
+      currentDate = Date.now();
+    } while (currentDate - date < milliseconds);
   }
 
 }

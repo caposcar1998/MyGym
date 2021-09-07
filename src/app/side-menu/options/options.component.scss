@@ -1,0 +1,22 @@
+.sidebar a {
+    display: block;
+    color: #ffffff;
+    padding: 3vh;
+    text-decoration: none;
+    text-align: left;
+}
+
+ul{
+    margin:auto;
+}
+
+.sidebar a:hover:not(.active) {
+    background-color: #c7c7c7;
+    color: #000000;
+}
+
+.list-unstyled {
+    padding-left: 0;
+    list-style: none; 
+}
+

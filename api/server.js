@@ -1,41 +1,49 @@
-
-// Use Express
 var express = require("express");
-// Use body-parser
 var bodyParser = require("body-parser");
-
-// Create new instance of the express server
 var app = express();
-
-// Define the JSON parser as a default way 
-// to consume and produce data through the 
-// exposed APIs
+var db = require("./models")
 app.use(bodyParser.json());
+const cors= require("cors")
+var corsOptions = {
+    origin:"*",
+    optionSuccessStatus: 200,
+}
+const {Usuarios} = require("./models");
 
-// Create link to Angular build directory
-// The `ng build` command will save the result
-// under the `dist` folder.
+
 var distDir = __dirname + "/dist/";
 app.use(express.static(distDir));
+app.use(cors(corsOptions));
+app.options("*",cors())
 
-// Init the server
-var server = app.listen(process.env.PORT || 8080, function () {
-    var port = server.address().port;
-    console.log("App now running on port", port);
+db.sequelize.sync().then((req)=>{
+    var server = app.listen(process.env.PORT || 8080, function () {
+        var port = server.address().port;
+        console.log("App now running on port", port);
+    });
+})
+// Post de registrar usuario
+app.post("/signup", function (req, res) {
+    return res.status(201).json({ registered: "Se ha recibido la información" });
 });
 
-/*  "/api/status"
- *   GET: Get server status
- *   PS: it's just an example, not mandatory
- */
+// Post de mandar token
+app.post("/login", function (req, res) {
+    return res.status(201).json({ registered: toString(res) });
+});
+
 app.get("/api/status", function (req, res) {
     res.status(200).json({ status: "UP" });
 });
 
-app.get("/oauth/signup", function (req, res) {
-    res.status(200).json({ registered: "true" });
-});
+
 
 app.get("/hello", function (req, res) {
     res.status(200).json({ hola: "hola" });
 });
+
+app.get("/base",function(req, res){
+    Usuarios.findAll().then((users)=>{
+        res.status(200).json({usuarios:users})
+    })
+})

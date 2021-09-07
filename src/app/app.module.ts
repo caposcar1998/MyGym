@@ -20,6 +20,16 @@ import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import {MatTableModule} from '@angular/material/table';
 import {MatIconModule} from '@angular/material/icon';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { SideMenuComponent } from './side-menu/side-menu.component';
+import { ProfileInfoComponent } from './side-menu/profile-info/profile-info.component';
+import { OptionsComponent } from './side-menu/options/options.component';
+import { HomeComponent } from './home/home.component';
+import { Routes, RouterModule } from '@angular/router';
+import { ContentComponent } from './home/content/content.component';
+
+const appRoutes: Routes = [
+	{ path: 'home', component: HomeComponent }
+];
 
 @NgModule({
   declarations: [
@@ -27,7 +37,12 @@ import { NotFoundComponent } from './not-found/not-found.component';
     LoginComponent,
     RegisterComponent,
     SecureComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    SideMenuComponent,
+    ProfileInfoComponent,
+    OptionsComponent,
+    HomeComponent,
+    ContentComponent
   ],
   imports: [
     BrowserModule,
