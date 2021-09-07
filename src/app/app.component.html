@@ -1,16 +1,14 @@
-<div class="wrapper">
-    <div class="row">
-      <div class="col-sm">
-            <!-- Component SideMenu -->
-          <div class="sidemenu">
-            <app-side-menu></app-side-menu>
-          </div>
-      </div>
-      <div class="col-sm">
-          <!-- HomePage Content -->
-          <div class="content">
-                <router-outlet></router-outlet>
-          </div>
-      </div>
+<div class="wrapper d-flex align-items-stretch">
+<!-- Component SideMenu -->
+    <div class="sidebar">
+        <app-side-menu></app-side-menu>
     </div>
-  </div>
+    <div class="content p-4 p-md-5 pt-5">
+        <!--Any Component with Content -->
+        
+        <router-outlet></router-outlet>
+        
+    </div>
+    
+</div>
+

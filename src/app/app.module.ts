@@ -12,6 +12,7 @@ import { OptionsComponent } from './side-menu/options/options.component';
 import { HomeComponent } from './home/home.component';
 import { Routes, RouterModule } from '@angular/router';
 import { ProfileComponent } from './profile/profile.component';
+import { CreateProfileComponent } from './profile/create-profile/create-profile.component';
 
 const appRoutes: Routes = [
 	{ path: 'home', component: HomeComponent},
@@ -29,7 +30,8 @@ const ngWizardConfig: NgWizardConfig = {
     ProfileInfoComponent,
     OptionsComponent,
     HomeComponent,
-    ProfileComponent
+    ProfileComponent,
+    CreateProfileComponent
   ],
   imports: [
     BrowserModule,
