@@ -13,6 +13,8 @@ import { HomeComponent } from './home/home.component';
 import { Routes, RouterModule } from '@angular/router';
 import { ProfileComponent } from './profile/profile.component';
 import { CreateProfileComponent } from './profile/create-profile/create-profile.component';
+import { StepsComponent } from './profile/create-profile/steps/steps.component';
+import { StepTemplateComponent } from './profile/create-profile/step-template/step-template.component';
 
 const appRoutes: Routes = [
 	{ path: 'home', component: HomeComponent},
@@ -31,7 +33,9 @@ const ngWizardConfig: NgWizardConfig = {
     OptionsComponent,
     HomeComponent,
     ProfileComponent,
-    CreateProfileComponent
+    CreateProfileComponent,
+    StepsComponent,
+    StepTemplateComponent,
   ],
   imports: [
     BrowserModule,

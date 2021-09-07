@@ -1,23 +1,24 @@
-<ng-wizard class="text-black mr-5" [config]="config" (stepChanged)="stepChanged($event)">
-  
-    <ng-wizard-step [title]="'Inicio'" [description]="'Crear Perfil'"
-      [canEnter]="isValidTypeBoolean" [canExit]="isValidFunctionReturnsBoolean.bind(this)" class="mr-4">
-      <span >Para iniciar tu camino con MyGym requerimos de tus datos personales , con el fin de crear rutinas y planes de trabajo acorde a tus necesidades. </span>
-    </ng-wizard-step>
-    
-    <ng-wizard-step [title]="'Segundo Paso'" [description]="'Datos Personales'" [canEnter]="isValidTypeBoolean" 
-    [canExit]="isValidFunctionReturnsBoolean.bind(this)">
-      <span>Es momento de preguntarte acerca de algunos datos personales. Llena los siguientes datos correctamente</span>
-    </ng-wizard-step>
-    
-    <ng-wizard-step [title]="'Tercer Paso'" [description]="'Tipo de Cuerpo'"
-      [canEnter]="isValidFunctionReturnsObservable.bind(this)" [canExit]="isValidFunctionReturnsBoolean.bind(this)">
-      <span>Escoge el tipo de cuerpo que tienes o, en todo caso, escoge el que más se asemeja a ti.</span>
-    </ng-wizard-step>
-   
-  <ng-wizard-step [title]="'Cuarto Paso'" [description]="'Objetivos'" [canEnter]="isValidTypeBoolean" 
-  [canExit]="isValidFunctionReturnsBoolean.bind(this)">
-      <span>A continuación se te desplegarán varios objetivos que te ayudarán a llegar a la meta que desees.</span>
-    </ng-wizard-step>
-   
-</ng-wizard>
+<div class="form-page-container">
+  <app-steps></app-steps>
+<div class="step-page-container">
+  <div class="form-step">
+      <ng-container [ngSwitch]="(currentStep | async)?.stepIndex">
+          <ng-container *ngSwitchCase="'1'">
+              <app-step-template [step]="(currentStep | async)"></app-step-template>
+          </ng-container>
+          <ng-container *ngSwitchCase="'2'">
+            <app-step-template [step]="(currentStep | async)"></app-step-template>
+          </ng-container>
+          <ng-container *ngSwitchCase="'3'">
+            <app-step-template [step]="(currentStep | async)"></app-step-template>
+          </ng-container>
+          <ng-container *ngSwitchCase="'4'">
+            <app-step-template [step]="(currentStep | async)"></app-step-template>
+          </ng-container>
+      </ng-container>
+  </div>
+</div>
+<button (click)="onNextStep()" [disabled]="!(currentStep | async)?.isComplete" class="form-continue-btn">
+  {{ showButtonLabel() }}
+</button>
+</div>

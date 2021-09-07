@@ -1,0 +1,9 @@
+<div class="step-template">
+    <h1>{{ step.name }}</h1>
+    <h2>Paso {{ step.stepIndex }}</h2>
+    <div class="step-content-label">{{ step.description }}</div>
+    <button class="step-complete-btn" (click)="onCompleteStep()">
+        <span class="completed-step-check material-icons">
+            {{ step.isComplete ? 'Formulario' : 'Formulario' }}
+        </span></button>
+</div>
