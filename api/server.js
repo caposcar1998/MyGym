@@ -3,12 +3,18 @@ var bodyParser = require("body-parser");
 var app = express();
 var db = require("./models")
 app.use(bodyParser.json());
+const cors= require("cors")
+var corsOptions = {
+    origin:"*",
+    optionSuccessStatus: 200,
+}
 const {Usuarios} = require("./models")
 
 
 var distDir = __dirname + "/dist/";
 app.use(express.static(distDir));
-
+app.use(cors(corsOptions));
+app.options("*",cors())
 
 db.sequelize.sync().then((req)=>{
     var server = app.listen(process.env.PORT || 8080, function () {

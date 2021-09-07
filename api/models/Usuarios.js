@@ -7,6 +7,13 @@ module.exports = (sequelize, DataTypes) => {
                 noteEmpty: true
             }
         },
+        correo: {
+            type:DataTypes.STRING,
+            allowNull: false,
+            validate: {
+                noteEmpty: true
+            }
+        },
         apellido:{
             type:DataTypes.STRING,
             allowNull: false,
