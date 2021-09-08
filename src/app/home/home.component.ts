@@ -23,14 +23,18 @@ export class HomeComponent implements OnInit {
       this.checkType(profile))
       )
   }
-
+  
   checkType(profile: any):void{
-    if(profile.email != null){
+    if((profile.sub).includes("google-oauth2")){
       this.createNewUser(profile.email, profile.sub,"")
-      console.log(profile)
-    }else{
+    }else if((profile.sub).includes("twitter")){
+      this.createNewUser(profile.nickname, profile.sub,"")
+    }
+    else if((profile.sub).includes("auth0")){
       this.createNewUser(profile.name, profile.sub,"")
       console.log(profile)
+    }else if((profile.sub).includes("facebook")){
+      this.createNewUser(profile.given_name, profile.sub,"")      
     }
   }
 
