@@ -1,19 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { LandingPageComponent } from './landing-page.component';
 
-describe('LandingPageComponent', () => {
-  let component: LandingPageComponent;
-  let fixture: ComponentFixture<LandingPageComponent>;
+import { LogoutButtonComponent } from './logout-button.component';
+
+describe('LogoutButtonComponent', () => {
+  let component: LogoutButtonComponent;
+  let fixture: ComponentFixture<LogoutButtonComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ LandingPageComponent]
+      declarations: [ LogoutButtonComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(LandingPageComponent);
+    fixture = TestBed.createComponent(LogoutButtonComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
