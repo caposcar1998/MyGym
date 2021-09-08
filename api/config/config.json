@@ -1,26 +1,26 @@
 {
   "development": {
-    "username": "Arturo",
-    "password": "15",
+    "username": "root",
+    "password": "",
     "database": "my_gym",
     "host": "127.0.0.1",
-    "port": 8889,
+    "port": 3306,
     "dialect": "mysql"
   },
   "test": {
-    "username": "Arturo",
-    "password": "15",
+    "username": "root",
+    "password": "",
     "database": "my_gym",
     "host": "127.0.0.1",
-    "port": 8889,
+    "port": 3306,
     "dialect": "mysql"
   },
   "production": {
-    "username": "Arturo",
-    "password": "15",
+    "username": "root",
+    "password": "",
     "database": "my_gym",
     "host": "127.0.0.1",
-    "port": 8889,
+    "port": 3306,
     "dialect": "mysql"
   }
 }
