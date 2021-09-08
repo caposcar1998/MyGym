@@ -16,6 +16,8 @@ import { LoginButtonComponent } from './components/login-button/login-button.com
 import { HeaderComponent } from './components/header/header.component';
 import { RegisterButtonComponent } from './components/register-button/register-button.component';
 import { LogoutButtonComponent } from './components/logout-button/logout-button.component';
+
+
 const appRoutes: Routes = [
 	{ path: 'home', component: HomeComponent },
   { path: '', component: LandingPageComponent }
@@ -31,7 +33,8 @@ const appRoutes: Routes = [
     ContentComponent,
     LoginButtonComponent,
     RegisterButtonComponent, 
-    HeaderComponent, LogoutButtonComponent
+    HeaderComponent, LogoutButtonComponent,
+    LandingPageComponent
   ],
   imports: [
     BrowserModule,
