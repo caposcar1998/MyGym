@@ -1,4 +1,4 @@
-<form #f="ngForm" (ngSubmit)="onSubmit(f)">
+<form #f="ngForm" (ngSubmit)="onFilledForm(f)">
     
     <label for="bodyType">Escoge tu tipo de cuerpo  de las siguientes imágenes:</label>
 
@@ -7,7 +7,7 @@
         <div class="col-md-3 ">
             <div class="custom-control custom-radio image-checkbox">
                 <h3>Ectomorfo</h3>
-                <input type="radio" class="custom-control-input" id="ck2a" name="bodyType" value="ectomorfo" ngModel>
+                <input type="radio" class="custom-control-input" id="ck2a" name="bodyType" value="ectomorfo" ngModel required>
                 <label class="custom-control-label img-option" for="ck2a">
                     <img src="https://i.ibb.co/MGWW1pV/ectomorfo.jpg" alt="#" class="img-fluid" width="200px">
                 </label>
@@ -16,7 +16,7 @@
         <div class="col-md-3">
             <div class="custom-control custom-radio image-checkbox">
                 <h3>Mesomorfo:</h3>
-                <input type="radio" class="custom-control-input" id="ck2b" name="bodyType" value="mesomorfo" ngModel>
+                <input type="radio" class="custom-control-input" id="ck2b" name="bodyType" value="mesomorfo" ngModel required>
                 <label class="custom-control-label img-option" for="ck2b">
                     <img src="https://i.ibb.co/71LycGb/metomofo.jpg" alt="#" class="img-fluid" width="203px">
                 </label>
@@ -25,7 +25,7 @@
         <div class="col-md-3">
             <div class="custom-control custom-radio image-checkbox">
                 <h3>Endomorfo</h3>
-                <input type="radio" class="custom-control-input " id="ck2c" name="bodyType" value="endomorfo" ngModel>
+                <input type="radio" class="custom-control-input " id="ck2c" name="bodyType" value="endomorfo" ngModel required>
                 <label class="custom-control-label img-option" for="ck2c">
                     
                     <img src="https://i.ibb.co/xS7yYdS/endomorfo.jpg" alt="#" class="img-fluid" width="200px">
@@ -36,9 +36,12 @@
 
      </div>
 
-     <button class="btn-success" type="submit">
-        Ingresar datos
-    </button>
+    <div *ngIf="f.valid; else success">
+        <p style="color: green;">Se han agregado los datos correctamente. </p>
+    </div>
+    <ng-template #success>
+        <p style="color: red;">Para continuar necesitas agregar los datos. </p>
+    </ng-template>
 
  
     
@@ -49,3 +52,6 @@
     <p><b>Endomorfo:</b> mucha grasa y músculo, con una forma corporal más redonda que la de los ectomorfos. Ganan peso fácilmente.</p>    
     <p><b>Mesomorfo:</b> atlético y musculoso, estos individuos ganan y pierden peso fácilmente.</p>
 </div>
+<button  (click)="[onNextStep(), onFilledForm(f)]" [disabled]="!f.valid" class="form-continue-btn mt-0" type="button">
+    {{ showButtonLabel() }}
+  </button>

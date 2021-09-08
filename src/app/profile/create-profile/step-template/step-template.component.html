@@ -2,17 +2,24 @@
     <h1>{{ step.name }}</h1>
     <h2>Paso {{ step.stepIndex }}</h2>
     <div class="step-content-label">{{ step.description }}</div>
-
-    <div *ngIf="step.stepIndex == 2" >
-        <app-personal-data></app-personal-data>
-    </div>
-    <div *ngIf="step.stepIndex == 3" >
-        <app-body-type></app-body-type>
-    </div>
-    <div *ngIf="step.stepIndex == 4" >
-        <app-objectives></app-objectives>
-    </div>        
-
+    <ng-container [ngSwitch]="(currentStep | async)?.stepIndex">
+        <ng-container *ngSwitchCase="'1'">
+            <button (click)="onNextStep()" class="form-continue-btn mt-0">
+                {{ showButtonLabel() }}
+            </button>
+        </ng-container>
+        <ng-container *ngSwitchCase="'2'">
+            <app-personal-data (onCompletedForm)="sendForm($event)"></app-personal-data>
+    
+        </ng-container>
+        <ng-container *ngSwitchCase="'3'">
+            <app-body-type (onCompletedForm)="sendForm($event)"></app-body-type>
+        </ng-container>
+        <ng-container *ngSwitchCase="'4'">
+            <app-objectives (onCompletedForm)="sendForm($event)"></app-objectives>
+        </ng-container>    
+    </ng-container>    
+    
 
     <!-- <button class="step-complete-btn" (click)="onCompleteStep()"> -->
         <!-- <span class="completed-step-check material-icons">

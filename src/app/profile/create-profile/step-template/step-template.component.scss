@@ -15,3 +15,20 @@
     margin-right: 12px;
     color: #2962ff !important;
 }
+.form-continue-btn {
+    color: white;
+    background: #2962ff;
+    padding: 20px;
+    border-radius: 50px;
+    width: 100%;
+    font-size: 1.15em;
+    cursor: pointer;
+    border: none !important;
+    margin: 32px;
+
+    &:disabled {
+        background-color: red;
+        opacity: 0.2;
+        cursor: not-allowed !important;
+    }
+}

@@ -1,5 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output, Input } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { StepModel } from 'src/app/profile/create-profile/models/step.model';
+import { Observable } from 'rxjs';
+import { StepsService } from 'src/app/profile/create-profile/services/steps.service';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-personal-data',
@@ -8,14 +13,34 @@ import { NgForm } from '@angular/forms';
 })
 export class PersonalDataComponent implements OnInit {
 
-  constructor() { }
+  @Output() onCompletedForm = new EventEmitter<any>();
+  @Input() step: StepModel;
 
   ngOnInit(): void {
+    
+    this.currentStep = this.stepsService.getCurrentStep();
   }
-
-  onSubmit(form: NgForm){
+  
+  onFilledForm(form: NgForm){
     const value = form.value;
-    console.log(value);
-
+    this.onCompletedForm.emit(value);
   }
+  
+  currentStep: Observable<StepModel>;
+  constructor(private stepsService: StepsService,
+    private router: Router) { }
+
+  onCompleteStep() {
+    this.step.isComplete = true;
+  }
+
+  onNextStep() {
+    this.stepsService.moveToNextStep();
+  }
+
+  showButtonLabel() {
+    return !this.stepsService.isLastStep() ? 'Continuar' : 'Finalizar';
+  }
+
+
 }

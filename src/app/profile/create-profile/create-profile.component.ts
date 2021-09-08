@@ -20,20 +20,8 @@ export class CreateProfileComponent implements OnInit {
     this.currentStep = this.stepsService.getCurrentStep();
   }
 
-  onNextStep() {
-    if (!this.stepsService.isLastStep()) {
-      this.stepsService.moveToNextStep();
-    } else {
-      this.onSubmit();
-    }
-  }
-
-  showButtonLabel() {
-    return !this.stepsService.isLastStep() ? 'Continuar' : 'Finalizar';
-  }
-
-  onSubmit(): void {
-    this.router.navigate(['/home']);
+  onRecieveData(form: any){
+    console.log(form);
   }
 }
 
