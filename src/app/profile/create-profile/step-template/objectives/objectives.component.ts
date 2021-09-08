@@ -1,0 +1,22 @@
+import { Component, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
+
+@Component({
+  selector: 'app-objectives',
+  templateUrl: './objectives.component.html',
+  styleUrls: ['./objectives.component.scss']
+})
+export class ObjectivesComponent implements OnInit {
+
+  constructor() { }
+
+  ngOnInit(): void {
+  }
+
+  onSubmit(form: NgForm){
+    const value = form.value;
+    console.log(value);
+
+  }
+
+}

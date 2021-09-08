@@ -3,10 +3,10 @@ import { BehaviorSubject, Observable } from 'rxjs';
 import { StepModel } from '../models/step.model';
 
 const STEPS = [
-  { name: 'Crear perfil', stepIndex: 1, isComplete: false, description: 'Para iniciar tu camino en MyGym, requerimos de tus datos personales con el fin de poder crear rutinas personalizadas y planes de trabajo.' },
-  { name: 'Datos personales', stepIndex: 2, isComplete: false, description: 'Llena los datos personales. La información requerida es confidencial.' },
-  { name: 'Tipo de cuerpo', stepIndex: 3, isComplete: false, description: 'Selecciona el cuerpo que tengas o, en caso de no encotrarlo, el que más se asemeje al tuyo.' },
-  { name: 'Objetivos', stepIndex: 4, isComplete: false, description: 'Selecciona los objetivos por cumplir para poder cumplir tus metas. !Estamos contigo!' }
+  { name: 'Crear perfil', stepIndex: 1, isComplete: true, description: 'Para iniciar tu camino en MyGym, requerimos de tus datos personales con el fin de poder crear rutinas personalizadas y planes de trabajo.' },
+  { name: 'Datos personales', stepIndex: 2, isComplete: true, description: 'Llena los datos personales. La información requerida es confidencial.' },
+  { name: 'Tipo de cuerpo', stepIndex: 3, isComplete: true, description: 'Selecciona el cuerpo que tengas o, en caso de no encontrarlo, el que más se asemeje al tuyo.' },
+  { name: 'Objetivos', stepIndex: 4, isComplete: true, description: 'Selecciona los objetivos por cumplir para poder cumplir tus metas. !Estamos contigo!' }
 ];
 
 @Injectable({

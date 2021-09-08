@@ -2,8 +2,22 @@
     <h1>{{ step.name }}</h1>
     <h2>Paso {{ step.stepIndex }}</h2>
     <div class="step-content-label">{{ step.description }}</div>
-    <button class="step-complete-btn" (click)="onCompleteStep()">
-        <span class="completed-step-check material-icons">
-            {{ step.isComplete ? 'Formulario' : 'Formulario' }}
-        </span></button>
+
+    <div *ngIf="step.stepIndex == 2" >
+        <app-personal-data></app-personal-data>
+    </div>
+    <div *ngIf="step.stepIndex == 3" >
+        <app-body-type></app-body-type>
+    </div>
+    <div *ngIf="step.stepIndex == 4" >
+        <app-objectives></app-objectives>
+    </div>        
+
+
+    <!-- <button class="step-complete-btn" (click)="onCompleteStep()"> -->
+        <!-- <span class="completed-step-check material-icons">
+            
+            <!-- {{ step.isComplete ? 'Formulario' : 'Formulario' }} -->
+        <!-- </span></button> -->
 </div>
+

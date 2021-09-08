@@ -2,6 +2,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgWizardModule, NgWizardConfig, THEME } from 'ng-wizard';
+import { FormsModule }   from '@angular/forms';
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -15,6 +16,9 @@ import { ProfileComponent } from './profile/profile.component';
 import { CreateProfileComponent } from './profile/create-profile/create-profile.component';
 import { StepsComponent } from './profile/create-profile/steps/steps.component';
 import { StepTemplateComponent } from './profile/create-profile/step-template/step-template.component';
+import { PersonalDataComponent } from './profile/create-profile/step-template/personal-data/personal-data.component';
+import { BodyTypeComponent } from './profile/create-profile/step-template/body-type/body-type.component';
+import { ObjectivesComponent } from './profile/create-profile/step-template/objectives/objectives.component';
 
 const appRoutes: Routes = [
 	{ path: 'home', component: HomeComponent},
@@ -36,13 +40,17 @@ const ngWizardConfig: NgWizardConfig = {
     CreateProfileComponent,
     StepsComponent,
     StepTemplateComponent,
+    PersonalDataComponent,
+    BodyTypeComponent,
+    ObjectivesComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
 	  RouterModule.forRoot(appRoutes),
-    NgWizardModule.forRoot(ngWizardConfig)
+    NgWizardModule.forRoot(ngWizardConfig),
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

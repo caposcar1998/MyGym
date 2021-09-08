@@ -18,7 +18,7 @@
       </ng-container>
   </div>
 </div>
-<button (click)="onNextStep()" [disabled]="!(currentStep | async)?.isComplete" class="form-continue-btn">
+<button (click)="onNextStep()"  [disabled]="!(currentStep | async)?.isComplete" class="form-continue-btn">
   {{ showButtonLabel() }}
 </button>
 </div>

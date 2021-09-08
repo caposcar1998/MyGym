@@ -1,0 +1,55 @@
+<form #f="ngForm" (ngSubmit)="onSubmit(f)">
+    <div class="form-group  mt-4">
+        <label for="daysForWeek">Días que va al gimansio a la semana</label>
+        <select class="form-select" id="daysForWeek" name="daysForWeek" ngModel>
+          <option selected value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+        </select>
+    </div>
+    <div class="form-group  mt-4">
+        <label for="hours">Horas al día que va al gimnasio</label>
+        <select class="form-select" id="hours" name="hours" ngModel>
+          <option selected value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+        </select>
+    </div>
+    <div class="form-group  mt-4">
+        <label for="intesity">Intensidad con la que se hace (Escala 1 - 10)</label>
+        <select class="form-select" id="intesity" name="intesity" ngModel>
+          <option selected value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
+        </select>
+    </div>
+    <div class="form-group  mt-4">
+        <label for="goal">Objetivos generales</label>
+        <select class="form-select" id="goal" name="goal" ngModel>
+          <option selected>Bajar de peso</option>
+          <option>Ganar volumen</option>
+          <option>Ganar masa muscular</option>
+          <option>Quemar grasa</option>
+          <option>Que el oski me bese</option>
+          <option>Que arturo me bese</option>
+          <option>Que akio me bese</option>
+          <option>Madrearme a Aldo</option>
+        </select>
+    </div>
+    <button class="btn btn-info">Submit</button>
+</form>

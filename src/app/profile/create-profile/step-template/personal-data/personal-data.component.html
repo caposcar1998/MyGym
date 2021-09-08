@@ -1,0 +1,20 @@
+<form #f="ngForm" (ngSubmit)="onSubmit(f)">
+    <div class="form-group mt-4">
+        <label for="name">Nombre</label>
+        <input type="text" class="form-control" id="name" aria-describedby="nameHelp" placeholder="Nombre" name="name" ngModel>
+    </div>
+    <div class="form-group mt-4">
+        <label for="lastName">Apellido</label>
+        <input type="text" class="form-control" id="lastName" placeholder="Apellido" name="lastName" ngModel>
+    </div>
+    <div class="form-group mt-4">
+        <label for="age">Edad</label>
+        <input type="number" class="form-control" id="age" placeholder="Edad" name="age" ngModel>
+    </div>
+    <label class="form-label mt-4" for="customFile">Foto (Opcional)</label>
+    <input type="file" class="form-control"placeholder="Foto" id="customFile" name="photo" ngModel>
+    <button class="btn-success" type="submit">
+        Ingresar datos
+    </button>
+    
+</form>
