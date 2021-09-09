@@ -21,7 +21,7 @@ import { PersonalDataComponent } from './profile/create-profile/step-template/pe
 import { BodyTypeComponent } from './profile/create-profile/step-template/body-type/body-type.component';
 import { ObjectivesComponent } from './profile/create-profile/step-template/objectives/objectives.component';
 
-import { ContentComponent } from './home/content/content.component';
+
 import { LandingPageComponent } from './components/landing-page/landing-page.component';
 import { environment as env } from 'src/environments/environment';
 import { LoginButtonComponent } from './components/login-button/login-button.component';
@@ -56,7 +56,7 @@ const ngWizardConfig: NgWizardConfig = {
     BodyTypeComponent,
     ObjectivesComponent,
 
-    ContentComponent,
+    
     LoginButtonComponent,
     RegisterButtonComponent, 
     HeaderComponent, LogoutButtonComponent,
