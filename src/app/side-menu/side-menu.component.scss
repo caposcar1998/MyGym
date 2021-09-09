@@ -1,10 +1,15 @@
-#sidebar {
+.sidebar {
+    position:fixed;
     margin: 0;
     padding: 0;
+    top: 0px;
+    left: 0px;
     width: 28vh;
     background-color: #2962ff;
-    position: fixed;
+    
     height: 100%;
     
-    overflow: auto;
+    
 }
+
+

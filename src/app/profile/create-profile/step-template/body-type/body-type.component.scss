@@ -1,0 +1,44 @@
+.img-option:hover {
+opacity: 0.5;
+text-align: center;
+}
+
+.form-continue-btn {
+    color: white;
+    background: #2962ff;
+    padding: 20px;
+    border-radius: 50px;
+    width: 100%;
+    font-size: 1.15em;
+    cursor: pointer;
+    border: none !important;
+    margin: 32px;
+
+    &:disabled {
+        background-color: red;
+        opacity: 0.2;
+        cursor: not-allowed !important;
+    }
+}
+
+.completed-step-check {
+    margin-right: 12px;
+    color: #2962ff !important;
+}
+
+.step-divider {
+    height: 2px;
+    background: #2962ff;
+    flex: 1;
+    margin: 0px 10px;
+}
+
+.step-current, .step-complete {
+    background: #2962ff;
+    color: white;
+}
+
+.step-incomplete {
+    cursor: not-allowed;
+    pointer-events: none;
+}
