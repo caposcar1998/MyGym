@@ -1,9 +1,10 @@
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+
 import { NgWizardModule, NgWizardConfig, THEME } from 'ng-wizard';
 import { FormsModule }   from '@angular/forms';
-
+import { AuthModule } from '@auth0/auth0-angular';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SideMenuComponent } from './side-menu/side-menu.component';
@@ -11,6 +12,7 @@ import { ProfileInfoComponent } from './side-menu/profile-info/profile-info.comp
 import { OptionsComponent } from './side-menu/options/options.component';
 import { HomeComponent } from './home/home.component';
 import { Routes, RouterModule } from '@angular/router';
+
 import { ProfileComponent } from './profile/profile.component';
 import { CreateProfileComponent } from './profile/create-profile/create-profile.component';
 import { StepsComponent } from './profile/create-profile/steps/steps.component';
@@ -19,8 +21,19 @@ import { PersonalDataComponent } from './profile/create-profile/step-template/pe
 import { BodyTypeComponent } from './profile/create-profile/step-template/body-type/body-type.component';
 import { ObjectivesComponent } from './profile/create-profile/step-template/objectives/objectives.component';
 
+import { ContentComponent } from './home/content/content.component';
+import { LandingPageComponent } from './components/landing-page/landing-page.component';
+import { environment as env } from 'src/environments/environment';
+import { LoginButtonComponent } from './components/login-button/login-button.component';
+import { HeaderComponent } from './components/header/header.component';
+import { RegisterButtonComponent } from './components/register-button/register-button.component';
+import { LogoutButtonComponent } from './components/logout-button/logout-button.component';
+
+
 const appRoutes: Routes = [
-	{ path: 'home', component: HomeComponent}
+	{ path: 'home', component: HomeComponent },
+  { path: '', component: LandingPageComponent }
+
 ];
 
 const ngWizardConfig: NgWizardConfig = {
@@ -34,6 +47,7 @@ const ngWizardConfig: NgWizardConfig = {
     ProfileInfoComponent,
     OptionsComponent,
     HomeComponent,
+
     ProfileComponent,
     CreateProfileComponent,
     StepsComponent,
@@ -41,6 +55,13 @@ const ngWizardConfig: NgWizardConfig = {
     PersonalDataComponent,
     BodyTypeComponent,
     ObjectivesComponent,
+
+    ContentComponent,
+    LoginButtonComponent,
+    RegisterButtonComponent, 
+    HeaderComponent, LogoutButtonComponent,
+    LandingPageComponent
+
   ],
   imports: [
     BrowserModule,
@@ -49,7 +70,11 @@ const ngWizardConfig: NgWizardConfig = {
 	  RouterModule.forRoot(appRoutes),
     NgWizardModule.forRoot(ngWizardConfig),
     FormsModule,
+    AuthModule.forRoot({ ...env.auth }),
+	  RouterModule.forRoot(appRoutes)
+
   ],
+  
   providers: [],
   bootstrap: [AppComponent]
 })

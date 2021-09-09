@@ -8,6 +8,7 @@ import { Observable } from 'rxjs';
 export class AppService {
 
   private pruebaUrl = 'http://localhost:8080/hello'; 
+  private url= 'http://localhost:8080'
 
   constructor(  private http: HttpClient) { }
 
@@ -15,7 +16,7 @@ export class AppService {
     return this.http.get(this.pruebaUrl)
   }
 
-  
+
 
 }
 
