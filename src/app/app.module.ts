@@ -20,8 +20,7 @@ import { BodyTypeComponent } from './profile/create-profile/step-template/body-t
 import { ObjectivesComponent } from './profile/create-profile/step-template/objectives/objectives.component';
 
 const appRoutes: Routes = [
-	{ path: 'home', component: HomeComponent},
-  {  path: 'profile', component: ProfileComponent}
+	{ path: 'home', component: HomeComponent}
 ];
 
 const ngWizardConfig: NgWizardConfig = {

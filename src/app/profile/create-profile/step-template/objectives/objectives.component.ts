@@ -47,6 +47,7 @@ export class ObjectivesComponent implements OnInit {
 
   onSubmit(): void {
     this.router.navigate(['/home']);
+    window.alert("Has finalizado con éxito! La alerta no es definitiva")
   }
 
 
