@@ -53,6 +53,19 @@ app.post("/usuarios",function(req,res){
     })
 });
 
+app.get("/usuarios/:correo",function(req,res){
+    const paraCorreo = req.params.correo 
+    Usuarios.findOne({ where: {correo: paraCorreo} }).then(function(user) {
+        if (user != null){
+            const resultUser = JSON.stringify(user)
+            res.status(200).json({response:resultUser})
+        } else {
+            res.status(404).json({response:"Usuario no encontrado"})
+        }
+
+    })
+})
+
 app.post("/usuarios/:correo",function(req,res){
     const correo = req.body.correo
     const idAuth = req.body.idAuth
