@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { StepModel } from '../models/step.model';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 const STEPS = [
   { name: 'Crear perfil', stepIndex: 1, isComplete: true, description: 'Para iniciar tu camino en MyGym, requerimos de tus datos personales con el fin de poder crear rutinas personalizadas y planes de trabajo.' },
@@ -13,12 +14,14 @@ const STEPS = [
   providedIn: 'root'
 })
 export class StepsService {
-
+  
+  private url= 'http://localhost:8080/usuarios'
   steps$: BehaviorSubject<StepModel[]> = new BehaviorSubject<StepModel[]>(STEPS);
   currentStep$: BehaviorSubject<StepModel> = new BehaviorSubject<StepModel>(null);
 
-  constructor() {
-    this.currentStep$.next(this.steps$.value[0]);
+  constructor(private http: HttpClient) {
+    this.currentStep$.next(this.steps$.value[0])
+    
   }
 
   setCurrentStep(step: StepModel): void {
@@ -43,5 +46,23 @@ export class StepsService {
 
   isLastStep(): boolean {
     return this.currentStep$.value.stepIndex === this.steps$.value.length;
+  }
+
+  updateUser(personalData:string,bodyType:string,objetivo:string,id:string){
+    const personal = JSON.parse(personalData);
+    const body = JSON.parse(bodyType)
+    const obj = JSON.parse(objetivo)
+    let postUrl = this.url+"/"+id;
+    return this.http.put(postUrl,{
+      "nombre":personal.name,
+      "apellido":personal.lastName,
+      "edad":personal.age,
+      "tipoCuerpo":body.bodyType,
+      "diasGym":parseInt(obj.daysForWeek),
+      "horasGym":parseFloat(obj.hours),
+      "intensidad":parseInt(obj.intesity),
+      "foto":personal.foto,
+      "objetivoCuerpo":obj.goal
+    })
   }
 }

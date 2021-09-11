@@ -21,7 +21,7 @@ export class BodyTypeComponent implements OnInit {
   
   onFilledForm(form: NgForm){
     const value = form.value;
-    this.onCompletedForm.emit(value);
+    localStorage.setItem('bodyType', JSON.stringify(value));
   }
   
   currentStep: Observable<StepModel>;
