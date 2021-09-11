@@ -12,7 +12,7 @@ import { ProfileInfoComponent } from './side-menu/profile-info/profile-info.comp
 import { OptionsComponent } from './side-menu/options/options.component';
 import { HomeComponent } from './home/home.component';
 import { Routes, RouterModule } from '@angular/router';
-
+import { AuthGuard } from './auth.guard';
 import { ProfileComponent } from './profile/profile.component';
 import { CreateProfileComponent } from './profile/create-profile/create-profile.component';
 import { StepsComponent } from './profile/create-profile/steps/steps.component';
@@ -31,9 +31,6 @@ import { LogoutButtonComponent } from './components/logout-button/logout-button.
 
 
 const appRoutes: Routes = [
-	{ path: 'home', component: HomeComponent },
-  { path: '', component: LandingPageComponent }
-
 ];
 
 const ngWizardConfig: NgWizardConfig = {
@@ -67,15 +64,12 @@ const ngWizardConfig: NgWizardConfig = {
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-	  RouterModule.forRoot(appRoutes),
     NgWizardModule.forRoot(ngWizardConfig),
     FormsModule,
     AuthModule.forRoot({ ...env.auth }),
-	  RouterModule.forRoot(appRoutes)
-
   ],
   
-  providers: [],
+  providers: [ AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
