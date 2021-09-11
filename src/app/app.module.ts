@@ -1,7 +1,7 @@
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import {MatCardModule} from '@angular/material/card';
 import { NgWizardModule, NgWizardConfig, THEME } from 'ng-wizard';
 import { FormsModule }   from '@angular/forms';
 import { AuthModule } from '@auth0/auth0-angular';
@@ -20,7 +20,7 @@ import { StepTemplateComponent } from './profile/create-profile/step-template/st
 import { PersonalDataComponent } from './profile/create-profile/step-template/personal-data/personal-data.component';
 import { BodyTypeComponent } from './profile/create-profile/step-template/body-type/body-type.component';
 import { ObjectivesComponent } from './profile/create-profile/step-template/objectives/objectives.component';
-
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 
 import { LandingPageComponent } from './components/landing-page/landing-page.component';
 import { environment as env } from 'src/environments/environment';
@@ -28,6 +28,7 @@ import { LoginButtonComponent } from './components/login-button/login-button.com
 import { HeaderComponent } from './components/header/header.component';
 import { RegisterButtonComponent } from './components/register-button/register-button.component';
 import { LogoutButtonComponent } from './components/logout-button/logout-button.component';
+import { SecureComponent } from './secure/secure.component';
 
 
 const appRoutes: Routes = [
@@ -57,11 +58,14 @@ const ngWizardConfig: NgWizardConfig = {
     LoginButtonComponent,
     RegisterButtonComponent, 
     HeaderComponent, LogoutButtonComponent,
-    LandingPageComponent
+    LandingPageComponent,
+    SecureComponent
 
   ],
   imports: [
     BrowserModule,
+    MatProgressSpinnerModule,
+    MatCardModule,
     AppRoutingModule,
     HttpClientModule,
     NgWizardModule.forRoot(ngWizardConfig),

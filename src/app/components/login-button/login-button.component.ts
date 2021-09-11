@@ -13,7 +13,9 @@ export class LoginButtonComponent implements OnInit {
   }
 
   login():void{
-      this.auth.loginWithRedirect();
+      this.auth.loginWithRedirect({
+        appState: { target: '/secure' }
+      });
       this.auth.user$.subscribe( (profile_e) => (
         localStorage.setItem('access_token', profile_e.sub.split('|')[1])
       ))

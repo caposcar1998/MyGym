@@ -38,13 +38,7 @@
         <ul>
           <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
           <li><a class="nav-link scrollto" href="#doctors">Programadores</a></li>
-          <div *ngIf="(auth.isAuthenticated$ | async) === false"> 
             <app-login-button></app-login-button>
-            </div>
-           <div *ngIf="(auth.isAuthenticated$ | async) === true"> 
-               <app-logout-button></app-logout-button>
-            </div>
-          <li *ngIf="(auth.user$ | async) as user" > {{ profileJson }} </li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav>
@@ -57,9 +51,7 @@
     <div class="container" id="fondo">
       <h1>MyGym!</h1>
       <h2>Una rutina hecha a tu medida y sin ningun costo</h2>
-      <div *ngIf="(auth.isAuthenticated$ | async) === false"> 
         <app-login-button></app-login-button>
-        </div>
     </div>
   </section>
 
