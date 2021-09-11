@@ -29,8 +29,10 @@ export class HomeComponent implements OnInit {
       this.checkIfNewUser(profileAll))
   }
 
-  checkIfExists(name:string){
-    if (name){
+  checkIfExists(nombre:string,id:string){
+    localStorage.setItem("id",id)
+    if (nombre){
+      
       this.existeUsuario = "Existe"
     }
   }
@@ -38,23 +40,23 @@ export class HomeComponent implements OnInit {
   checkIfNewUser(profile: any){
       if((profile.sub).includes("google-oauth2")){
         this.homeService.findUser(profile.email).subscribe(data=>
-          this.checkIfExists(JSON.parse(data["response"]).nombre),
+          this.checkIfExists(JSON.parse(data["response"]).nombre,JSON.parse(data["response"]).id),
           err => console.log("No existe este usuario")
           )
       }else if((profile.sub).includes("twitter")){
         this.homeService.findUser(profile.nickname).subscribe(data=>
-          this.checkIfExists(JSON.parse(data["response"]).nombre),
+          this.checkIfExists(JSON.parse(data["response"]).nombre,JSON.parse(data["response"]).id),
           err => console.log("No existe este usuario")
           )
       }
       else if((profile.sub).includes("auth0")){
         this.homeService.findUser(profile.name).subscribe(data=>
-          this.checkIfExists(JSON.parse(data["response"]).nombre),
+          this.checkIfExists(JSON.parse(data["response"]).nombre,JSON.parse(data["response"]).id),
           err => console.log("No existe este usuario")
           )
       }else if((profile.sub).includes("facebook")){
         this.homeService.findUser(profile.given_name).subscribe(data=>
-          this.checkIfExists(JSON.parse(data["response"]).nombre),
+          this.checkIfExists(JSON.parse(data["response"]).nombre,JSON.parse(data["response"]).id),
           err => console.log("No existe este usuario")
           )    
       }

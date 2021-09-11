@@ -22,12 +22,12 @@ export class ObjectivesComponent implements OnInit {
   
   onFilledForm(form: NgForm){
     const value = form.value;
-    this.onCompletedForm.emit(value);
+    localStorage.setItem('objetivo', JSON.stringify(value));
   }
   
   currentStep: Observable<StepModel>;
   constructor(private stepsService: StepsService,
-    private router: Router) { }
+    private router: Router, private steps : StepsService) { }
 
   onCompleteStep() {
     this.step.isComplete = true;
@@ -46,8 +46,13 @@ export class ObjectivesComponent implements OnInit {
   }
 
   onSubmit(): void {
-    this.router.navigate(['/home']);
-    window.alert("Has finalizado con éxito! La alerta no es definitiva")
+    
+    this.steps.updateUser(localStorage.getItem('personalData'),localStorage.getItem('bodyType'),localStorage.getItem('objetivo'),localStorage.getItem('id')).subscribe(data=>
+      window.alert("Has finalizado con éxito! La alerta no es definitiva"))
+      localStorage.removeItem("personalData")
+      localStorage.removeItem("bodyType")
+      localStorage.removeItem("objetivo")
+      this.router.navigate(['/home']);
   }
 
 

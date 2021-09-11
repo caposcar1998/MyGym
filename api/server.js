@@ -26,20 +26,6 @@ db.sequelize.sync().then((req)=>{
 
 
 
-app.get("/api/status", function (req, res) {
-    res.status(200).json({ status: "UP" });
-});
-
-app.get("/hello", function (req, res) {
-    res.status(200).json({ hola: "hola" });
-});
-
-app.get("/base",function(req, res){
-    Usuarios.findAll().then((users)=>{
-        res.status(200).json({usuarios:users})
-    })
-})
-
 app.post("/usuarios",function(req,res){
     const correo = req.body.correo
     const idAuth = req.body.idAuth
@@ -85,4 +71,33 @@ app.post("/usuarios/:correo",function(req,res){
             res.status(200).json({Mensaje:"Existe el usuario"})
         }
     })
+})
+
+app.put("/usuarios/:idUsuario",function(req,res){
+    const id = req.params.idUsuario
+    const nombre = req.body.nombre
+    const apellido = req.body.apellido
+    const edad = req.body.edad
+    const tipoCuerpo = req.body.tipoCuerpo
+    const diasGym = req.body.diasGym
+    const horasGym = req.body.horasGym
+    const intensidad = req.body.intensidad
+    const foto = req.body.intensidad
+    const objetivoCuerpo = req.body.objetivoCuerpo
+    Usuarios.update(
+        {
+        nombre:nombre,
+        apellido:apellido,
+        edad:edad,
+        tipoCuerpo:tipoCuerpo,
+        diasGym:diasGym,
+        horasGym:horasGym,
+        intensidad:intensidad,
+        foto:foto,
+        objetivoCuerpo:objetivoCuerpo
+        }, 
+        {where: {id:id}
+        })
+        .then((response)=>{res.status(204).json({Status:"Exito al actualizar"})})
+        .catch((err)=>{res.status(500).json({Error:err})})
 })
