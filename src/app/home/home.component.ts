@@ -65,14 +65,18 @@ export class HomeComponent implements OnInit {
   checkType(profile: any):void{
     if((profile.sub).includes("google-oauth2")){
       this.createNewUser(profile.email, profile.sub,"",profile)
+      localStorage.setItem('access_token', profile.sub.split('|')[1])
     }else if((profile.sub).includes("twitter")){
       this.createNewUser(profile.nickname, profile.sub,"",profile)
+      localStorage.setItem('access_token', profile.sub.split('|')[1])
     }
     else if((profile.sub).includes("auth0")){
       this.createNewUser(profile.name, profile.sub,"",profile)
+      localStorage.setItem('access_token', profile.sub.split('|')[1])
       console.log(profile)
     }else if((profile.sub).includes("facebook")){
-      this.createNewUser(profile.given_name, profile.sub,"",profile)      
+      this.createNewUser(profile.given_name, profile.sub,"",profile)    
+      localStorage.setItem('access_token', profile.sub.split('|')[1])  
     }
   }
 
