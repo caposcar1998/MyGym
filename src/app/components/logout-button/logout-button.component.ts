@@ -15,5 +15,6 @@ export class LogoutButtonComponent implements OnInit {
 
   logout():void{
     this.auth.logout({returnTo: this.doc.location.origin})
+    localStorage.removeItem('id')
   }
 }

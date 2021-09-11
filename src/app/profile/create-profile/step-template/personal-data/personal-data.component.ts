@@ -23,7 +23,7 @@ export class PersonalDataComponent implements OnInit {
   
   onFilledForm(form: NgForm){
     const value = form.value;
-    this.onCompletedForm.emit(value);
+    localStorage.setItem('personalData', JSON.stringify(value));
   }
   
   currentStep: Observable<StepModel>;
