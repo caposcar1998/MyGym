@@ -1,4 +1,4 @@
-import { Component, OnInit, EventEmitter, Output, Input } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output, Input, ɵCodegenComponentFactoryResolver } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { StepModel } from 'src/app/profile/create-profile/models/step.model';
 import { Observable } from 'rxjs';
@@ -22,7 +22,9 @@ export class ObjectivesComponent implements OnInit {
   
   onFilledForm(form: NgForm){
     const value = form.value;
+    console.log("OnFilledForm" + value);
     localStorage.setItem('objetivo', JSON.stringify(value));
+    this.onSubmit();
   }
   
   currentStep: Observable<StepModel>;
@@ -31,13 +33,6 @@ export class ObjectivesComponent implements OnInit {
 
   onCompleteStep() {
     this.step.isComplete = true;
-  }
-
-
-  onNextStep() {
-    
-    this.onSubmit();
- 
   }
 
 

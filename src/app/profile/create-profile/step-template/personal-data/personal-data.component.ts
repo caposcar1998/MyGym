@@ -23,6 +23,7 @@ export class PersonalDataComponent implements OnInit {
   
   onFilledForm(form: NgForm){
     const value = form.value;
+    console.log(value);
     localStorage.setItem('personalData', JSON.stringify(value));
   }
   
