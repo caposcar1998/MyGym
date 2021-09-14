@@ -5,6 +5,7 @@ import { LandingPageComponent } from './components/landing-page/landing-page.com
 import { ProfileComponent } from './profile/profile.component';
 import { HomeComponent } from './home/home.component';
 import { SecureComponent } from './secure/secure.component';
+import { EditProfileComponent } from './profile/edit-profile/edit-profile.component';
 
 
 const routes: Routes = [
@@ -13,6 +14,7 @@ const routes: Routes = [
   { path: '', component: LandingPageComponent },
   { path: '**', component: HomeComponent, canActivate:[AuthGuard] },
   { path: 'profile', component: ProfileComponent },
+  { path: 'edit-profile', component: EditProfileComponent },
 
 ];
 
