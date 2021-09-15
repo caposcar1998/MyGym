@@ -29,6 +29,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { RegisterButtonComponent } from './components/register-button/register-button.component';
 import { LogoutButtonComponent } from './components/logout-button/logout-button.component';
 import { SecureComponent } from './secure/secure.component';
+import { SlidderComponent } from './home/slidder/slidder.component';
 
 
 const appRoutes: Routes = [
@@ -59,7 +60,8 @@ const ngWizardConfig: NgWizardConfig = {
     RegisterButtonComponent, 
     HeaderComponent, LogoutButtonComponent,
     LandingPageComponent,
-    SecureComponent
+    SecureComponent,
+    SlidderComponent
 
   ],
   imports: [

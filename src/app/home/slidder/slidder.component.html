@@ -1,0 +1,27 @@
+<div class="container" #container>
+	<div class="left" *ngIf="totalPages > 1" (click)="currentPage != 1 && changePage(-1)" [ngClass]="{'disabled':currentPage === 1}"></div>
+	<div class="cards" [ngClass]="{'w-100': totalPages === 1}">
+		<div class="overflow" [ngStyle]="{'width': overflowWidth, 'left': pagePosition}">
+			<div class="card" *ngFor="let i of rutinas; let index = index" [ngStyle]="{'width': cardWidth, 'height': cardHeight}" >
+				<mat-card class="example-card">
+                    <mat-card-header>
+                      <div mat-card-avatar class="example-header-image"></div>
+                      <mat-card-title [ngClass]="'numberOfCard'" >{{i}}</mat-card-title>
+                      <mat-card-subtitle [ngClass]="'titleOfCard'" >{{rutinasNombre[index]}}</mat-card-subtitle>
+                    </mat-card-header>
+                    <img mat-card-image [ngClass]="'imageOfCard'"  src="../../../assets/gym_c.jpg" alt="Foto Chica Fuerte">
+                    <mat-card-content>
+                      <p [ngClass]="'descriptionOfCard'" >
+                        {{rutinasDescripcion[index]}}
+                      </p>
+                    </mat-card-content>
+                    <mat-card-actions>
+                      <button class="button-18" role="button" mat-button>Mandar a mis Rutinas</button>
+                    </mat-card-actions>
+                  </mat-card>
+			</div>
+		</div>
+	</div>
+	<div class="right" *ngIf="totalPages > 1" (click)="currentPage != totalPages && changePage(+1)"
+		[ngClass]="{'disabled':currentPage === totalPages}"></div>
+</div>
