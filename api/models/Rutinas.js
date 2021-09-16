@@ -4,23 +4,14 @@ module.exports = (sequelize, DataTypes) => {
         nombre:{
             type:DataTypes.STRING,
             allowNull: false,
-            validate: {
-                noteEmpty: true
-            }
         },
         intensidad:{
             type:DataTypes.INTEGER,
             allowNull: false,
-            validate: {
-                noteEmpty: true
-            }
         },
         tiempo:{
             type:DataTypes.INTEGER,
             allowNull: false,
-            validate: {
-                noteEmpty: true
-            }
         },
         idUsuario:{
             type:DataTypes.INTEGER(11),
