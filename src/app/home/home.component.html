@@ -9,9 +9,15 @@
       <app-profile>
       </app-profile> 
   </div>
+
+
   <div *ngIf="existeUsuario == 'Existe'" > 
-    Rutinas Recomendadas
+    <h3>Rutina del Día</h3>
+    <app-daily-routine></app-daily-routine>
+    <h3>Rutina del Día</h3>
     <app-slidder></app-slidder>
+    <h3>Rutina del Día</h3>
+    <app-carrousel></app-carrousel>
   </div>
   </div>
 </div>

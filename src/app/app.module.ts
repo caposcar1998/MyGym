@@ -21,7 +21,6 @@ import { PersonalDataComponent } from './profile/create-profile/step-template/pe
 import { BodyTypeComponent } from './profile/create-profile/step-template/body-type/body-type.component';
 import { ObjectivesComponent } from './profile/create-profile/step-template/objectives/objectives.component';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
-
 import { LandingPageComponent } from './components/landing-page/landing-page.component';
 import { environment as env } from 'src/environments/environment';
 import { LoginButtonComponent } from './components/login-button/login-button.component';
@@ -30,6 +29,9 @@ import { RegisterButtonComponent } from './components/register-button/register-b
 import { LogoutButtonComponent } from './components/logout-button/logout-button.component';
 import { SecureComponent } from './secure/secure.component';
 import { SlidderComponent } from './home/slidder/slidder.component';
+import { CarrouselComponent } from './home/carrousel/carrousel.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { DailyRoutineComponent } from './home/daily-routine/daily-routine.component';
 
 
 const appRoutes: Routes = [
@@ -61,7 +63,9 @@ const ngWizardConfig: NgWizardConfig = {
     HeaderComponent, LogoutButtonComponent,
     LandingPageComponent,
     SecureComponent,
-    SlidderComponent
+    SlidderComponent,
+    CarrouselComponent,
+    DailyRoutineComponent
 
   ],
   imports: [
@@ -73,6 +77,7 @@ const ngWizardConfig: NgWizardConfig = {
     NgWizardModule.forRoot(ngWizardConfig),
     FormsModule,
     AuthModule.forRoot({ ...env.auth }),
+    NgbModule,
   ],
   
   providers: [ AuthGuard],
