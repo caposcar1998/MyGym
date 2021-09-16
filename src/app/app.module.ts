@@ -29,6 +29,8 @@ import { HeaderComponent } from './components/header/header.component';
 import { RegisterButtonComponent } from './components/register-button/register-button.component';
 import { LogoutButtonComponent } from './components/logout-button/logout-button.component';
 import { SecureComponent } from './secure/secure.component';
+import { CarruselComponent } from './components/carrusel/carrusel.component';
+import { CardComponent } from './components/card/card.component';
 
 
 const appRoutes: Routes = [
@@ -59,7 +61,9 @@ const ngWizardConfig: NgWizardConfig = {
     RegisterButtonComponent, 
     HeaderComponent, LogoutButtonComponent,
     LandingPageComponent,
-    SecureComponent
+    SecureComponent,
+    CarruselComponent,
+    CardComponent
 
   ],
   imports: [
