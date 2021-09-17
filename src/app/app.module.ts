@@ -21,7 +21,7 @@ import { PersonalDataComponent } from './components/create-profile/step-template
 import { BodyTypeComponent } from './components/create-profile/step-template/body-type/body-type.component';
 import { ObjectivesComponent } from './components/create-profile/step-template/objectives/objectives.component';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
-
+import {MatSnackBarModule} from '@angular/material/snack-bar';
 import { LandingPageComponent } from './components/landing-page/landing-page.component';
 import { environment as env } from 'src/environments/environment';
 import { LoginButtonComponent } from './components/login-button/login-button.component';
@@ -34,6 +34,7 @@ import { CarruselComponent } from './components/carrusel/carrusel.component';
 import { CardComponent } from './components/card/card.component';
 import { EjerciciosListaComponent } from './components/ejercicios-lista/ejercicios-lista.component';
 import { CardEjerciciosComponent } from './components/card-ejercicios/card-ejercicios.component';
+import { ContactUsComponent } from './side-menu/contact-us/contact-us.component';
 
 
 
@@ -70,7 +71,8 @@ const ngWizardConfig: NgWizardConfig = {
     CarruselComponent,
     CardComponent,
     EjerciciosListaComponent,
-    CardEjerciciosComponent
+    CardEjerciciosComponent,
+    ContactUsComponent
 
   ],
   imports: [
@@ -81,6 +83,7 @@ const ngWizardConfig: NgWizardConfig = {
     HttpClientModule,
     NgWizardModule.forRoot(ngWizardConfig),
     FormsModule,
+    MatSnackBarModule,
     AuthModule.forRoot({ ...env.auth }),
   ],
   
