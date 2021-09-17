@@ -7,6 +7,7 @@ import { ProfileComponent } from './profile/profile.component';
 import { HomeComponent } from './home/home.component';
 import { SecureComponent } from './secure/secure.component';
 import { EditProfileComponent } from './edit-profile/edit-profile.component';
+import { RoutinesComponent } from './components/routines/routines.component';
 import { ContactUsComponent } from './side-menu/contact-us/contact-us.component';
 
 
@@ -18,6 +19,7 @@ const routes: Routes = [
   { path: 'profile', component: ProfileComponent, canActivate:[AuthGuard] },
   { path: 'edit-profile', component: EditProfileComponent },
   { path: "ejerciciosLista", component: EjerciciosListaComponent},
+  { path: "routines", component: RoutinesComponent}
   { path: "contactanos", component: ContactUsComponent}
 ];
 
