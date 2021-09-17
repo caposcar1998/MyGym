@@ -1,0 +1,158 @@
+
+
+
+
+<div class="wrapper d-flex align-items-stretch">
+    <div class="sidebar">
+      <app-side-menu></app-side-menu>
+    </div>
+    <div class="content p-4 p-md-5 pt-5">
+        <div class="container">
+            <div class="main-body">
+                <div class="shadow-lg p-3 mb-5 bg-white rounded">
+                    <nav aria-label="breadcrumb" class="main-breadcrumb mb-5 mt-5 text-center">
+                        <figcaption><h1><b>Editar Perfil</b></h1></figcaption>
+                      </nav>
+                    <form (ngSubmit)="onEditData(f)" #f="ngForm">
+                        <div class="row">
+                            <div class="col-lg-4">
+                                <div class="card shadow-sm">
+                                    <div class="card-body">
+                                        <div class="d-flex flex-column align-items-center text-center">
+                                            <img src="https://bit.ly/3kTbBAy" class="img-fluid rounded-circle mx-auto d-block p-2 mt-5" width="150px" >
+                                            <div class="mt-3">
+                                                <label><h2>Foto</h2></label>
+                                                <input class="text-center" type="file"
+                                                    id="avatar" name="photo"
+                                                    accept="image/png, image/jpeg">
+                                            </div>
+                                        </div>
+                                        <hr class="my-4">
+                                    
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-8">
+                                <div class="card shadow-sm">
+                                    <div class="card-body">
+                                        <div class="row mb-3">
+                                            <div class="col-sm-3">
+                                                <h6 class="mb-0">Nombre</h6>
+                                            </div>
+                                            <div class="col-sm-9 text-secondary">
+                                                <input type="text" placeholder="{{userData.nombre}}" class="form-control" name="name" [(ngModel)]="userData.nombre" ngModel>
+                                            </div>
+                                        </div>
+                                        <div class="row mb-3">
+                                            <div class="col-sm-3">
+                                                <h6 class="mb-0">Apellido</h6>
+                                            </div>
+                                            <div class="col-sm-9 text-secondary">
+                                                <input type="text" placeholder="{{userData.apellido}}" class="form-control" name="lastName" [(ngModel)]="userData.apellido" ngModel>
+                                            </div>
+                                        </div>
+                                        <div class="row mb-3">
+                                            <div class="col-sm-3">
+                                                <h6 class="mb-0">Edad</h6>
+                                            </div>
+                                            <div class="col-sm-9 text-secondary">
+                                                <input type="number" placeholder="{{userData.edad}}" class="form-control" name="age" [(ngModel)]="userData.edad" ngModel>
+                                            </div>
+                                        </div>
+                                        <div class="row mb-3">
+                                            <div class="col-sm-3">
+                                                <h6 class="mb-0">Tipo de cuerpo</h6>
+                                            </div>
+                                            <div class="col-sm-9 text-secondary">
+                                                <input type="text" placeholder="{{userData.tipoCuerpo}}" class="form-control" name="body" [(ngModel)]="userData.tipoCuerpo" ngModel>
+                                            </div>
+                                        </div>
+                                        <div class="row mb-3">
+                                            <div class="col-sm-3">
+                                                <h6 class="mb-0">Días a la semana que voy al Gym</h6>
+                                            </div>
+                                            <div class="col-sm-9 text-secondary">
+                                                <select class="form-select" id="days" name="days" [(ngModel)]="userData.diasGym" ngModel>
+                                                    <option value="1">1</option>
+                                                    <option value="2">2</option>
+                                                    <option value="3">3</option>
+                                                    <option value="4">4</option>
+                                                    <option value="5">5</option>
+                                                    <option value="6">6</option>
+                                                    <option value="7">7</option>
+                                                  </select>
+                                            </div>
+                                        </div>
+                                        <div class="row mb-3">
+                                            <div class="col-sm-3">
+                                                <h6 class="mb-0">Intensidad con la que se ejercita</h6>
+                                            </div>
+                                            <div class="col-sm-9 text-secondary">
+                                                <select class="form-select" id="intensity" name="intensity" [(ngModel)]="userData.intensidad" ngModel >
+                                                    <option value="1">1</option>
+                                                    <option value="2">2</option>
+                                                    <option value="3">3</option>
+                                                    <option value="4">4</option>
+                                                    <option value="5">5</option>
+                                                    <option value="6">6</option>
+                                                    <option value="7">7</option>
+                                                    <option value="8">8</option>
+                                                    <option value="9">9</option>
+                                                    <option value="10">10</option>
+                                                  </select>
+                                            </div>
+                                        </div>
+                                        <div class="row mb-3">
+                                            <div class="col-sm-3">
+                                                <h6 class="mb-0">Horas al día que se va al Gym</h6>
+                                            </div>
+                                            <div class="col-sm-9 text-secondary">
+                                                <select class="form-select" id="hours" name="hours" [(ngModel)]="userData.horasGym" ngModel>
+                                                    <option value="0.5">30 minutos</option>
+                                                    <option value="1">1</option>
+                                                    <option value="1.5">1.5 horas</option>
+                                                    <option value="2">2</option>
+                                                    <option value="2.5">2.5 horas</option>
+                                                    <option value="3">3</option>
+                                                    <option value="3.5">3.5 horas</option>
+                                                    <option value="4">4</option>
+                                                    <option value="4.5">4.5 horas</option>
+                                                  </select>
+                                            </div>
+                                        </div>
+                                        <div class="row mb-3">
+                                            <div class="col-sm-3">
+                                                <h6 class="mb-0">Objetivo</h6>
+                                            </div>
+                                            <div class="col-sm-9 text-secondary">
+                                                <select class="form-select" id="goal" name="goal" [(ngModel)]="userData.objetivoCuerpo" ngModel >
+                                                    <option value="Bajar de peso">Bajar de peso</option>
+                                                    <option value="Ganar volumen">Ganar volumen</option>
+                                                    <option value="Ganar masa muscular">Ganar masa muscular</option>
+                                                    <option value="Quemar grasa">Quemar grasa</option>
+                                                  </select>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-sm-3"></div>
+                                            <div class="col-sm-9 text-secondary">
+                                                <input type="button" (click)="onEditData(f)" class="btn btn-primary px-4 mr-2" value="Guardar Cambios">
+                                                <input type="button" (click)="onCancelData()"class="btn btn-danger px-4 ml-2" value="Cancelar">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            
+        </div>        
+    </div>
+</div>

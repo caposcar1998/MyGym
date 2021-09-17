@@ -22,10 +22,8 @@ export class HomeComponent implements OnInit {
 
 
   ngOnInit(): void {
-    this.auth.user$.subscribe( (profile) => (
-      this.checkType(profile)
-      )
-      )
+    this.auth.user$.subscribe( (profile) => (this.checkType(profile)));
+    
   }
 
   createNewUser(profile: String, idAuth: String, urlValue: String,profileAll:any){
@@ -36,7 +34,7 @@ export class HomeComponent implements OnInit {
   checkIfExists(nombre:string,id:string){
     localStorage.setItem("id",id)
     if (nombre){
-      
+    
       this.existeUsuario = "Existe"
     }
   }
@@ -67,6 +65,7 @@ export class HomeComponent implements OnInit {
   }
   
   checkType(profile: any):void{
+    console.log("THE PROFILE ID: " + profile.email)
     if((profile.sub).includes("google-oauth2")){
       this.createNewUser(profile.email, profile.sub,"",profile)
       localStorage.setItem('access_token', profile.sub.split('|')[1])

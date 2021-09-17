@@ -14,12 +14,12 @@ import { HomeComponent } from './home/home.component';
 import { Routes, RouterModule } from '@angular/router';
 import { AuthGuard } from './auth.guard';
 import { ProfileComponent } from './profile/profile.component';
-import { CreateProfileComponent } from './profile/create-profile/create-profile.component';
-import { StepsComponent } from './profile/create-profile/steps/steps.component';
-import { StepTemplateComponent } from './profile/create-profile/step-template/step-template.component';
-import { PersonalDataComponent } from './profile/create-profile/step-template/personal-data/personal-data.component';
-import { BodyTypeComponent } from './profile/create-profile/step-template/body-type/body-type.component';
-import { ObjectivesComponent } from './profile/create-profile/step-template/objectives/objectives.component';
+import { CreateProfileComponent } from './components/create-profile/create-profile.component';
+import { StepsComponent } from './components/create-profile/steps/steps.component';
+import { StepTemplateComponent } from './components/create-profile/step-template/step-template.component';
+import { PersonalDataComponent } from './components/create-profile/step-template/personal-data/personal-data.component';
+import { BodyTypeComponent } from './components/create-profile/step-template/body-type/body-type.component';
+import { ObjectivesComponent } from './components/create-profile/step-template/objectives/objectives.component';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 
 import { LandingPageComponent } from './components/landing-page/landing-page.component';
@@ -29,10 +29,12 @@ import { HeaderComponent } from './components/header/header.component';
 import { RegisterButtonComponent } from './components/register-button/register-button.component';
 import { LogoutButtonComponent } from './components/logout-button/logout-button.component';
 import { SecureComponent } from './secure/secure.component';
+import { EditProfileComponent } from './edit-profile/edit-profile.component';
 import { CarruselComponent } from './components/carrusel/carrusel.component';
 import { CardComponent } from './components/card/card.component';
 import { EjerciciosListaComponent } from './components/ejercicios-lista/ejercicios-lista.component';
 import { CardEjerciciosComponent } from './components/card-ejercicios/card-ejercicios.component';
+
 
 
 const appRoutes: Routes = [
@@ -64,6 +66,7 @@ const ngWizardConfig: NgWizardConfig = {
     HeaderComponent, LogoutButtonComponent,
     LandingPageComponent,
     SecureComponent,
+    EditProfileComponent
     CarruselComponent,
     CardComponent,
     EjerciciosListaComponent,
