@@ -9,7 +9,7 @@ var corsOptions = {
     optionSuccessStatus: 200,
 }
 const {Usuarios} = require("./models")
-
+const {Ejercicios} = require("./models") 
 
 var distDir = __dirname + "/dist/";
 app.use(express.static(distDir));
@@ -100,4 +100,12 @@ app.put("/usuarios/:idUsuario",function(req,res){
         })
         .then((response)=>{res.status(204).json({Status:"Exito al actualizar"})})
         .catch((err)=>{res.status(500).json({Error:err})})
+})
+
+app.get("/ejercicios",function(req,res){
+    Ejercicios.findAll()
+    .then((ejercicios)=>{res.status(200).json({Mensaje:ejercicios})})
+    .catch((err)=>{res.status(500).json({Error:err})})
+    
+    
 })
