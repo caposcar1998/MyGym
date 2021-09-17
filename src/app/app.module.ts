@@ -34,6 +34,8 @@ import { CarruselComponent } from './components/carrusel/carrusel.component';
 import { CardComponent } from './components/card/card.component';
 import { EjerciciosListaComponent } from './components/ejercicios-lista/ejercicios-lista.component';
 import { CardEjerciciosComponent } from './components/card-ejercicios/card-ejercicios.component';
+import { RoutinesComponent } from './components/routines/routines.component';
+import { CardRoutinesComponent } from './components/card-routines/card-routines.component';
 
 
 
@@ -70,7 +72,9 @@ const ngWizardConfig: NgWizardConfig = {
     CarruselComponent,
     CardComponent,
     EjerciciosListaComponent,
-    CardEjerciciosComponent
+    CardEjerciciosComponent,
+    RoutinesComponent,
+    CardRoutinesComponent
 
   ],
   imports: [
