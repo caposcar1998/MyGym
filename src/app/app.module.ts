@@ -31,6 +31,8 @@ import { LogoutButtonComponent } from './components/logout-button/logout-button.
 import { SecureComponent } from './secure/secure.component';
 import { CarruselComponent } from './components/carrusel/carrusel.component';
 import { CardComponent } from './components/card/card.component';
+import { EjerciciosListaComponent } from './components/ejercicios-lista/ejercicios-lista.component';
+import { CardEjerciciosComponent } from './components/card-ejercicios/card-ejercicios.component';
 
 
 const appRoutes: Routes = [
@@ -63,7 +65,9 @@ const ngWizardConfig: NgWizardConfig = {
     LandingPageComponent,
     SecureComponent,
     CarruselComponent,
-    CardComponent
+    CardComponent,
+    EjerciciosListaComponent,
+    CardEjerciciosComponent
 
   ],
   imports: [
