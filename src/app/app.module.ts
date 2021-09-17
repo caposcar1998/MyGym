@@ -29,7 +29,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { RegisterButtonComponent } from './components/register-button/register-button.component';
 import { LogoutButtonComponent } from './components/logout-button/logout-button.component';
 import { SecureComponent } from './secure/secure.component';
-import { EditProfileComponent } from './profile/edit-profile/edit-profile.component';
+import { EditProfileComponent } from './edit-profile/edit-profile.component';
 
 
 const appRoutes: Routes = [

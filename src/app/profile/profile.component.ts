@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { HomeService } from '../home/home.service'
 import { ProfileService } from './profile.service';
 import { AuthService } from '@auth0/auth0-angular';
+import {Router} from '@angular/router';
 
 
 @Component({
@@ -10,36 +12,28 @@ import { AuthService } from '@auth0/auth0-angular';
 })
 export class ProfileComponent implements OnInit {
 
-  name: string = '';
-  lastName: string = '';
-  age: number = 0;
-  body: string = '';
-  days: number = 0;
-  hours: number = 0.0;
-  intensity: number = 0;
-  photo: string = '';
-  goal: string = '';
+  userData = <any> {};
+  load: boolean = false;
 
-  constructor(private profileService: ProfileService,public auth: AuthService) { }
+  constructor(public auth: AuthService, 
+    private profileService: ProfileService, private router: Router ) { }
 
 
   ngOnInit(): void {
+    
     this.auth.user$.subscribe( (profile) => (this.checkUser(profile)));
   }
 
-  getData(userData:any){
-    if(userData.id){
-      this.name = userData.nombre;
-      this.lastName = userData.apellido;
-      this.age = userData.edad;
-      this.body = userData.tipoCuerpo;
-      this.days = userData.diasGym;
-      this.hours  = userData.horasGym;
-      this.intensity = userData.intensidad;
-      this.photo = userData.foto;
-      this.goal = userData.objetivoCuerpo;
+  getData(values:any){
+    if(values.id){
+      this.userData = values;
+  
     }
     
+  }
+
+  onEdit(){
+    this.router.navigate(['/edit-profile']);
   }
 
   checkUser(profile:any){
