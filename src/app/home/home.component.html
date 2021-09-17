@@ -5,8 +5,10 @@
     <app-side-menu></app-side-menu>
   </div>
   <div class="content p-4 p-md-5 pt-5">
-  <div *ngIf="existeUsuario == 'No existe'" > <app-profile></app-profile> </div>
-
+  <div *ngIf="existeUsuario == 'No existe'" > <app-create-profile></app-create-profile> </div>
+  <div *ngIf="existeUsuario == 'Existe'" >
+  
+  
   <h1>Rutina por día</h1>
 <div class="container">
   <div class="row">
@@ -34,3 +36,6 @@
   <app-carrusel></app-carrusel>
   </div>
 </div>
+  
+   
+    </div>

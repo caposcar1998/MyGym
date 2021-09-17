@@ -66,7 +66,7 @@ const ngWizardConfig: NgWizardConfig = {
     HeaderComponent, LogoutButtonComponent,
     LandingPageComponent,
     SecureComponent,
-    EditProfileComponent
+    EditProfileComponent,
     CarruselComponent,
     CardComponent,
     EjerciciosListaComponent,
