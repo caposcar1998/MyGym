@@ -1,0 +1,87 @@
+
+<!--Carousel Wrapper-->
+<div id="multi-item-example" class="carousel slide carousel-multi-item" data-ride="carousel">
+
+  <!--Controls-->
+  <div class="controls-top">
+    <a class="btn-floating" href="#multi-item-example" data-slide="prev"><i class="fas fa-chevron-left"></i></a>
+    <a class="btn-floating" href="#multi-item-example" data-slide="next"><i
+        class="fas fa-chevron-right"></i></a>
+  </div>
+  <!--/.Controls-->
+
+  <!--Indicators-->
+  <ol class="carousel-indicators">
+    <li data-target="#multi-item-example" data-slide-to="0" class="active"></li>
+    <li data-target="#multi-item-example" data-slide-to="1"></li>
+    
+  </ol>
+  <!--/.Indicators-->
+
+  <!--Slides-->
+  <div class="carousel-inner" role="listbox">
+
+    <!--First slide-->
+    <div class="carousel-item active">
+
+        <app-card [size]=size        [foto]=foto
+       [titulo]=titulo
+       [tiempo]=tiempo
+       [descripcion]=descripcion></app-card>
+
+        <app-card [size]=size        [foto]=foto
+       [titulo]=titulo
+       [tiempo]=tiempo
+       [descripcion]=descripcion></app-card>
+      
+        <app-card [size]=size        [foto]=foto
+       [titulo]=titulo
+       [tiempo]=tiempo
+       [descripcion]=descripcion></app-card>
+      
+       <app-card [size]=size        [foto]=foto
+       [titulo]=titulo
+       [tiempo]=tiempo
+       [descripcion]=descripcion></app-card>
+
+    </div>
+    <!--/.First slide-->
+
+    <!--Second slide-->
+    <div class="carousel-item">
+
+      <app-card [size]=size
+      [foto]=foto
+       [titulo]=titulo
+       [tiempo]=tiempo
+       [descripcion]=descripcion>
+       </app-card>
+
+      <app-card [size]=size
+       [foto]=foto
+       [titulo]=titulo
+       [tiempo]=tiempo
+       [descripcion]=descripcion></app-card>
+
+      <app-card [size]=size        
+       [foto]=foto
+       [titulo]=titulo
+       [tiempo]=tiempo
+       [descripcion]=descripcion></app-card>
+      
+      <app-card [size]=size        
+       [foto]=foto
+       [titulo]=titulo
+       [tiempo]=tiempo
+       [descripcion]=descripcion></app-card>
+
+    </div>
+    <!--/.Second slide-->
+
+   
+
+  </div>
+  <!--/.Slides-->
+
+</div>
+<!--/.Carousel Wrapper-->
