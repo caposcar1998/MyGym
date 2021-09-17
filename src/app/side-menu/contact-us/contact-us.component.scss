@@ -1,0 +1,42 @@
+.sidebar {
+    position:fixed;
+    margin: 0;
+    padding: 0;
+    top: 0px;
+    left: 0px;
+    width: 28vh;
+    background-color: #2962ff;
+    height: 100%;
+}
+.moveRight {
+    position: absolute;
+}
+
+
+.form-control {
+    border: 1px solid #cfd1d8;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    font-size: .825rem;
+    background: #ffffff;
+    color: #2e323c;
+}
+
+.card {
+    background: #ffffff;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+}
+
+.wrapper {
+    width: 100%;   
+}
+
+.content{
+    width: 100%;
+    margin-left: 28vh;
+    margin-top: 5vh;
+}
