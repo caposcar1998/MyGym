@@ -35,8 +35,7 @@
             ],
             "styles": [
               "src/styles.scss",
-              "./node_modules/bootstrap/dist/css/bootstrap.min.css",
-              "./node_modules/boostrap-icons/font/boostrap-icons.css"
+              "./node_modules/bootstrap/dist/css/bootstrap.min.css"
             ],
             "scripts": [
               "./node_modules/jquery/dist/jquery.min.js",
@@ -107,8 +106,7 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss",
-              "./node_modules/boostrap-icons/font/boostrap-icons.css"
+              "src/styles.scss"
             ],
             "scripts": []
           }
