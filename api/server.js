@@ -23,9 +23,6 @@ db.sequelize.sync().then((req)=>{
     });
 })
 
-
-
-
 app.post("/usuarios",function(req,res){
     const correo = req.body.correo
     const idAuth = req.body.idAuth

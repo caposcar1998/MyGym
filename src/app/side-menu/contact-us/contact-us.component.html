@@ -1,0 +1,76 @@
+<div class="wrapper d-flex align-items-stretch">
+    <div class="sidebar">
+      <app-side-menu></app-side-menu>
+    </div>
+<section class="moveRight">
+
+    <!--Section heading-->
+    <h2 class="h1-responsive font-weight-bold text-right my-4">Contáctanos</h2>
+    <!--Section description-->
+    <p class="text-center  w-responsive mx-auto mb-5">¿Tienes alguna sugerencia o problema? ¡No dudes en contactarnos!</p>
+
+    <div class="row">
+        <div class="col-md-9 mb-md-0 mb-5">
+            <form target="_blank" action="https://formsubmit.co/mygym.labweb@gmail.com" method="POST">
+
+                <!--Grid row-->
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="md-form mb-0">
+                            <input type="text" name="name" class="form-control" placeholder="Óscar Kun" #nombre>
+                            <label for="name" class="">Tu nombre</label>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="md-form mb-0">
+                            <input type="text" name="email" class="form-control" placeholder="oski@oski.com" #email>
+                            <label for="email" class="">Tu correo electrónico</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="md-form mb-0">
+                            <input type="text" name="subject" class="form-control" placeholder="Problema en Correo" #asunto>
+                            <label for="subject" >Asunto</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="md-form">
+                            <textarea type="text" name="message" rows="4" placeholder="Aumentar Seguridad" class="form-control md-textarea" #mensaje></textarea>
+                            <label for="message">Tú mensaje</label>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="text-center text-md-left">
+                    <button type="submit" class="btn btn-primary" (click)="sendMailUser(nombre.value, email.value, asunto.value, mensaje.value)">Enviar</button>
+                </div>
+            </form>
+
+            
+        </div>
+
+        <div class="col-md-3 text-center">
+            <ul class="list-unstyled mb-0">
+                <li><i class="fas fa-map-marker-alt fa-2x"></i>
+                    <p>Ciudad de México, Zaragosa. 14920</p>
+                </li>
+
+                <li><i class="fas fa-phone mt-4 fa-2x"></i>
+                    <p>+ 52 55 1505 2254</p>
+                </li>
+
+                <li><i class="fas fa-envelope mt-4 fa-2x"></i>
+                    <p>mygym@mygym.com</p>
+                </li>
+            </ul>
+        </div>
+        <!--Grid column-->
+
+    </div>
+
+</section>
+</div>
