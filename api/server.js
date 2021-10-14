@@ -97,6 +97,16 @@ app.put("/usuarios/:idUsuario",function(req,res){
         })
         .then((response)=>{res.status(204).json({Status:"Exito al actualizar"})})
         .catch((err)=>{res.status(500).json({Error:err})})
+
+        //Generar rutina
+        if (tipoCuerpo == "Ectomorfo"){
+            crearRutinaEctomorfo(objetivoCuerpo, diasGym, horasGym, intensidad)
+        }else if (tipoCuerpo == "Mesoformo") {
+            crearRutinaMesomorfo(objetivoCuerpo)
+        } else {
+            crearRutinaEndomorfo(objetivoCuerpo)
+        }
+        
 })
 
 app.get("/ejercicios",function(req,res){
