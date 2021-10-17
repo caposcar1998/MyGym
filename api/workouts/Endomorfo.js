@@ -4,7 +4,7 @@ const {EjerciciosRutinas} = require ("../models")
 const {Rutinas} = require ("../models")
 
 async function crearRutinaEndomorfo(objetivoCuerpo, diasGym, horasGym, intensidad, idUsuario, nombreUsuario){
-    if (objetivoCuerpo == "BajarPeso"){
+    if (objetivoCuerpo == "Bajar de Peso"){
         await rutinaBajarDePeso(diasGym, horasGym, intensidad, idUsuario, nombreUsuario, objetivoCuerpo)
     }if (objetivoCuerpo == "Tonificar") {
         await rutinaTonificar(diasGym, horasGym, intensidad, idUsuario, nombreUsuario, objetivoCuerpo)

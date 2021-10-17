@@ -98,17 +98,25 @@ app.put("/usuarios/:idUsuario",function(req,res){
         }, 
         {where: {id:id}
         })
-        .then((response)=>{res.status(204).json({Status:"Exito al actualizar"})})
+        .then(()=>{
+            if (tipoCuerpo == "Ectomorfo"){
+                ectomorfo.crearRutinaEctomorfo(objetivoCuerpo, diasGym, horasGym, intensidad, id, nombre).then(resu =>
+                 {res.status(200).json({Mensaje:"se crea"})}
+                 )
+             } else if (tipoCuerpo == "Endomorfo"){
+                 endomorfo.crearRutinaEndomorfo(objetivoCuerpo, diasGym, horasGym, intensidad, id, nombre).then(resu =>
+                     {res.status(200).json({Mensaje:"se crea"})}
+                     )
+             } else{
+                 mesoformo.crearRutinaMesoformo(objetivoCuerpo, diasGym, horasGym, intensidad, id, nombre).then(resu =>
+                     {res.status(200).json({Mensaje:"se crea"})}
+                     )
+             }
+        })
         .catch((err)=>{res.status(500).json({Error:err})})
 
         //Generar rutina
-        if (tipoCuerpo == "Ectomorfo"){
-            crearRutinaEctomorfo(objetivoCuerpo, diasGym, horasGym, intensidad)
-        }else if (tipoCuerpo == "Mesoformo") {
-            crearRutinaMesomorfo(objetivoCuerpo)
-        } else {
-            crearRutinaEndomorfo(objetivoCuerpo)
-        }
+
         
 })
 
@@ -120,26 +128,3 @@ app.get("/ejercicios",function(req,res){
     
 })
 
-app.post("/rutinas",function(req,res){
-    const tipoCuerpo = req.body.tipoCuerpo
-    const objetivoCuerpo = req.body.objetivoCuerpo
-    const diasGym = req.body.diasGym
-    const horasGym = req.body.horasGym
-    const intensidad = req.body.intensidad
-    const idUsuario = req.body.idUsuario
-    const nombreUsuario = req.body.nombreUsuario
-    if (tipoCuerpo == "Ectomorfo"){
-       ectomorfo.crearRutinaEctomorfo(objetivoCuerpo, diasGym, horasGym, intensidad, idUsuario, nombreUsuario,res).then(resu =>
-        {res.status(200).json({Mensaje:"se crea"})}
-        )
-    } else if (tipoCuerpo == "Endomorfo"){
-        endomorfo.crearRutinaEndomorfo(objetivoCuerpo, diasGym, horasGym, intensidad, idUsuario, nombreUsuario,res).then(resu =>
-            {res.status(200).json({Mensaje:"se crea"})}
-            )
-    } else{
-        mesoformo.crearRutinaMesoformo(objetivoCuerpo, diasGym, horasGym, intensidad, idUsuario, nombreUsuario,res).then(resu =>
-            {res.status(200).json({Mensaje:"se crea"})}
-            )
-    }
-    
-});
