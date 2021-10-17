@@ -12,7 +12,7 @@ const {Usuarios} = require("./models")
 const {Ejercicios} = require("./models") 
 const ectomorfo = require("./workouts/Ectomorfo.js")
 const endomorfo = require("./workouts/Endomorfo.js")
-const mesoformo = require("./workouts/Mesoformo.js")
+const mesoformo = require("./workouts/Mesomorfo.js")
 
 var distDir = __dirname + "/dist/";
 app.use(express.static(distDir));

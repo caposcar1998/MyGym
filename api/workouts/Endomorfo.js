@@ -62,7 +62,7 @@ function calcularEjerciciosDiaHoras(diasGym, horasGym, nombreUsuario, tipoRutina
     if (diasGym == 1){
         if (horasGym == 1 || horasGym == 1.5){
             //Query 5 ejercicios de todo
-            crearRutina(nombreUsuario, tipoRutina, idUsuario, diasGym, horasGym).then(res => {
+             crearRutina(nombreUsuario, tipoRutina, idUsuario, diasGym, horasGym, tiempo, repeticiones).then(res => {
                 ejercicioAleatorio("Hombros", res.id,repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
                 ejercicioAleatorio("Pectorales", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
                 ejercicioAleatorio("Biceps", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
@@ -73,7 +73,7 @@ function calcularEjerciciosDiaHoras(diasGym, horasGym, nombreUsuario, tipoRutina
 
         }else if (horasGym == 2 || horasGym == 2.5){
             //Query 8 ejercicios de todo            
-            crearRutina(nombreUsuario, tipoRutina, idUsuario, diasGym, horasGym).then(res => {
+             crearRutina(nombreUsuario, tipoRutina, idUsuario, diasGym, horasGym, tiempo, repeticiones).then(res => {
                 ejercicioAleatorio("Hombros", res.id,repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
                 ejercicioAleatorio("Pectorales", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
                 ejercicioAleatorio("Biceps", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
@@ -86,7 +86,7 @@ function calcularEjerciciosDiaHoras(diasGym, horasGym, nombreUsuario, tipoRutina
             })
         }else if (horasGym == 3 || horasGym == 3.5){
             //Query 12 ejercicios de todo
-            crearRutina(nombreUsuario, tipoRutina, idUsuario, diasGym, horasGym).then(res => {
+             crearRutina(nombreUsuario, tipoRutina, idUsuario, diasGym, horasGym, tiempo, repeticiones).then(res => {
                 ejercicioAleatorio("Hombros", res.id,repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
                 ejercicioAleatorio("Pectorales", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
                 ejercicioAleatorio("Biceps", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
@@ -103,7 +103,7 @@ function calcularEjerciciosDiaHoras(diasGym, horasGym, nombreUsuario, tipoRutina
             })
         }else if (horasGym == 4 || horasGym == 4.5){
             //Query 15 ejercicios de todo
-            crearRutina(nombreUsuario, tipoRutina, idUsuario, diasGym, horasGym).then(res => {
+             crearRutina(nombreUsuario, tipoRutina, idUsuario, diasGym, horasGym, tiempo, repeticiones).then(res => {
                 ejercicioAleatorio("Hombros", res.id,repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
                 ejercicioAleatorio("Pectorales", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
                 ejercicioAleatorio("Biceps", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
@@ -125,7 +125,7 @@ function calcularEjerciciosDiaHoras(diasGym, horasGym, nombreUsuario, tipoRutina
     }else if (diasGym == 2){
         if (horasGym == 1 || horasGym == 1.5){
             //Query 5 arriba y 5 abajo
-            crearRutina(nombreUsuario, tipoRutina, idUsuario, diasGym, horasGym).then(res => {
+             crearRutina(nombreUsuario, tipoRutina, idUsuario, diasGym, horasGym, tiempo, repeticiones).then(res => {
                 ejercicioAleatorio("Hombros", res.id,repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
                 ejercicioAleatorio("Pectorales", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
                 ejercicioAleatorio("Biceps", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
@@ -133,7 +133,7 @@ function calcularEjerciciosDiaHoras(diasGym, horasGym, nombreUsuario, tipoRutina
                 ejercicioAleatorio("Cuadriceps", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
                 agregarCardio(tiempoCardio, res.id).then(() => console.log(pasa))
             })
-            crearRutina(nombreUsuario, tipoRutina, idUsuario, diasGym, horasGym).then(res => {
+             crearRutina(nombreUsuario, tipoRutina, idUsuario, diasGym, horasGym, tiempo, repeticiones).then(res => {
                 ejercicioAleatorio("Abdomen", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
                 ejercicioAleatorio("Cuadriceps", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
                 ejercicioAleatorio("Todo", res.id).then(() => {console.log("entra")})
@@ -143,7 +143,7 @@ function calcularEjerciciosDiaHoras(diasGym, horasGym, nombreUsuario, tipoRutina
             })
         }else if (horasGym == 2 || horasGym == 2.5){
             //Query 8 arriba y 8 abajo
-            crearRutina(nombreUsuario, tipoRutina, idUsuario, diasGym, horasGym).then(res => {
+             crearRutina(nombreUsuario, tipoRutina, idUsuario, diasGym, horasGym, tiempo, repeticiones).then(res => {
                 ejercicioAleatorio("Hombros", res.id,repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
                 ejercicioAleatorio("Pectorales", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
                 ejercicioAleatorio("Biceps", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
@@ -154,7 +154,7 @@ function calcularEjerciciosDiaHoras(diasGym, horasGym, nombreUsuario, tipoRutina
                 ejercicioAleatorio("Cuadriceps", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
                 agregarCardio(tiempoCardio, res.id).then(() => console.log(pasa))
             })
-            crearRutina(nombreUsuario, tipoRutina, idUsuario, diasGym, horasGym).then(res => {
+             crearRutina(nombreUsuario, tipoRutina, idUsuario, diasGym, horasGym, tiempo, repeticiones).then(res => {
                 ejercicioAleatorio("Abdomen", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
                 ejercicioAleatorio("Cuadriceps", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
                 ejercicioAleatorio("Todo", res.id).then(() => {console.log("entra")})
@@ -166,7 +166,7 @@ function calcularEjerciciosDiaHoras(diasGym, horasGym, nombreUsuario, tipoRutina
                 agregarCardio(tiempoCardio, res.id).then(() => console.log(pasa))
             })
         }else if (horasGym == 3 || horasGym == 3.5){
-            crearRutina(nombreUsuario, tipoRutina, idUsuario, diasGym, horasGym).then(res => {
+             crearRutina(nombreUsuario, tipoRutina, idUsuario, diasGym, horasGym, tiempo, repeticiones).then(res => {
                 ejercicioAleatorio("Abdomen", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
                 ejercicioAleatorio("Cuadriceps", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
                 ejercicioAleatorio("Todo", res.id).then(() => {console.log("entra")})
@@ -179,7 +179,7 @@ function calcularEjerciciosDiaHoras(diasGym, horasGym, nombreUsuario, tipoRutina
                 ejercicioAleatorio("Cuadriceps", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
                 agregarCardio(tiempoCardio, res.id).then(() => console.log(pasa))
             })
-            crearRutina(nombreUsuario, tipoRutina, idUsuario, diasGym, horasGym).then(res => {
+             crearRutina(nombreUsuario, tipoRutina, idUsuario, diasGym, horasGym, tiempo, repeticiones).then(res => {
                 ejercicioAleatorio("Abdomen", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
                 ejercicioAleatorio("Cuadriceps", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
                 ejercicioAleatorio("Todo", res.id).then(() => {console.log("entra")})
@@ -195,7 +195,7 @@ function calcularEjerciciosDiaHoras(diasGym, horasGym, nombreUsuario, tipoRutina
             
         }else if (horasGym == 4 || horasGym == 4.5){
             //Query 15 arriba y 15 abajo
-            crearRutina(nombreUsuario, tipoRutina, idUsuario, diasGym, horasGym).then(res => {
+             crearRutina(nombreUsuario, tipoRutina, idUsuario, diasGym, horasGym, tiempo, repeticiones).then(res => {
                 ejercicioAleatorio("Abdomen", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
                 ejercicioAleatorio("Cuadriceps", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
                 ejercicioAleatorio("Todo", res.id).then(() => {console.log("entra")})
@@ -213,7 +213,7 @@ function calcularEjerciciosDiaHoras(diasGym, horasGym, nombreUsuario, tipoRutina
                 ejercicioAleatorio("Cuadriceps", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
                 agregarCardio(tiempoCardio, res.id).then(() => console.log(pasa))
             })
-            crearRutina(nombreUsuario, tipoRutina, idUsuario, diasGym, horasGym).then(res => {
+             crearRutina(nombreUsuario, tipoRutina, idUsuario, diasGym, horasGym, tiempo, repeticiones).then(res => {
                 ejercicioAleatorio("Abdomen", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
                 ejercicioAleatorio("Cuadriceps", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
                 ejercicioAleatorio("Todo", res.id).then(() => {console.log("entra")})
@@ -236,7 +236,7 @@ function calcularEjerciciosDiaHoras(diasGym, horasGym, nombreUsuario, tipoRutina
     }else if (diasGym == 3){
         if (horasGym == 1 || horasGym == 1.5){
             //Query 5 brazo y hombro, 5 espalda y pecho, 5 pierna
-            crearRutina(nombreUsuario, tipoRutina, idUsuario, diasGym, horasGym).then(res => {
+             crearRutina(nombreUsuario, tipoRutina, idUsuario, diasGym, horasGym, tiempo, repeticiones).then(res => {
                 ejercicioAleatorio("Hombros", res.id,repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
                 ejercicioAleatorio("Cuadriceps", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
                 ejercicioAleatorio("Bíceps", res.id).then(() => {console.log("entra")})
@@ -244,7 +244,7 @@ function calcularEjerciciosDiaHoras(diasGym, horasGym, nombreUsuario, tipoRutina
                 ejercicioAleatorio("Bíceps", res.id).then(() => {console.log("entra")})
                 agregarCardio(tiempoCardio, res.id).then(() => console.log(pasa))
             })
-            crearRutina(nombreUsuario, tipoRutina, idUsuario, diasGym, horasGym).then(res => {
+             crearRutina(nombreUsuario, tipoRutina, idUsuario, diasGym, horasGym, tiempo, repeticiones).then(res => {
                 ejercicioAleatorio("Pectorales", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
                 ejercicioAleatorio("Pectorales", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
                 ejercicioAleatorio("Pectorales", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
@@ -252,7 +252,7 @@ function calcularEjerciciosDiaHoras(diasGym, horasGym, nombreUsuario, tipoRutina
                 ejercicioAleatorio("Abdomen", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
                 agregarCardio(tiempoCardio, res.id).then(() => console.log(pasa))
             })
-            crearRutina(nombreUsuario, tipoRutina, idUsuario, diasGym, horasGym).then(res => {
+             crearRutina(nombreUsuario, tipoRutina, idUsuario, diasGym, horasGym, tiempo, repeticiones).then(res => {
                 ejercicioAleatorio("Abdomen", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
                 ejercicioAleatorio("Cuadriceps", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
                 ejercicioAleatorio("Todo", res.id).then(() => {console.log("entra")})
@@ -263,7 +263,7 @@ function calcularEjerciciosDiaHoras(diasGym, horasGym, nombreUsuario, tipoRutina
             return {tiempoEjercicio: "8 min"}
         }else if (horasGym == 2 || horasGym == 2.5){
             //Query 8 brazo y hombro, 8 espalda y pecho, 8 pierna
-            crearRutina(nombreUsuario, tipoRutina, idUsuario, diasGym, horasGym).then(res => {
+             crearRutina(nombreUsuario, tipoRutina, idUsuario, diasGym, horasGym, tiempo, repeticiones).then(res => {
                 ejercicioAleatorio("Hombros", res.id,repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
                 ejercicioAleatorio("Cuadriceps", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
                 ejercicioAleatorio("Bíceps", res.id).then(() => {console.log("entra")})
@@ -274,7 +274,7 @@ function calcularEjerciciosDiaHoras(diasGym, horasGym, nombreUsuario, tipoRutina
                 ejercicioAleatorio("Bíceps", res.id).then(() => {console.log("entra")})
                 agregarCardio(tiempoCardio, res.id).then(() => console.log(pasa))
             })
-            crearRutina(nombreUsuario, tipoRutina, idUsuario, diasGym, horasGym).then(res => {
+             crearRutina(nombreUsuario, tipoRutina, idUsuario, diasGym, horasGym, tiempo, repeticiones).then(res => {
                 ejercicioAleatorio("Pectorales", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
                 ejercicioAleatorio("Pectorales", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
                 ejercicioAleatorio("Pectorales", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
@@ -285,7 +285,7 @@ function calcularEjerciciosDiaHoras(diasGym, horasGym, nombreUsuario, tipoRutina
                 ejercicioAleatorio("Bíceps", res.id).then(() => {console.log("entra")})
                 agregarCardio(tiempoCardio, res.id).then(() => console.log(pasa))
             })
-            crearRutina(nombreUsuario, tipoRutina, idUsuario, diasGym, horasGym).then(res => {
+             crearRutina(nombreUsuario, tipoRutina, idUsuario, diasGym, horasGym, tiempo, repeticiones).then(res => {
                 ejercicioAleatorio("Abdomen", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
                 ejercicioAleatorio("Cuadriceps", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
                 ejercicioAleatorio("Todo", res.id).then(() => {console.log("entra")})
@@ -299,7 +299,7 @@ function calcularEjerciciosDiaHoras(diasGym, horasGym, nombreUsuario, tipoRutina
             return {tiempoEjercicio: "12 min"}
         }else if (horasGym == 3 || horasGym == 3.5){
             //Query 10 brazo y hombro, 10 espalda y pecho, 10 pierna
-            crearRutina(nombreUsuario, tipoRutina, idUsuario, diasGym, horasGym).then(res => {
+             crearRutina(nombreUsuario, tipoRutina, idUsuario, diasGym, horasGym, tiempo, repeticiones).then(res => {
                 ejercicioAleatorio("Hombros", res.id,repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
                 ejercicioAleatorio("Cuadriceps", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
                 ejercicioAleatorio("Bíceps", res.id).then(() => {console.log("entra")})
@@ -312,7 +312,7 @@ function calcularEjerciciosDiaHoras(diasGym, horasGym, nombreUsuario, tipoRutina
                 ejercicioAleatorio("Bíceps", res.id).then(() => {console.log("entra")})
                 agregarCardio(tiempoCardio, res.id).then(() => console.log(pasa))
             })
-            crearRutina(nombreUsuario, tipoRutina, idUsuario, diasGym, horasGym).then(res => {
+             crearRutina(nombreUsuario, tipoRutina, idUsuario, diasGym, horasGym, tiempo, repeticiones).then(res => {
                 ejercicioAleatorio("Pectorales", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
                 ejercicioAleatorio("Pectorales", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
                 ejercicioAleatorio("Pectorales", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
@@ -325,7 +325,7 @@ function calcularEjerciciosDiaHoras(diasGym, horasGym, nombreUsuario, tipoRutina
                 ejercicioAleatorio("Bíceps", res.id).then(() => {console.log("entra")})
                 agregarCardio(tiempoCardio, res.id).then(() => console.log(pasa))
             })
-            crearRutina(nombreUsuario, tipoRutina, idUsuario, diasGym, horasGym).then(res => {
+             crearRutina(nombreUsuario, tipoRutina, idUsuario, diasGym, horasGym, tiempo, repeticiones).then(res => {
                 ejercicioAleatorio("Abdomen", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
                 ejercicioAleatorio("Cuadriceps", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
                 ejercicioAleatorio("Todo", res.id).then(() => {console.log("entra")})
@@ -340,7 +340,7 @@ function calcularEjerciciosDiaHoras(diasGym, horasGym, nombreUsuario, tipoRutina
             })
             return {tiempoEjercicio: "14 min"}
         }else if (horasGym == 4 || horasGym == 4.5){
-            crearRutina(nombreUsuario, tipoRutina, idUsuario, diasGym, horasGym).then(res => {
+             crearRutina(nombreUsuario, tipoRutina, idUsuario, diasGym, horasGym, tiempo, repeticiones).then(res => {
                 ejercicioAleatorio("Hombros", res.id,repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
                 ejercicioAleatorio("Cuadriceps", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
                 ejercicioAleatorio("Bíceps", res.id).then(() => {console.log("entra")})
@@ -355,7 +355,7 @@ function calcularEjerciciosDiaHoras(diasGym, horasGym, nombreUsuario, tipoRutina
                 ejercicioAleatorio("Bíceps", res.id).then(() => {console.log("entra")})
                 agregarCardio(tiempoCardio, res.id).then(() => console.log(pasa))
             })
-            crearRutina(nombreUsuario, tipoRutina, idUsuario, diasGym, horasGym).then(res => {
+             crearRutina(nombreUsuario, tipoRutina, idUsuario, diasGym, horasGym, tiempo, repeticiones).then(res => {
                 ejercicioAleatorio("Pectorales", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
                 ejercicioAleatorio("Pectorales", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
                 ejercicioAleatorio("Pectorales", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
@@ -370,7 +370,7 @@ function calcularEjerciciosDiaHoras(diasGym, horasGym, nombreUsuario, tipoRutina
                 ejercicioAleatorio("Bíceps", res.id).then(() => {console.log("entra")})
                 agregarCardio(tiempoCardio, res.id).then(() => console.log(pasa))
             })
-            crearRutina(nombreUsuario, tipoRutina, idUsuario, diasGym, horasGym).then(res => {
+             crearRutina(nombreUsuario, tipoRutina, idUsuario, diasGym, horasGym, tiempo, repeticiones).then(res => {
                 ejercicioAleatorio("Abdomen", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
                 ejercicioAleatorio("Cuadriceps", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
                 ejercicioAleatorio("Todo", res.id).then(() => {console.log("entra")})
@@ -390,7 +390,7 @@ function calcularEjerciciosDiaHoras(diasGym, horasGym, nombreUsuario, tipoRutina
 
     }else if (diasGym == 4){
         if (horasGym == 1 || horasGym == 1.5){
-            crearRutina(nombreUsuario, tipoRutina, idUsuario, diasGym, horasGym).then(res => {
+             crearRutina(nombreUsuario, tipoRutina, idUsuario, diasGym, horasGym, tiempo, repeticiones).then(res => {
                 ejercicioAleatorio("Hombros", res.id,repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
                 ejercicioAleatorio("Cuadriceps", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
                 ejercicioAleatorio("Bíceps", res.id).then(() => {console.log("entra")})
@@ -398,7 +398,7 @@ function calcularEjerciciosDiaHoras(diasGym, horasGym, nombreUsuario, tipoRutina
                 ejercicioAleatorio("Bíceps", res.id).then(() => {console.log("entra")})
                 agregarCardio(tiempoCardio, res.id).then(() => console.log(pasa))
             })
-            crearRutina(nombreUsuario, tipoRutina, idUsuario, diasGym, horasGym).then(res => {
+             crearRutina(nombreUsuario, tipoRutina, idUsuario, diasGym, horasGym, tiempo, repeticiones).then(res => {
                 ejercicioAleatorio("Pectorales", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
                 ejercicioAleatorio("Pectorales", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
                 ejercicioAleatorio("Pectorales", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
@@ -406,7 +406,7 @@ function calcularEjerciciosDiaHoras(diasGym, horasGym, nombreUsuario, tipoRutina
                 ejercicioAleatorio("Abdomen", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
                 agregarCardio(tiempoCardio, res.id).then(() => console.log(pasa))
             })
-            crearRutina(nombreUsuario, tipoRutina, idUsuario, diasGym, horasGym).then(res => {
+             crearRutina(nombreUsuario, tipoRutina, idUsuario, diasGym, horasGym, tiempo, repeticiones).then(res => {
                 ejercicioAleatorio("Abdomen", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
                 ejercicioAleatorio("Cuadriceps", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
                 ejercicioAleatorio("Todo", res.id).then(() => {console.log("entra")})
@@ -414,7 +414,7 @@ function calcularEjerciciosDiaHoras(diasGym, horasGym, nombreUsuario, tipoRutina
                 ejercicioAleatorio("Cuadriceps", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
                 agregarCardio(tiempoCardio, res.id).then(() => console.log(pasa))
             })
-            crearRutina(nombreUsuario, tipoRutina, idUsuario, diasGym, horasGym).then(res => {
+             crearRutina(nombreUsuario, tipoRutina, idUsuario, diasGym, horasGym, tiempo, repeticiones).then(res => {
                 ejercicioAleatorio("Abdomen", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
                 ejercicioAleatorio("Abdomen", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
                 ejercicioAleatorio("Todo", res.id).then(() => {console.log("entra")})
@@ -426,7 +426,7 @@ function calcularEjerciciosDiaHoras(diasGym, horasGym, nombreUsuario, tipoRutina
             return {tiempoEjercicio: "8 min"}
         }else if (horasGym == 2 || horasGym == 2.5){
             //Query 8 brazo y hombro, 8 espalda , 8 pecho, 8 pierna
-            crearRutina(nombreUsuario, tipoRutina, idUsuario, diasGym, horasGym).then(res => {
+             crearRutina(nombreUsuario, tipoRutina, idUsuario, diasGym, horasGym, tiempo, repeticiones).then(res => {
                 ejercicioAleatorio("Hombros", res.id,repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
                 ejercicioAleatorio("Cuadriceps", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
                 ejercicioAleatorio("Bíceps", res.id).then(() => {console.log("entra")})
@@ -437,7 +437,7 @@ function calcularEjerciciosDiaHoras(diasGym, horasGym, nombreUsuario, tipoRutina
                 ejercicioAleatorio("Bíceps", res.id).then(() => {console.log("entra")})
                 agregarCardio(tiempoCardio, res.id).then(() => console.log(pasa))
             })
-            crearRutina(nombreUsuario, tipoRutina, idUsuario, diasGym, horasGym).then(res => {
+             crearRutina(nombreUsuario, tipoRutina, idUsuario, diasGym, horasGym, tiempo, repeticiones).then(res => {
                 ejercicioAleatorio("Pectorales", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
                 ejercicioAleatorio("Pectorales", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
                 ejercicioAleatorio("Pectorales", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
@@ -448,7 +448,7 @@ function calcularEjerciciosDiaHoras(diasGym, horasGym, nombreUsuario, tipoRutina
                 ejercicioAleatorio("Bíceps", res.id).then(() => {console.log("entra")})
                 agregarCardio(tiempoCardio, res.id).then(() => console.log(pasa))
             })
-            crearRutina(nombreUsuario, tipoRutina, idUsuario, diasGym, horasGym).then(res => {
+             crearRutina(nombreUsuario, tipoRutina, idUsuario, diasGym, horasGym, tiempo, repeticiones).then(res => {
                 ejercicioAleatorio("Abdomen", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
                 ejercicioAleatorio("Cuadriceps", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
                 ejercicioAleatorio("Todo", res.id).then(() => {console.log("entra")})
@@ -459,7 +459,7 @@ function calcularEjerciciosDiaHoras(diasGym, horasGym, nombreUsuario, tipoRutina
                 ejercicioAleatorio("Bíceps", res.id).then(() => {console.log("entra")})
                 agregarCardio(tiempoCardio, res.id).then(() => console.log(pasa))
             })
-            crearRutina(nombreUsuario, tipoRutina, idUsuario, diasGym, horasGym).then(res => {
+             crearRutina(nombreUsuario, tipoRutina, idUsuario, diasGym, horasGym, tiempo, repeticiones).then(res => {
                 ejercicioAleatorio("Abdomen", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
                 ejercicioAleatorio("Abdomen", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
                 ejercicioAleatorio("Todo", res.id).then(() => {console.log("entra")})
@@ -473,7 +473,7 @@ function calcularEjerciciosDiaHoras(diasGym, horasGym, nombreUsuario, tipoRutina
             return {tiempoEjercicio: "12 min"}
         }else if (horasGym == 3 || horasGym == 3.5){
             //Query 10 brazo y hombro, 10 espalda , 10 pecho, 10 pierna
-            crearRutina(nombreUsuario, tipoRutina, idUsuario, diasGym, horasGym).then(res => {
+             crearRutina(nombreUsuario, tipoRutina, idUsuario, diasGym, horasGym, tiempo, repeticiones).then(res => {
                 ejercicioAleatorio("Abdomen", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
                 ejercicioAleatorio("Abdomen", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
                 ejercicioAleatorio("Todo", res.id).then(() => {console.log("entra")})
@@ -484,7 +484,7 @@ function calcularEjerciciosDiaHoras(diasGym, horasGym, nombreUsuario, tipoRutina
                 ejercicioAleatorio("Bíceps", res.id).then(() => {console.log("entra")})
                 agregarCardio(tiempoCardio, res.id).then(() => console.log(pasa))
             })
-            crearRutina(nombreUsuario, tipoRutina, idUsuario, diasGym, horasGym).then(res => {
+             crearRutina(nombreUsuario, tipoRutina, idUsuario, diasGym, horasGym, tiempo, repeticiones).then(res => {
                 ejercicioAleatorio("Abdomen", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
                 ejercicioAleatorio("Abdomen", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
                 ejercicioAleatorio("Todo", res.id).then(() => {console.log("entra")})
@@ -497,7 +497,7 @@ function calcularEjerciciosDiaHoras(diasGym, horasGym, nombreUsuario, tipoRutina
                 ejercicioAleatorio("Bíceps", res.id).then(() => {console.log("entra")})
                 agregarCardio(tiempoCardio, res.id).then(() => console.log(pasa))
             })
-            crearRutina(nombreUsuario, tipoRutina, idUsuario, diasGym, horasGym).then(res => {
+             crearRutina(nombreUsuario, tipoRutina, idUsuario, diasGym, horasGym, tiempo, repeticiones).then(res => {
                 ejercicioAleatorio("Abdomen", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
                 ejercicioAleatorio("Abdomen", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
                 ejercicioAleatorio("Todo", res.id).then(() => {console.log("entra")})
@@ -513,7 +513,7 @@ function calcularEjerciciosDiaHoras(diasGym, horasGym, nombreUsuario, tipoRutina
             return {tiempoEjercicio: "14 min"}
         }else if (horasGym == 4 || horasGym == 4.5){
             //Query 12 brazo y hombro, 12 espalda , 12 pecho, 12 pierna
-            crearRutina(nombreUsuario, tipoRutina, idUsuario, diasGym, horasGym).then(res => {
+             crearRutina(nombreUsuario, tipoRutina, idUsuario, diasGym, horasGym, tiempo, repeticiones).then(res => {
                 ejercicioAleatorio("Abdomen", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
                 ejercicioAleatorio("Abdomen", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
                 ejercicioAleatorio("Todo", res.id).then(() => {console.log("entra")})
@@ -526,7 +526,7 @@ function calcularEjerciciosDiaHoras(diasGym, horasGym, nombreUsuario, tipoRutina
                 ejercicioAleatorio("Bíceps", res.id).then(() => {console.log("entra")})
                 agregarCardio(tiempoCardio, res.id).then(() => console.log(pasa))
             })
-            crearRutina(nombreUsuario, tipoRutina, idUsuario, diasGym, horasGym).then(res => {
+             crearRutina(nombreUsuario, tipoRutina, idUsuario, diasGym, horasGym, tiempo, repeticiones).then(res => {
                 ejercicioAleatorio("Abdomen", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
                 ejercicioAleatorio("Abdomen", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
                 ejercicioAleatorio("Todo", res.id).then(() => {console.log("entra")})
@@ -539,7 +539,7 @@ function calcularEjerciciosDiaHoras(diasGym, horasGym, nombreUsuario, tipoRutina
                 ejercicioAleatorio("Bíceps", res.id).then(() => {console.log("entra")})
                 agregarCardio(tiempoCardio, res.id).then(() => console.log(pasa))
             })
-            crearRutina(nombreUsuario, tipoRutina, idUsuario, diasGym, horasGym).then(res => {
+             crearRutina(nombreUsuario, tipoRutina, idUsuario, diasGym, horasGym, tiempo, repeticiones).then(res => {
                 ejercicioAleatorio("Abdomen", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
                 ejercicioAleatorio("Abdomen", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
                 ejercicioAleatorio("Todo", res.id).then(() => {console.log("entra")})
@@ -558,7 +558,7 @@ function calcularEjerciciosDiaHoras(diasGym, horasGym, nombreUsuario, tipoRutina
     }else if (diasGym == 5){
         if (horasGym == 1 || horasGym == 1.5){
             //Query 5 brazo , 5 hombro, 5 espalda, 5 pecho, 5 pierna
-            crearRutina(nombreUsuario, tipoRutina, idUsuario, diasGym, horasGym).then(res => {
+             crearRutina(nombreUsuario, tipoRutina, idUsuario, diasGym, horasGym, tiempo, repeticiones).then(res => {
                 ejercicioAleatorio("Biceps", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
                 ejercicioAleatorio("Biceps", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
                 ejercicioAleatorio("Biceps", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
@@ -566,7 +566,7 @@ function calcularEjerciciosDiaHoras(diasGym, horasGym, nombreUsuario, tipoRutina
                 ejercicioAleatorio("Biceps", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
                 agregarCardio(tiempoCardio, res.id).then(() => console.log(pasa))
             })
-            crearRutina(nombreUsuario, tipoRutina, idUsuario, diasGym, horasGym).then(res => {
+             crearRutina(nombreUsuario, tipoRutina, idUsuario, diasGym, horasGym, tiempo, repeticiones).then(res => {
                 ejercicioAleatorio("Pectorales", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
                 ejercicioAleatorio("Pectorales", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
                 ejercicioAleatorio("Pectorales", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
@@ -574,7 +574,7 @@ function calcularEjerciciosDiaHoras(diasGym, horasGym, nombreUsuario, tipoRutina
                 ejercicioAleatorio("Pectorales", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
                 agregarCardio(tiempoCardio, res.id).then(() => console.log(pasa))
             })
-            crearRutina(nombreUsuario, tipoRutina, idUsuario, diasGym, horasGym).then(res => {
+             crearRutina(nombreUsuario, tipoRutina, idUsuario, diasGym, horasGym, tiempo, repeticiones).then(res => {
                 ejercicioAleatorio("Cuadriceps", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
                 ejercicioAleatorio("Cuadriceps", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
                 ejercicioAleatorio("Cuadriceps", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
@@ -582,7 +582,7 @@ function calcularEjerciciosDiaHoras(diasGym, horasGym, nombreUsuario, tipoRutina
                 ejercicioAleatorio("Cuadriceps", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
                 agregarCardio(tiempoCardio, res.id).then(() => console.log(pasa))
             })
-            crearRutina(nombreUsuario, tipoRutina, idUsuario, diasGym, horasGym).then(res => {
+             crearRutina(nombreUsuario, tipoRutina, idUsuario, diasGym, horasGym, tiempo, repeticiones).then(res => {
                 ejercicioAleatorio("Todo", res.id).then(() => {console.log("entra")})
                 ejercicioAleatorio("Todo", res.id).then(() => {console.log("entra")})
                 ejercicioAleatorio("Todo", res.id).then(() => {console.log("entra")})
@@ -590,7 +590,7 @@ function calcularEjerciciosDiaHoras(diasGym, horasGym, nombreUsuario, tipoRutina
                 ejercicioAleatorio("Todo", res.id).then(() => {console.log("entra")})
                 agregarCardio(tiempoCardio, res.id).then(() => console.log(pasa))
             })
-            crearRutina(nombreUsuario, tipoRutina, idUsuario, diasGym, horasGym).then(res => {
+             crearRutina(nombreUsuario, tipoRutina, idUsuario, diasGym, horasGym, tiempo, repeticiones).then(res => {
                 ejercicioAleatorio("Abdomen", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
                 ejercicioAleatorio("Abdomen", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
                 ejercicioAleatorio("Abdomen", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
@@ -601,7 +601,7 @@ function calcularEjerciciosDiaHoras(diasGym, horasGym, nombreUsuario, tipoRutina
             return {tiempoEjercicio: "8 min"}
         }else if (horasGym == 2 || horasGym == 2.5){
             //Query 8 brazo , 8 hombro, 8 espalda , 8 pecho, 8 pierna
-            crearRutina(nombreUsuario, tipoRutina, idUsuario, diasGym, horasGym).then(res => {
+             crearRutina(nombreUsuario, tipoRutina, idUsuario, diasGym, horasGym, tiempo, repeticiones).then(res => {
                 ejercicioAleatorio("Biceps", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
                 ejercicioAleatorio("Biceps", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
                 ejercicioAleatorio("Biceps", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
@@ -612,7 +612,7 @@ function calcularEjerciciosDiaHoras(diasGym, horasGym, nombreUsuario, tipoRutina
                 ejercicioAleatorio("Biceps", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
                 agregarCardio(tiempoCardio, res.id).then(() => console.log(pasa))
             })
-            crearRutina(nombreUsuario, tipoRutina, idUsuario, diasGym, horasGym).then(res => {
+             crearRutina(nombreUsuario, tipoRutina, idUsuario, diasGym, horasGym, tiempo, repeticiones).then(res => {
                 ejercicioAleatorio("Pectorales", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
                 ejercicioAleatorio("Pectorales", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
                 ejercicioAleatorio("Pectorales", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
@@ -623,7 +623,7 @@ function calcularEjerciciosDiaHoras(diasGym, horasGym, nombreUsuario, tipoRutina
                 ejercicioAleatorio("Pectorales", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
                 agregarCardio(tiempoCardio, res.id).then(() => console.log(pasa))
             })
-            crearRutina(nombreUsuario, tipoRutina, idUsuario, diasGym, horasGym).then(res => {
+             crearRutina(nombreUsuario, tipoRutina, idUsuario, diasGym, horasGym, tiempo, repeticiones).then(res => {
                 ejercicioAleatorio("Cuadriceps", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
                 ejercicioAleatorio("Cuadriceps", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
                 ejercicioAleatorio("Cuadriceps", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
@@ -634,7 +634,7 @@ function calcularEjerciciosDiaHoras(diasGym, horasGym, nombreUsuario, tipoRutina
                 ejercicioAleatorio("Cuadriceps", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
                 agregarCardio(tiempoCardio, res.id).then(() => console.log(pasa))
             })
-            crearRutina(nombreUsuario, tipoRutina, idUsuario, diasGym, horasGym).then(res => {
+             crearRutina(nombreUsuario, tipoRutina, idUsuario, diasGym, horasGym, tiempo, repeticiones).then(res => {
                 ejercicioAleatorio("Todo", res.id).then(() => {console.log("entra")})
                 ejercicioAleatorio("Todo", res.id).then(() => {console.log("entra")})
                 ejercicioAleatorio("Todo", res.id).then(() => {console.log("entra")})
@@ -645,7 +645,7 @@ function calcularEjerciciosDiaHoras(diasGym, horasGym, nombreUsuario, tipoRutina
                 ejercicioAleatorio("Todo", res.id).then(() => {console.log("entra")})
                 agregarCardio(tiempoCardio, res.id).then(() => console.log(pasa))
             })
-            crearRutina(nombreUsuario, tipoRutina, idUsuario, diasGym, horasGym).then(res => {
+             crearRutina(nombreUsuario, tipoRutina, idUsuario, diasGym, horasGym, tiempo, repeticiones).then(res => {
                 ejercicioAleatorio("Abdomen", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
                 ejercicioAleatorio("Abdomen", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
                 ejercicioAleatorio("Abdomen", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
@@ -659,7 +659,7 @@ function calcularEjerciciosDiaHoras(diasGym, horasGym, nombreUsuario, tipoRutina
             return {tiempoEjercicio: "12 min"}
         }else if (horasGym == 3 || horasGym == 3.5){
             //Query 10 brazo , 10 hombro, 10 espalda , 10 pecho, 10 pierna
-            crearRutina(nombreUsuario, tipoRutina, idUsuario, diasGym, horasGym).then(res => {
+             crearRutina(nombreUsuario, tipoRutina, idUsuario, diasGym, horasGym, tiempo, repeticiones).then(res => {
                 ejercicioAleatorio("Biceps", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
                 ejercicioAleatorio("Biceps", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
                 ejercicioAleatorio("Biceps", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
@@ -672,7 +672,7 @@ function calcularEjerciciosDiaHoras(diasGym, horasGym, nombreUsuario, tipoRutina
                 ejercicioAleatorio("Biceps", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
                 agregarCardio(tiempoCardio, res.id).then(() => console.log(pasa))
             })
-            crearRutina(nombreUsuario, tipoRutina, idUsuario, diasGym, horasGym).then(res => {
+             crearRutina(nombreUsuario, tipoRutina, idUsuario, diasGym, horasGym, tiempo, repeticiones).then(res => {
                 ejercicioAleatorio("Pectorales", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
                 ejercicioAleatorio("Pectorales", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
                 ejercicioAleatorio("Pectorales", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
@@ -685,7 +685,7 @@ function calcularEjerciciosDiaHoras(diasGym, horasGym, nombreUsuario, tipoRutina
                 ejercicioAleatorio("Pectorales", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
                 agregarCardio(tiempoCardio, res.id).then(() => console.log(pasa))
             })
-            crearRutina(nombreUsuario, tipoRutina, idUsuario, diasGym, horasGym).then(res => {
+             crearRutina(nombreUsuario, tipoRutina, idUsuario, diasGym, horasGym, tiempo, repeticiones).then(res => {
                 ejercicioAleatorio("Cuadriceps", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
                 ejercicioAleatorio("Cuadriceps", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
                 ejercicioAleatorio("Cuadriceps", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
@@ -698,7 +698,7 @@ function calcularEjerciciosDiaHoras(diasGym, horasGym, nombreUsuario, tipoRutina
                 ejercicioAleatorio("Cuadriceps", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
                 agregarCardio(tiempoCardio, res.id).then(() => console.log(pasa))
             })
-            crearRutina(nombreUsuario, tipoRutina, idUsuario, diasGym, horasGym).then(res => {
+             crearRutina(nombreUsuario, tipoRutina, idUsuario, diasGym, horasGym, tiempo, repeticiones).then(res => {
                 ejercicioAleatorio("Todo", res.id).then(() => {console.log("entra")})
                 ejercicioAleatorio("Todo", res.id).then(() => {console.log("entra")})
                 ejercicioAleatorio("Todo", res.id).then(() => {console.log("entra")})
@@ -711,7 +711,7 @@ function calcularEjerciciosDiaHoras(diasGym, horasGym, nombreUsuario, tipoRutina
                 ejercicioAleatorio("Todo", res.id).then(() => {console.log("entra")})
                 agregarCardio(tiempoCardio, res.id).then(() => console.log(pasa))
             })
-            crearRutina(nombreUsuario, tipoRutina, idUsuario, diasGym, horasGym).then(res => {
+             crearRutina(nombreUsuario, tipoRutina, idUsuario, diasGym, horasGym, tiempo, repeticiones).then(res => {
                 ejercicioAleatorio("Abdomen", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
                 ejercicioAleatorio("Abdomen", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
                 ejercicioAleatorio("Abdomen", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
@@ -727,7 +727,7 @@ function calcularEjerciciosDiaHoras(diasGym, horasGym, nombreUsuario, tipoRutina
             return {tiempoEjercicio: "14 min"}
         }else if (horasGym == 4 || horasGym == 4.5){
             //Query 12 brazo , 12 hombro, 12 espalda , 12 pecho, 12 pierna
-            crearRutina(nombreUsuario, tipoRutina, idUsuario, diasGym, horasGym).then(res => {
+             crearRutina(nombreUsuario, tipoRutina, idUsuario, diasGym, horasGym, tiempo, repeticiones).then(res => {
                 ejercicioAleatorio("Biceps", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
                 ejercicioAleatorio("Biceps", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
                 ejercicioAleatorio("Biceps", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
@@ -742,7 +742,7 @@ function calcularEjerciciosDiaHoras(diasGym, horasGym, nombreUsuario, tipoRutina
                 ejercicioAleatorio("Biceps", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
                 agregarCardio(tiempoCardio, res.id).then(() => console.log(pasa))
             })
-            crearRutina(nombreUsuario, tipoRutina, idUsuario, diasGym, horasGym).then(res => {
+             crearRutina(nombreUsuario, tipoRutina, idUsuario, diasGym, horasGym, tiempo, repeticiones).then(res => {
                 ejercicioAleatorio("Pectorales", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
                 ejercicioAleatorio("Pectorales", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
                 ejercicioAleatorio("Pectorales", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
@@ -758,7 +758,7 @@ function calcularEjerciciosDiaHoras(diasGym, horasGym, nombreUsuario, tipoRutina
                 ejercicioAleatorio("Pectorales", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
                 agregarCardio(tiempoCardio, res.id).then(() => console.log(pasa))
             })
-            crearRutina(nombreUsuario, tipoRutina, idUsuario, diasGym, horasGym).then(res => {
+             crearRutina(nombreUsuario, tipoRutina, idUsuario, diasGym, horasGym, tiempo, repeticiones).then(res => {
                 ejercicioAleatorio("Cuadriceps", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
                 ejercicioAleatorio("Cuadriceps", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
                 ejercicioAleatorio("Cuadriceps", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
@@ -773,7 +773,7 @@ function calcularEjerciciosDiaHoras(diasGym, horasGym, nombreUsuario, tipoRutina
                 ejercicioAleatorio("Cuadriceps", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
                 agregarCardio(tiempoCardio, res.id).then(() => console.log(pasa))
             })
-            crearRutina(nombreUsuario, tipoRutina, idUsuario, diasGym, horasGym).then(res => {
+             crearRutina(nombreUsuario, tipoRutina, idUsuario, diasGym, horasGym, tiempo, repeticiones).then(res => {
                 ejercicioAleatorio("Todo", res.id).then(() => {console.log("entra")})
                 ejercicioAleatorio("Todo", res.id).then(() => {console.log("entra")})
                 ejercicioAleatorio("Todo", res.id).then(() => {console.log("entra")})
@@ -789,7 +789,7 @@ function calcularEjerciciosDiaHoras(diasGym, horasGym, nombreUsuario, tipoRutina
                 agregarCardio(tiempoCardio, res.id).then(() => console.log(pasa))
                 
             })
-            crearRutina(nombreUsuario, tipoRutina, idUsuario, diasGym, horasGym).then(res => {
+             crearRutina(nombreUsuario, tipoRutina, idUsuario, diasGym, horasGym, tiempo, repeticiones).then(res => {
                 ejercicioAleatorio("Abdomen", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
                 ejercicioAleatorio("Abdomen", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
                 ejercicioAleatorio("Abdomen", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
@@ -881,12 +881,12 @@ async function agregarCardio(tiempoCardio, idRutina){
 }
 
 
-async function crearRutina(nombreUsuario, tipoRutina, idUsuario, dias, horas){
+async function crearRutina(nombreUsuario, tipoRutina, idUsuario, dias, horas,tiempo, intensidad){
     rutina = {}
     await Rutinas.create({
         nombre:nombreUsuario + ": " + tipoRutina + ":" + dias + ":" + horas,
-        intensidad:4,
-        tiempo:0,
+        intensidad:intensidad,
+        tiempo:tiempo,
         idUsuario: idUsuario
     }).then((creado)=>{
         rutina = creado
