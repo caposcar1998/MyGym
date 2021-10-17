@@ -44,12 +44,16 @@ export class ObjectivesComponent implements OnInit {
   onSubmit(): void {
     
     this.steps.updateUser(localStorage.getItem('personalData'),localStorage.getItem('bodyType'),localStorage.getItem('objetivo'),localStorage.getItem('id')).subscribe(data=>
-      window.alert("Has finalizado con éxito! La alerta no es definitiva"))
-      localStorage.removeItem("personalData")
-      localStorage.removeItem("bodyType")
-      localStorage.removeItem("objetivo")
-      this.router.navigate(['/home']);
+      this.endCreatePorfile())
+
   }
 
+  endCreatePorfile(){
+    window.alert("Has finalizado con éxito! La alerta no es definitiva")
+    localStorage.removeItem("personalData")
+    localStorage.removeItem("bodyType")
+    localStorage.removeItem("objetivo")
+    window.location.reload();
+  }
 
 }
