@@ -1,18 +1,22 @@
 
 const {Ejercicios} = require("../models") 
+const {EjerciciosRutinas} = require ("../models")
+const {Rutinas} = require ("../models")
 
-function crearRutinaEctomorfo(objetivoCuerpo, diasGym, horasGym, intensidad){
+async function crearRutinaEctomorfo(objetivoCuerpo, diasGym, horasGym, intensidad, idUsuario, nombreUsuario){
     if (objetivoCuerpo == "BajarPeso"){
-        rutinaBajarDePeso(diasGym, horasGym, intensidad)
+        await rutinaBajarDePeso(diasGym, horasGym, intensidad, idUsuario, nombreUsuario, objetivoCuerpo)
     }if (objetivoCuerpo == "Tonificar") {
-        rutinaTonificar(diasGym, horasGym, intensidad)
+        await rutinaTonificar(diasGym, horasGym, intensidad)
     } else {
-        rutinaGanarMasa(diasGym, horasGym, intensidad)
+        await rutinaGanarMasa(diasGym, horasGym, intensidad)
     }
 }
 
-function rutinaBajarDePeso(){
-    return {peso: "Poco medio"}
+function rutinaBajarDePeso(diasGym, horasGym, intensidad, idUsuario, nombreUsuario, objetivoCuerpo){
+
+    intensidadEjercicios = calcularIntensidad(intensidad)
+    calcularEjerciciosDiaHoras(diasGym, horasGym, nombreUsuario, objetivoCuerpo, idUsuario)
 }
 
 function rutinaTonificar(){
@@ -36,11 +40,20 @@ function calcularIntensidad(intensidad){
     }
 }
 
-function calcularEjerciciosDiaHoras(diasGym, horasGym){
+function calcularEjerciciosDiaHoras(diasGym, horasGym, nombreUsuario, tipoRutina, idUsuario, res){
    
     if (diasGym == 1){
         if (horasGym == 1 || horasGym == 1.5){
             //Query 5 ejercicios de todo
+            crearRutina(nombreUsuario, tipoRutina, idUsuario, diasGym, horasGym).then(res => {
+                ejercicioAleatorio("Hombros", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Pectorales", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Biceps", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Pectorales", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Cuadriceps", res.id).then(() => {console.log("entra")})
+    
+            })
+
             return {tiempoEjercicio: "8 min"}
         }else if (horasGym == 2 || horasGym == 2.5){
             //Query 8 ejercicios de todo
@@ -143,11 +156,53 @@ function calcularEjerciciosDiaHoras(diasGym, horasGym){
 }
 }
 
-function ejercicioAleatorio(parteCuerpo){
-    Ejercicios.findOne({ where: {partePrincipal: parteCuerpo, tipo: "Peso libre"} }).then(function(ejercicio) {
+let ejercicioAleatorio = async function (parteCuerpo, idRutina){
+    ejercicio = {}
+    await Ejercicios.findAll({ where: { partePrincipal: parteCuerpo } })
+    .then((ejer)=>{
+        ejercicio = ejer[(Math.random() * ejer.length) | 0] 
         console.log(ejercicio)
-
+        EjerciciosRutinas.create({
+            peso:5.0,
+            repeticiones:4,
+            series:3,
+            tiempo: 5,
+            idRutina: idRutina,
+            idEjercicio: ejercicio.id,
+            foto: ejercicio.foto,
+            video: ejercicio.video
+        }).then((creado)=>{
+            console.log(creado)
+        })  
     })
+
 }
 
-ejercicioAleatorio("Hombros")
+
+async function crearRutina(nombreUsuario, tipoRutina, idUsuario, dias, horas){
+    rutina = {}
+    await Rutinas.create({
+        nombre:nombreUsuario + ": " + tipoRutina + ":" + dias + ":" + horas,
+        intensidad:4,
+        tiempo:0,
+        idUsuario: idUsuario
+    }).then((creado)=>{
+        rutina = creado
+    })
+    return rutina
+    
+}
+
+module.exports ={
+    crearRutinaEctomorfo
+}
+
+
+
+
+
+
+
+
+
+

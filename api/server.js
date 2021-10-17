@@ -10,6 +10,7 @@ var corsOptions = {
 }
 const {Usuarios} = require("./models")
 const {Ejercicios} = require("./models") 
+const ectomorfo = require("./workouts/Ectomorfo.js")
 
 var distDir = __dirname + "/dist/";
 app.use(express.static(distDir));
@@ -116,3 +117,19 @@ app.get("/ejercicios",function(req,res){
     
     
 })
+
+app.post("/rutinas",function(req,res){
+    const tipoCuerpo = req.body.tipoCuerpo
+    const objetivoCuerpo = req.body.objetivoCuerpo
+    const diasGym = req.body.diasGym
+    const horasGym = req.body.horasGym
+    const intensidad = req.body.intensidad
+    const idUsuario = req.body.idUsuario
+    const nombreUsuario = req.body.nombreUsuario
+    if (tipoCuerpo == "Ectomorfo"){
+       ectomorfo.crearRutinaEctomorfo(objetivoCuerpo, diasGym, horasGym, intensidad, idUsuario, nombreUsuario,res).then(resu =>
+        {res.status(200).json({Mensaje:"se crea"})}
+        )
+    }
+    
+});
