@@ -7,34 +7,34 @@ async function crearRutinaEctomorfo(objetivoCuerpo, diasGym, horasGym, intensida
     if (objetivoCuerpo == "BajarPeso"){
         await rutinaBajarDePeso(diasGym, horasGym, intensidad, idUsuario, nombreUsuario, objetivoCuerpo)
     }if (objetivoCuerpo == "Tonificar") {
-        await rutinaBajarDePeso(diasGym, horasGym, intensidad, idUsuario, nombreUsuario, objetivoCuerpo)
+        await rutinaTonificar(diasGym, horasGym, intensidad, idUsuario, nombreUsuario, objetivoCuerpo)
     } else {
-        await rutinaBajarDePeso(diasGym, horasGym, intensidad, idUsuario, nombreUsuario, objetivoCuerpo)
+        await rutinaGanarMasa(diasGym, horasGym, intensidad, idUsuario, nombreUsuario, objetivoCuerpo)
     }
 }
 
 function rutinaBajarDePeso(diasGym, horasGym, intensidad, idUsuario, nombreUsuario, objetivoCuerpo){
 
     intensidadEjercicios = calcularIntensidad(intensidad)
-    repeticiones = 6
-    series = 5
+    repeticiones = intensidadEjercicios.repeticiones
+    series = intensidadEjercicios.series
     tiempo = 6
     peso = 5
     tiempoCardio = 35
     calcularEjerciciosDiaHoras(diasGym, horasGym, nombreUsuario, objetivoCuerpo, idUsuario, repeticiones, series, tiempo, peso,tiempoCardio)
 }
 
-function rutinaTonificar(){
+function rutinaTonificar(diasGym, horasGym, intensidad, idUsuario, nombreUsuario, objetivoCuerpo){
     intensidadEjercicios = calcularIntensidad(intensidad)
-    repeticiones = 8
-    series = 5
+    repeticiones = intensidadEjercicios.repeticiones
+    series = intensidadEjercicios.series
     tiempo = 4
     peso = 7
     tiempoCardio = 25
     calcularEjerciciosDiaHoras(diasGym, horasGym, nombreUsuario, objetivoCuerpo, idUsuario, repeticiones, series, peso,tiempoCardio)
 }
 
-function rutinaGanarMasa(){
+function rutinaGanarMasa(diasGym, horasGym, intensidad, idUsuario, nombreUsuario, objetivoCuerpo){
     intensidadEjercicios = calcularIntensidad(intensidad)
     repeticiones = intensidadEjercicios.repeticiones
     series = intensidadEjercicios.series

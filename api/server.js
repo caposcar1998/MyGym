@@ -11,6 +11,8 @@ var corsOptions = {
 const {Usuarios} = require("./models")
 const {Ejercicios} = require("./models") 
 const ectomorfo = require("./workouts/Ectomorfo.js")
+const endomorfo = require("./workouts/Endomorfo.js")
+const mesoformo = require("./workouts/Mesoformo.js")
 
 var distDir = __dirname + "/dist/";
 app.use(express.static(distDir));
@@ -130,6 +132,14 @@ app.post("/rutinas",function(req,res){
        ectomorfo.crearRutinaEctomorfo(objetivoCuerpo, diasGym, horasGym, intensidad, idUsuario, nombreUsuario,res).then(resu =>
         {res.status(200).json({Mensaje:"se crea"})}
         )
+    } else if (tipoCuerpo == "Endomorfo"){
+        endomorfo.crearRutinaEndomorfo(objetivoCuerpo, diasGym, horasGym, intensidad, idUsuario, nombreUsuario,res).then(resu =>
+            {res.status(200).json({Mensaje:"se crea"})}
+            )
+    } else{
+        mesoformo.crearRutinaMesoformo(objetivoCuerpo, diasGym, horasGym, intensidad, idUsuario, nombreUsuario,res).then(resu =>
+            {res.status(200).json({Mensaje:"se crea"})}
+            )
     }
     
 });
