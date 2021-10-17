@@ -54,74 +54,696 @@ function calcularEjerciciosDiaHoras(diasGym, horasGym, nombreUsuario, tipoRutina
     
             })
 
-            return {tiempoEjercicio: "8 min"}
         }else if (horasGym == 2 || horasGym == 2.5){
-            //Query 8 ejercicios de todo
-            return {tiempoEjercicio: "12 min"}
+            //Query 8 ejercicios de todo            
+            crearRutina(nombreUsuario, tipoRutina, idUsuario, diasGym, horasGym).then(res => {
+                ejercicioAleatorio("Hombros", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Pectorales", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Biceps", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Pectorales", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Tríceps", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Glúteos", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Abdomen", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Hombros", res.id).then(() => {console.log("entra")})
+            })
         }else if (horasGym == 3 || horasGym == 3.5){
             //Query 12 ejercicios de todo
-            return {tiempoEjercicio: "14 min"}
+            crearRutina(nombreUsuario, tipoRutina, idUsuario, diasGym, horasGym).then(res => {
+                ejercicioAleatorio("Hombros", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Pectorales", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Biceps", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Pectorales", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Tríceps", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Glúteos", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Abdomen", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Hombros", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Tríceps", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Glúteos", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Abdomen", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Hombros", res.id).then(() => {console.log("entra")})
+            })
         }else if (horasGym == 4 || horasGym == 4.5){
             //Query 15 ejercicios de todo
-            return {tiempoEjercicio: "14 min"}
+            crearRutina(nombreUsuario, tipoRutina, idUsuario, diasGym, horasGym).then(res => {
+                ejercicioAleatorio("Hombros", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Pectorales", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Biceps", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Pectorales", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Tríceps", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Glúteos", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Abdomen", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Hombros", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Tríceps", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Glúteos", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Abdomen", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Hombros", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Glúteos", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Abdomen", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Hombros", res.id).then(() => {console.log("entra")})
+            })
         }
     }else if (diasGym == 2){
         if (horasGym == 1 || horasGym == 1.5){
             //Query 5 arriba y 5 abajo
-            return {tiempoEjercicio: "8 min"}
+            crearRutina(nombreUsuario, tipoRutina, idUsuario, diasGym, horasGym).then(res => {
+                ejercicioAleatorio("Hombros", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Pectorales", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Biceps", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Pectorales", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Cuadriceps", res.id).then(() => {console.log("entra")})
+    
+            })
+            crearRutina(nombreUsuario, tipoRutina, idUsuario, diasGym, horasGym).then(res => {
+                ejercicioAleatorio("Abdomen", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Cuadriceps", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Todo", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Cuadriceps", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Cuadriceps", res.id).then(() => {console.log("entra")})
+    
+            })
         }else if (horasGym == 2 || horasGym == 2.5){
             //Query 8 arriba y 8 abajo
-            return {tiempoEjercicio: "12 min"}
+            crearRutina(nombreUsuario, tipoRutina, idUsuario, diasGym, horasGym).then(res => {
+                ejercicioAleatorio("Hombros", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Pectorales", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Biceps", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Pectorales", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Cuadriceps", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Biceps", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Pectorales", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Cuadriceps", res.id).then(() => {console.log("entra")})
+    
+            })
+            crearRutina(nombreUsuario, tipoRutina, idUsuario, diasGym, horasGym).then(res => {
+                ejercicioAleatorio("Abdomen", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Cuadriceps", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Todo", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Cuadriceps", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Cuadriceps", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Biceps", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Pectorales", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Cuadriceps", res.id).then(() => {console.log("entra")})
+    
+            })
         }else if (horasGym == 3 || horasGym == 3.5){
-            //Query 12 arriba y 12 abajo
-            return {tiempoEjercicio: "14 min"}
+            crearRutina(nombreUsuario, tipoRutina, idUsuario, diasGym, horasGym).then(res => {
+                ejercicioAleatorio("Abdomen", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Cuadriceps", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Todo", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Cuadriceps", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Cuadriceps", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Biceps", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Pectorales", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Cuadriceps", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Pectorales", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Cuadriceps", res.id).then(() => {console.log("entra")})
+    
+            })
+            crearRutina(nombreUsuario, tipoRutina, idUsuario, diasGym, horasGym).then(res => {
+                ejercicioAleatorio("Abdomen", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Cuadriceps", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Todo", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Cuadriceps", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Cuadriceps", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Biceps", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Pectorales", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Cuadriceps", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Pectorales", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Cuadriceps", res.id).then(() => {console.log("entra")})
+    
+            })
+            
         }else if (horasGym == 4 || horasGym == 4.5){
             //Query 15 arriba y 15 abajo
-            return {tiempoEjercicio: "14 min"}
+            crearRutina(nombreUsuario, tipoRutina, idUsuario, diasGym, horasGym).then(res => {
+                ejercicioAleatorio("Abdomen", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Cuadriceps", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Todo", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Cuadriceps", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Cuadriceps", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Biceps", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Pectorales", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Cuadriceps", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Pectorales", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Cuadriceps", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Biceps", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Pectorales", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Cuadriceps", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Pectorales", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Cuadriceps", res.id).then(() => {console.log("entra")})
+            })
+            crearRutina(nombreUsuario, tipoRutina, idUsuario, diasGym, horasGym).then(res => {
+                ejercicioAleatorio("Abdomen", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Cuadriceps", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Todo", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Cuadriceps", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Cuadriceps", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Biceps", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Pectorales", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Cuadriceps", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Pectorales", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Cuadriceps", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Biceps", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Pectorales", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Cuadriceps", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Pectorales", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Cuadriceps", res.id).then(() => {console.log("entra")})
+            })
         }
 
     }else if (diasGym == 3){
         if (horasGym == 1 || horasGym == 1.5){
             //Query 5 brazo y hombro, 5 espalda y pecho, 5 pierna
+            crearRutina(nombreUsuario, tipoRutina, idUsuario, diasGym, horasGym).then(res => {
+                ejercicioAleatorio("Hombros", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Cuadriceps", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Bíceps", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Biceps", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Bíceps", res.id).then(() => {console.log("entra")})
+            })
+            crearRutina(nombreUsuario, tipoRutina, idUsuario, diasGym, horasGym).then(res => {
+                ejercicioAleatorio("Pectorales", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Pectorales", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Pectorales", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Pectorales", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Abdomen", res.id).then(() => {console.log("entra")})
+            })
+            crearRutina(nombreUsuario, tipoRutina, idUsuario, diasGym, horasGym).then(res => {
+                ejercicioAleatorio("Abdomen", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Cuadriceps", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Todo", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Cuadriceps", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Cuadriceps", res.id).then(() => {console.log("entra")})
+            })
             return {tiempoEjercicio: "8 min"}
         }else if (horasGym == 2 || horasGym == 2.5){
             //Query 8 brazo y hombro, 8 espalda y pecho, 8 pierna
+            crearRutina(nombreUsuario, tipoRutina, idUsuario, diasGym, horasGym).then(res => {
+                ejercicioAleatorio("Hombros", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Cuadriceps", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Bíceps", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Biceps", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Bíceps", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Bíceps", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Biceps", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Bíceps", res.id).then(() => {console.log("entra")})
+            })
+            crearRutina(nombreUsuario, tipoRutina, idUsuario, diasGym, horasGym).then(res => {
+                ejercicioAleatorio("Pectorales", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Pectorales", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Pectorales", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Pectorales", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Abdomen", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Bíceps", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Biceps", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Bíceps", res.id).then(() => {console.log("entra")})
+            })
+            crearRutina(nombreUsuario, tipoRutina, idUsuario, diasGym, horasGym).then(res => {
+                ejercicioAleatorio("Abdomen", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Cuadriceps", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Todo", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Cuadriceps", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Cuadriceps", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Bíceps", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Biceps", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Bíceps", res.id).then(() => {console.log("entra")})
+            })
             return {tiempoEjercicio: "12 min"}
         }else if (horasGym == 3 || horasGym == 3.5){
             //Query 10 brazo y hombro, 10 espalda y pecho, 10 pierna
+            crearRutina(nombreUsuario, tipoRutina, idUsuario, diasGym, horasGym).then(res => {
+                ejercicioAleatorio("Hombros", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Cuadriceps", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Bíceps", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Biceps", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Bíceps", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Bíceps", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Biceps", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Bíceps", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Biceps", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Bíceps", res.id).then(() => {console.log("entra")})
+            })
+            crearRutina(nombreUsuario, tipoRutina, idUsuario, diasGym, horasGym).then(res => {
+                ejercicioAleatorio("Pectorales", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Pectorales", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Pectorales", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Pectorales", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Abdomen", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Bíceps", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Biceps", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Bíceps", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Biceps", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Bíceps", res.id).then(() => {console.log("entra")})
+            })
+            crearRutina(nombreUsuario, tipoRutina, idUsuario, diasGym, horasGym).then(res => {
+                ejercicioAleatorio("Abdomen", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Cuadriceps", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Todo", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Cuadriceps", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Cuadriceps", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Bíceps", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Biceps", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Bíceps", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Biceps", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Bíceps", res.id).then(() => {console.log("entra")})
+            })
             return {tiempoEjercicio: "14 min"}
         }else if (horasGym == 4 || horasGym == 4.5){
-            //Query 12 brazo y hombro, 12 espalda y pecho, 12 pierna
+            crearRutina(nombreUsuario, tipoRutina, idUsuario, diasGym, horasGym).then(res => {
+                ejercicioAleatorio("Hombros", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Cuadriceps", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Bíceps", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Biceps", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Bíceps", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Bíceps", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Biceps", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Bíceps", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Biceps", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Bíceps", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Biceps", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Bíceps", res.id).then(() => {console.log("entra")})
+            })
+            crearRutina(nombreUsuario, tipoRutina, idUsuario, diasGym, horasGym).then(res => {
+                ejercicioAleatorio("Pectorales", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Pectorales", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Pectorales", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Pectorales", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Abdomen", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Bíceps", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Biceps", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Bíceps", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Biceps", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Bíceps", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Biceps", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Bíceps", res.id).then(() => {console.log("entra")})
+            })
+            crearRutina(nombreUsuario, tipoRutina, idUsuario, diasGym, horasGym).then(res => {
+                ejercicioAleatorio("Abdomen", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Cuadriceps", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Todo", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Cuadriceps", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Cuadriceps", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Bíceps", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Biceps", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Bíceps", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Biceps", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Bíceps", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Biceps", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Bíceps", res.id).then(() => {console.log("entra")})
+            })
             return {tiempoEjercicio: "14 min"}
         }
 
     }else if (diasGym == 4){
         if (horasGym == 1 || horasGym == 1.5){
+            crearRutina(nombreUsuario, tipoRutina, idUsuario, diasGym, horasGym).then(res => {
+                ejercicioAleatorio("Hombros", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Cuadriceps", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Bíceps", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Biceps", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Bíceps", res.id).then(() => {console.log("entra")})
+
+            })
+            crearRutina(nombreUsuario, tipoRutina, idUsuario, diasGym, horasGym).then(res => {
+                ejercicioAleatorio("Pectorales", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Pectorales", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Pectorales", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Pectorales", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Abdomen", res.id).then(() => {console.log("entra")})
+
+            })
+            crearRutina(nombreUsuario, tipoRutina, idUsuario, diasGym, horasGym).then(res => {
+                ejercicioAleatorio("Abdomen", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Cuadriceps", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Todo", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Cuadriceps", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Cuadriceps", res.id).then(() => {console.log("entra")})
+
+            })
+            crearRutina(nombreUsuario, tipoRutina, idUsuario, diasGym, horasGym).then(res => {
+                ejercicioAleatorio("Abdomen", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Abdomen", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Todo", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Abdomen", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Abdomen", res.id).then(() => {console.log("entra")})
+
+            })
             //Query 5 brazo y hombro, 5 espalda, 5 pecho, 5 pierna
             return {tiempoEjercicio: "8 min"}
         }else if (horasGym == 2 || horasGym == 2.5){
             //Query 8 brazo y hombro, 8 espalda , 8 pecho, 8 pierna
+            crearRutina(nombreUsuario, tipoRutina, idUsuario, diasGym, horasGym).then(res => {
+                ejercicioAleatorio("Hombros", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Cuadriceps", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Bíceps", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Biceps", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Bíceps", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Bíceps", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Biceps", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Bíceps", res.id).then(() => {console.log("entra")})
+
+            })
+            crearRutina(nombreUsuario, tipoRutina, idUsuario, diasGym, horasGym).then(res => {
+                ejercicioAleatorio("Pectorales", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Pectorales", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Pectorales", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Pectorales", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Abdomen", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Bíceps", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Biceps", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Bíceps", res.id).then(() => {console.log("entra")})
+
+            })
+            crearRutina(nombreUsuario, tipoRutina, idUsuario, diasGym, horasGym).then(res => {
+                ejercicioAleatorio("Abdomen", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Cuadriceps", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Todo", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Cuadriceps", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Cuadriceps", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Bíceps", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Biceps", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Bíceps", res.id).then(() => {console.log("entra")})
+
+            })
+            crearRutina(nombreUsuario, tipoRutina, idUsuario, diasGym, horasGym).then(res => {
+                ejercicioAleatorio("Abdomen", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Abdomen", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Todo", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Abdomen", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Abdomen", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Bíceps", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Biceps", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Bíceps", res.id).then(() => {console.log("entra")})
+
+            })
             return {tiempoEjercicio: "12 min"}
         }else if (horasGym == 3 || horasGym == 3.5){
             //Query 10 brazo y hombro, 10 espalda , 10 pecho, 10 pierna
+            crearRutina(nombreUsuario, tipoRutina, idUsuario, diasGym, horasGym).then(res => {
+                ejercicioAleatorio("Abdomen", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Abdomen", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Todo", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Abdomen", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Abdomen", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Bíceps", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Biceps", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Bíceps", res.id).then(() => {console.log("entra")})
+
+            })
+            crearRutina(nombreUsuario, tipoRutina, idUsuario, diasGym, horasGym).then(res => {
+                ejercicioAleatorio("Abdomen", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Abdomen", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Todo", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Abdomen", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Abdomen", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Bíceps", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Biceps", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Bíceps", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Biceps", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Bíceps", res.id).then(() => {console.log("entra")})
+            })
+            crearRutina(nombreUsuario, tipoRutina, idUsuario, diasGym, horasGym).then(res => {
+                ejercicioAleatorio("Abdomen", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Abdomen", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Todo", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Abdomen", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Abdomen", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Bíceps", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Biceps", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Bíceps", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Biceps", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Bíceps", res.id).then(() => {console.log("entra")})
+            })
             return {tiempoEjercicio: "14 min"}
         }else if (horasGym == 4 || horasGym == 4.5){
             //Query 12 brazo y hombro, 12 espalda , 12 pecho, 12 pierna
+            crearRutina(nombreUsuario, tipoRutina, idUsuario, diasGym, horasGym).then(res => {
+                ejercicioAleatorio("Abdomen", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Abdomen", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Todo", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Abdomen", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Abdomen", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Bíceps", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Biceps", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Bíceps", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Biceps", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Bíceps", res.id).then(() => {console.log("entra")})
+            })
+            crearRutina(nombreUsuario, tipoRutina, idUsuario, diasGym, horasGym).then(res => {
+                ejercicioAleatorio("Abdomen", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Abdomen", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Todo", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Abdomen", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Abdomen", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Bíceps", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Biceps", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Bíceps", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Biceps", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Bíceps", res.id).then(() => {console.log("entra")})
+            })
+            crearRutina(nombreUsuario, tipoRutina, idUsuario, diasGym, horasGym).then(res => {
+                ejercicioAleatorio("Abdomen", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Abdomen", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Todo", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Abdomen", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Abdomen", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Bíceps", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Biceps", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Bíceps", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Biceps", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Bíceps", res.id).then(() => {console.log("entra")})
+            })
             return {tiempoEjercicio: "14 min"}
         }
 
     }else if (diasGym == 5){
         if (horasGym == 1 || horasGym == 1.5){
             //Query 5 brazo , 5 hombro, 5 espalda, 5 pecho, 5 pierna
+            crearRutina(nombreUsuario, tipoRutina, idUsuario, diasGym, horasGym).then(res => {
+                ejercicioAleatorio("Biceps", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Biceps", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Biceps", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Biceps", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Biceps", res.id).then(() => {console.log("entra")})
+            })
+            crearRutina(nombreUsuario, tipoRutina, idUsuario, diasGym, horasGym).then(res => {
+                ejercicioAleatorio("Pectorales", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Pectorales", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Pectorales", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Pectorales", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Pectorales", res.id).then(() => {console.log("entra")})
+            })
+            crearRutina(nombreUsuario, tipoRutina, idUsuario, diasGym, horasGym).then(res => {
+                ejercicioAleatorio("Cuadriceps", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Cuadriceps", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Cuadriceps", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Cuadriceps", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Cuadriceps", res.id).then(() => {console.log("entra")})
+            })
+            crearRutina(nombreUsuario, tipoRutina, idUsuario, diasGym, horasGym).then(res => {
+                ejercicioAleatorio("Todo", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Todo", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Todo", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Todo", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Todo", res.id).then(() => {console.log("entra")})
+            })
+            crearRutina(nombreUsuario, tipoRutina, idUsuario, diasGym, horasGym).then(res => {
+                ejercicioAleatorio("Abdomen", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Abdomen", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Abdomen", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Abdomen", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Abdomen", res.id).then(() => {console.log("entra")})
+            })
             return {tiempoEjercicio: "8 min"}
         }else if (horasGym == 2 || horasGym == 2.5){
             //Query 8 brazo , 8 hombro, 8 espalda , 8 pecho, 8 pierna
+            crearRutina(nombreUsuario, tipoRutina, idUsuario, diasGym, horasGym).then(res => {
+                ejercicioAleatorio("Biceps", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Biceps", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Biceps", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Biceps", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Biceps", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Biceps", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Biceps", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Biceps", res.id).then(() => {console.log("entra")})
+            })
+            crearRutina(nombreUsuario, tipoRutina, idUsuario, diasGym, horasGym).then(res => {
+                ejercicioAleatorio("Pectorales", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Pectorales", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Pectorales", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Pectorales", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Pectorales", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Pectorales", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Pectorales", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Pectorales", res.id).then(() => {console.log("entra")})
+            })
+            crearRutina(nombreUsuario, tipoRutina, idUsuario, diasGym, horasGym).then(res => {
+                ejercicioAleatorio("Cuadriceps", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Cuadriceps", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Cuadriceps", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Cuadriceps", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Cuadriceps", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Cuadriceps", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Cuadriceps", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Cuadriceps", res.id).then(() => {console.log("entra")})
+            })
+            crearRutina(nombreUsuario, tipoRutina, idUsuario, diasGym, horasGym).then(res => {
+                ejercicioAleatorio("Todo", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Todo", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Todo", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Todo", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Todo", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Todo", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Todo", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Todo", res.id).then(() => {console.log("entra")})
+            })
+            crearRutina(nombreUsuario, tipoRutina, idUsuario, diasGym, horasGym).then(res => {
+                ejercicioAleatorio("Abdomen", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Abdomen", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Abdomen", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Abdomen", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Abdomen", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Abdomen", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Abdomen", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Abdomen", res.id).then(() => {console.log("entra")})
+            })
             return {tiempoEjercicio: "12 min"}
         }else if (horasGym == 3 || horasGym == 3.5){
             //Query 10 brazo , 10 hombro, 10 espalda , 10 pecho, 10 pierna
+            crearRutina(nombreUsuario, tipoRutina, idUsuario, diasGym, horasGym).then(res => {
+                ejercicioAleatorio("Biceps", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Biceps", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Biceps", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Biceps", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Biceps", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Biceps", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Biceps", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Biceps", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Biceps", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Biceps", res.id).then(() => {console.log("entra")})
+            })
+            crearRutina(nombreUsuario, tipoRutina, idUsuario, diasGym, horasGym).then(res => {
+                ejercicioAleatorio("Pectorales", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Pectorales", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Pectorales", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Pectorales", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Pectorales", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Pectorales", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Pectorales", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Pectorales", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Pectorales", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Pectorales", res.id).then(() => {console.log("entra")})
+            })
+            crearRutina(nombreUsuario, tipoRutina, idUsuario, diasGym, horasGym).then(res => {
+                ejercicioAleatorio("Cuadriceps", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Cuadriceps", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Cuadriceps", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Cuadriceps", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Cuadriceps", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Cuadriceps", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Cuadriceps", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Cuadriceps", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Cuadriceps", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Cuadriceps", res.id).then(() => {console.log("entra")})
+            })
+            crearRutina(nombreUsuario, tipoRutina, idUsuario, diasGym, horasGym).then(res => {
+                ejercicioAleatorio("Todo", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Todo", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Todo", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Todo", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Todo", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Todo", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Todo", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Todo", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Todo", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Todo", res.id).then(() => {console.log("entra")})
+            })
+            crearRutina(nombreUsuario, tipoRutina, idUsuario, diasGym, horasGym).then(res => {
+                ejercicioAleatorio("Abdomen", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Abdomen", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Abdomen", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Abdomen", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Abdomen", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Abdomen", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Abdomen", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Abdomen", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Abdomen", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Abdomen", res.id).then(() => {console.log("entra")})
+            })
             return {tiempoEjercicio: "14 min"}
         }else if (horasGym == 4 || horasGym == 4.5){
             //Query 12 brazo , 12 hombro, 12 espalda , 12 pecho, 12 pierna
+            crearRutina(nombreUsuario, tipoRutina, idUsuario, diasGym, horasGym).then(res => {
+                ejercicioAleatorio("Biceps", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Biceps", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Biceps", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Biceps", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Biceps", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Biceps", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Biceps", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Biceps", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Biceps", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Biceps", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Biceps", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Biceps", res.id).then(() => {console.log("entra")})
+            })
+            crearRutina(nombreUsuario, tipoRutina, idUsuario, diasGym, horasGym).then(res => {
+                ejercicioAleatorio("Pectorales", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Pectorales", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Pectorales", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Pectorales", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Pectorales", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Pectorales", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Pectorales", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Pectorales", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Pectorales", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Pectorales", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Pectorales", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Pectorales", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Pectorales", res.id).then(() => {console.log("entra")})
+            })
+            crearRutina(nombreUsuario, tipoRutina, idUsuario, diasGym, horasGym).then(res => {
+                ejercicioAleatorio("Cuadriceps", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Cuadriceps", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Cuadriceps", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Cuadriceps", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Cuadriceps", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Cuadriceps", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Cuadriceps", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Cuadriceps", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Cuadriceps", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Cuadriceps", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Cuadriceps", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Cuadriceps", res.id).then(() => {console.log("entra")})
+            })
+            crearRutina(nombreUsuario, tipoRutina, idUsuario, diasGym, horasGym).then(res => {
+                ejercicioAleatorio("Todo", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Todo", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Todo", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Todo", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Todo", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Todo", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Todo", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Todo", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Todo", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Todo", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Todo", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Todo", res.id).then(() => {console.log("entra")})
+            })
+            crearRutina(nombreUsuario, tipoRutina, idUsuario, diasGym, horasGym).then(res => {
+                ejercicioAleatorio("Abdomen", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Abdomen", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Abdomen", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Abdomen", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Abdomen", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Abdomen", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Abdomen", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Abdomen", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Abdomen", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Abdomen", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Abdomen", res.id).then(() => {console.log("entra")})
+                ejercicioAleatorio("Abdomen", res.id).then(() => {console.log("entra")})
+            })
             return {tiempoEjercicio: "14 min"}
         }
     }else if (diasGym == 6){
