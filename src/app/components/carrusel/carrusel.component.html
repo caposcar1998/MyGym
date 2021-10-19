@@ -22,61 +22,21 @@
   <div class="carousel-inner" role="listbox">
 
     <!--First slide-->
-    <div class="carousel-item active">
+    <div *ngFor="let rutina of rutinas ">
 
-        <app-card [size]=size        [foto]=foto
-       [titulo]=titulo
-       [tiempo]=tiempo
-       [descripcion]=descripcion></app-card>
 
-        <app-card [size]=size        [foto]=foto
-       [titulo]=titulo
-       [tiempo]=tiempo
-       [descripcion]=descripcion></app-card>
-      
-        <app-card [size]=size        [foto]=foto
-       [titulo]=titulo
-       [tiempo]=tiempo
-       [descripcion]=descripcion></app-card>
-      
-       <app-card [size]=size        [foto]=foto
-       [titulo]=titulo
-       [tiempo]=tiempo
-       [descripcion]=descripcion></app-card>
+
+        <app-card [size]=size        
+        [foto]=foto
+       [titulo]=rutina.nombre
+       [tiempo]=rutina.tiempo
+       [descripcion]=rutina.intensidad></app-card>
+
+
 
     </div>
     <!--/.First slide-->
 
-    <!--Second slide-->
-    <div class="carousel-item">
-
-      <app-card [size]=size
-      [foto]=foto
-       [titulo]=titulo
-       [tiempo]=tiempo
-       [descripcion]=descripcion>
-       </app-card>
-
-      <app-card [size]=size
-       [foto]=foto
-       [titulo]=titulo
-       [tiempo]=tiempo
-       [descripcion]=descripcion></app-card>
-
-      <app-card [size]=size        
-       [foto]=foto
-       [titulo]=titulo
-       [tiempo]=tiempo
-       [descripcion]=descripcion></app-card>
-      
-      <app-card [size]=size        
-       [foto]=foto
-       [titulo]=titulo
-       [tiempo]=tiempo
-       [descripcion]=descripcion></app-card>
-
-    </div>
-    <!--/.Second slide-->
 
    
 
