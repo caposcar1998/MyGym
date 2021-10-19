@@ -9,6 +9,7 @@ import { AuthService } from '@auth0/auth0-angular';
 export class HomeService {
 
   private url= 'http://localhost:8080/usuarios'
+  private urlR = 'http://localhost:8080/rutinas'
 
   constructor(private http: HttpClient, public auth: AuthService) { }
 
@@ -25,4 +26,10 @@ export class HomeService {
       "idAuth":idAuth
     })
   }
+
+  findFirstRutine(userId){
+    let urlGet = this.urlR+"/rutina/"+userId
+    return this.http.get(urlGet)
+  }
+
 }

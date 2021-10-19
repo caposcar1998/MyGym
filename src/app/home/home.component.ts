@@ -16,6 +16,7 @@ export class HomeComponent implements OnInit {
   titulo: string ="Brazos de acero"
   tiempo: string = "60"
   descripcion: string = "Para unos brazos de acero"
+  rutina: any[]
   
   constructor(private homeService: HomeService,public auth: AuthService) { }
 
@@ -23,7 +24,7 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
     this.auth.user$.subscribe( (profile) => (this.checkType(profile)));
-    
+
   }
 
   createNewUser(profile: String, idAuth: String, urlValue: String,profileAll:any){
@@ -31,11 +32,21 @@ export class HomeComponent implements OnInit {
       this.checkIfNewUser(profileAll))
   }
 
+  
+
   checkIfExists(nombre:string,id:string){
     localStorage.setItem("id",id)
     if (nombre){
     
       this.existeUsuario = "Existe"
+      this.homeService.findFirstRutine(parseInt(localStorage.getItem("id"))).subscribe(data =>
+        {this.rutina = data["response"],
+        console.log(this.rutina),
+        this.titulo = this.rutina["nombre"]
+        this.tiempo = "Tiempo por ejercicio: "+this.rutina["tiempo"] + " minutos"
+        this.descripcion = "Intensidad "+this.rutina['intensidad']
+      }
+        )
     }
   }
 
