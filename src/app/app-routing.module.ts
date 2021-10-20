@@ -10,7 +10,7 @@ import { EditProfileComponent } from './edit-profile/edit-profile.component';
 import { RoutinesComponent } from './components/routines/routines.component';
 import { ContactUsComponent } from './side-menu/contact-us/contact-us.component';
 import { RutinaComponent } from './components/rutina/rutina.component';
-
+import { ModalComponent } from './components/modal/modal.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent, canActivate:[AuthGuard] },
@@ -22,7 +22,9 @@ const routes: Routes = [
   { path: "ejerciciosLista", component: EjerciciosListaComponent},
   { path: "routines", component: RoutinesComponent},
   { path: "contactanos", component: ContactUsComponent},
-  { path: "rutina/:id/ejercicios", component: RutinaComponent}
+  { path: "rutina/:id/ejercicios", component: RutinaComponent},
+  {path: "modal", component: ModalComponent},
+  {path: '**', pathMatch: 'full', redirectTo: 'modal'}
 ];
 
 @NgModule({
