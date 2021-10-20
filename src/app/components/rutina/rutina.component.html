@@ -10,7 +10,23 @@
         <div class="content p-4 p-md-5 pt-5">  
                 <div class="text-center"> <h1>Rutina</h1></div>
             <div class="container">
-                
+                 <div class="row">
+                    <div class="col-6" *ngFor="let item of ejercicios">
+                      <app-card-ejercicios
+                      [size]=""
+                      [foto]=item.foto
+                      [nombre]=item.nombre
+                      [equipo]=item.equipo
+                      [principal]=item.partePrincipal
+                      [tipo]=item.tipo
+                      [descripcion]=item.descripcion
+                      [secundaria]=item.parteSecundaria
+                      [terciaria]=item.parteTerciaria
+                      >
+                      </app-card-ejercicios>
+                    </div>
+
+                  </div>
             
 
         </div>

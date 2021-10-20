@@ -9,6 +9,8 @@ import { RutinaService } from './rutina.service';
 })
 export class RutinaComponent implements OnInit {
   
+  ejercicios= []
+
   constructor(private route: ActivatedRoute,private rutinaService: RutinaService) { }
 
 
@@ -16,7 +18,7 @@ export class RutinaComponent implements OnInit {
     const id = this.route.snapshot.params['id'];
     console.log(id)
     this.rutinaService.findExercies(id).subscribe(data=>
-      console.log(data))
+      {this.ejercicios = data["response"],console.log(this.ejercicios)})
   }
 
 }
