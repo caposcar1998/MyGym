@@ -9,6 +9,7 @@ import { SecureComponent } from './secure/secure.component';
 import { EditProfileComponent } from './edit-profile/edit-profile.component';
 import { RoutinesComponent } from './components/routines/routines.component';
 import { ContactUsComponent } from './side-menu/contact-us/contact-us.component';
+import { RutinaComponent } from './components/rutina/rutina.component';
 
 
 const routes: Routes = [
@@ -20,7 +21,8 @@ const routes: Routes = [
   { path: 'edit-profile', component: EditProfileComponent },
   { path: "ejerciciosLista", component: EjerciciosListaComponent},
   { path: "routines", component: RoutinesComponent},
-  { path: "contactanos", component: ContactUsComponent}
+  { path: "contactanos", component: ContactUsComponent},
+  { path: "rutina/:id/ejercicios", component: RutinaComponent}
 ];
 
 @NgModule({

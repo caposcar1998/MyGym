@@ -14,6 +14,7 @@ const ectomorfo = require("./workouts/Ectomorfo.js")
 const endomorfo = require("./workouts/Endomorfo.js")
 const mesoformo = require("./workouts/Mesomorfo.js")
 const {Rutinas} = require("./models")
+const {EjerciciosRutinas} = require("./models")
 
 var distDir = __dirname + "/dist/";
 app.use(express.static(distDir));
@@ -152,4 +153,18 @@ app.get("/rutinas/:idUsuario",function(req,res){
 
     })
 })
+
+app.get("/ejerciciosrutinas/:idRutina",function(req,res){
+    const id = req.params.idRutina
+    EjerciciosRutinas.findAll({ where: {idRutina: id} }).then(function(ejercicio) {
+        if (ejercicio != null){
+            res.status(200).json({response:ejercicio})
+        } else {
+            res.status(404).json({response:"Ejercicio no encontrado"})
+        }
+
+    })
+})
+
+
 

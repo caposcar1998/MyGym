@@ -15,6 +15,7 @@ export class HomeComponent implements OnInit {
   foto: string = "https://www.entrenamientos.com/media/cache/exercise_750/uploads/exercise/elevacion-lateral-de-hombros-con-mancuernas-2992.png"
   titulo: string ="Brazos de acero"
   tiempo: string = "60"
+  idRutina: 0
   descripcion: string = "Para unos brazos de acero"
   rutina: any[]
   
@@ -45,6 +46,7 @@ export class HomeComponent implements OnInit {
         this.titulo = this.rutina["nombre"]
         this.tiempo = "Tiempo por ejercicio: "+this.rutina["tiempo"] + " minutos"
         this.descripcion = "Intensidad "+this.rutina['intensidad']
+        this.idRutina = this.rutina["id"]
       }
         )
     }

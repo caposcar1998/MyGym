@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-card',
   templateUrl: './card.component.html',
@@ -17,10 +17,16 @@ export class CardComponent implements OnInit {
   tiempo: string;
   @Input()
   descripcion: string;
+  @Input()
+  idRutina: number;
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
   }
+  sendToPage(){
+    this.router.navigate(['/rutina', this.idRutina, 'ejercicios'], { queryParams: { allowEdit: this.idRutina }, fragment: 'loading' })
+  }
+
 
 }
