@@ -4,6 +4,7 @@ import { StepModel } from 'src/app/components/create-profile/models/step.model';
 import { Observable } from 'rxjs';
 import { StepsService } from 'src/app/components/create-profile/services/steps.service';
 import { Router } from '@angular/router';
+
 @Component({
   selector: 'app-objectives',
   templateUrl: './objectives.component.html',
@@ -43,12 +44,16 @@ export class ObjectivesComponent implements OnInit {
   onSubmit(): void {
     
     this.steps.updateUser(localStorage.getItem('personalData'),localStorage.getItem('bodyType'),localStorage.getItem('objetivo'),localStorage.getItem('id')).subscribe(data=>
-      window.alert("Has finalizado con éxito! La alerta no es definitiva"))
-      localStorage.removeItem("personalData")
-      localStorage.removeItem("bodyType")
-      localStorage.removeItem("objetivo")
-      this.router.navigate(['/home']);
+      this.endCreatePorfile())
+
   }
 
+  endCreatePorfile(){
+    window.alert("Has finalizado con éxito! La alerta no es definitiva")
+    localStorage.removeItem("personalData")
+    localStorage.removeItem("bodyType")
+    localStorage.removeItem("objetivo")
+    window.location.reload();
+  }
 
 }

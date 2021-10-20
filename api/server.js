@@ -10,6 +10,11 @@ var corsOptions = {
 }
 const {Usuarios} = require("./models")
 const {Ejercicios} = require("./models") 
+const ectomorfo = require("./workouts/Ectomorfo.js")
+const endomorfo = require("./workouts/Endomorfo.js")
+const mesoformo = require("./workouts/Mesomorfo.js")
+const {Rutinas} = require("./models")
+const {EjerciciosRutinas} = require("./models")
 
 var distDir = __dirname + "/dist/";
 app.use(express.static(distDir));
@@ -95,8 +100,26 @@ app.put("/usuarios/:idUsuario",function(req,res){
         }, 
         {where: {id:id}
         })
-        .then((response)=>{res.status(204).json({Status:"Exito al actualizar"})})
+        .then(()=>{
+            if (tipoCuerpo == "Ectomorfo"){
+                ectomorfo.crearRutinaEctomorfo(objetivoCuerpo, diasGym, horasGym, intensidad, id, nombre).then(resu =>
+                 {res.status(200).json({Mensaje:"se crea"})}
+                 )
+             } else if (tipoCuerpo == "Endomorfo"){
+                 endomorfo.crearRutinaEndomorfo(objetivoCuerpo, diasGym, horasGym, intensidad, id, nombre).then(resu =>
+                     {res.status(200).json({Mensaje:"se crea"})}
+                     )
+             } else{
+                 mesoformo.crearRutinaMesoformo(objetivoCuerpo, diasGym, horasGym, intensidad, id, nombre).then(resu =>
+                     {res.status(200).json({Mensaje:"se crea"})}
+                     )
+             }
+        })
         .catch((err)=>{res.status(500).json({Error:err})})
+
+        //Generar rutina
+
+        
 })
 
 app.get("/ejercicios",function(req,res){
@@ -106,3 +129,42 @@ app.get("/ejercicios",function(req,res){
     
     
 })
+
+app.get("/rutinas/rutina/:idUsuario",function(req,res){
+    const id = req.params.idUsuario
+    Rutinas.findOne({ where: {idUsuario: id} }).then(function(ejercicio) {
+        if (ejercicio != null){
+            res.status(200).json({response:ejercicio})
+        } else {
+            res.status(404).json({response:"Ejercicio no encontrado"})
+        }
+
+    })
+})
+
+app.get("/rutinas/:idUsuario",function(req,res){
+    const id = req.params.idUsuario
+    Rutinas.findAll({ where: {idUsuario: id} }).then(function(ejercicio) {
+        if (ejercicio != null){
+            res.status(200).json({response:ejercicio})
+        } else {
+            res.status(404).json({response:"Ejercicio no encontrado"})
+        }
+
+    })
+})
+
+app.get("/ejerciciosrutinas/:idRutina",function(req,res){
+    const id = req.params.idRutina
+    EjerciciosRutinas.findAll({ where: {idRutina: id} }).then(function(ejercicio) {
+        if (ejercicio != null){
+            res.status(200).json({response:ejercicio})
+        } else {
+            res.status(404).json({response:"Ejercicio no encontrado"})
+        }
+
+    })
+})
+
+
+

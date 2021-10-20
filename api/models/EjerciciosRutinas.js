@@ -5,30 +5,22 @@ module.exports = (sequelize, DataTypes) => {
         peso:{
             type:DataTypes.DOUBLE,
             allowNull: false,
-            validate: {
-                noteEmpty: true
-            }
+
         },
         repeticiones:{
             type:DataTypes.INTEGER,
             allowNull: false,
-            validate: {
-                noteEmpty: true
-            }
+
         },
         series:{
             type:DataTypes.INTEGER,
             allowNull: false,
-            validate: {
-                noteEmpty: true
-            }
+
         },
         tiempo:{
-            type: DataTypes.STRING,
+            type: DataTypes.INTEGER,
             allowNull: false,
-            validate: {
-                noteEmpty: true
-            }
+
         },
         idRutina:{
             type:DataTypes.INTEGER(11),
