@@ -1,8 +1,6 @@
-<h1>Modal</h1>
-<hr>
 <ng-template #contenido let-modal>
     <div class="modal-header">
-        <h4>Título Modal:</h4>
+        <h3>{{ modalName }}</h3>
         <button class="close" arial-label="close" type="button" (click)="modal.dismiss()">
             <span aria-hidden="true">&times;</span>
         </button>
@@ -16,4 +14,4 @@
 
 </ng-template>
 
-<button type="button" class="btn btn-outline-danger" (click)="modal.open(contenido)">Lanzar modal</button>
+<button type="button" class="btn btn-info" (click)="openM(contenido)">{{ modalName }}</button>

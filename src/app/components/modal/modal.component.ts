@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import {NgbModal} from '@ng-bootstrap/ng-bootstrap'
 
 @Component({
@@ -8,9 +8,20 @@ import {NgbModal} from '@ng-bootstrap/ng-bootstrap'
 })
 export class ModalComponent implements OnInit {
 
+  @Input()
+  modalName: string;
+  @Input()
+  contentType: boolean;
+
   constructor(public modal:NgbModal) { }
 
+  
+
   ngOnInit(): void {
+  }
+
+  openM(content){
+    this.modal.open(content,{size:'m'})
   }
 
 }

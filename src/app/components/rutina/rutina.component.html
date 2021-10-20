@@ -12,6 +12,7 @@
             <div class="container">
                  <div class="row">
                     <div class="col-6" *ngFor="let item of ejercicios">
+                      
                       <app-card-ejercicios
                       [size]=""
                       [foto]=item.foto
@@ -23,9 +24,11 @@
                       [secundaria]=item.parteSecundaria
                       [terciaria]=item.parteTerciaria
                       >
+                      
                       </app-card-ejercicios>
+                        
                     </div>
-
+                    
                   </div>
             
 

@@ -7,6 +7,10 @@
             <h4 class="card-title">{{tiempo}}</h4>
             <p class="card-text">{{descripcion}}</p>
             <a class="btn btn-primary" (click)="sendToPage()">Ir a rutina</a>
+            <app-modal 
+              [modalName]=evaluateModal>
+              
+            </app-modal>
           </div>
         </div>
       </div>

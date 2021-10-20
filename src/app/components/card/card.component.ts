@@ -20,6 +20,8 @@ export class CardComponent implements OnInit {
   @Input()
   idRutina: number;
 
+  evaluateModal:string = "Evaluar rutina"; 
+
   constructor(private router: Router) { }
 
   ngOnInit(): void {
