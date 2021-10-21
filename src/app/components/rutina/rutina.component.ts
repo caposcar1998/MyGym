@@ -52,7 +52,6 @@ export class RutinaComponent implements OnInit {
   }
   async ngOnInit(): Promise<void> {
     const id = this.route.snapshot.params['id'];
-    console.log(id)
     this.rutinaService.findExercies(id).subscribe(data=>
       {this.ejercicios = data["response"],console.log(this.ejercicios)});
     this.findEjercicios().subscribe(data=>

@@ -1,5 +1,6 @@
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { BrowserModule } from '@angular/platform-browser';
 import {MatCardModule} from '@angular/material/card';
 import { NgWizardModule, NgWizardConfig, THEME } from 'ng-wizard';
@@ -34,13 +35,14 @@ import { CarruselComponent } from './components/carrusel/carrusel.component';
 import { CardComponent } from './components/card/card.component';
 import { EjerciciosListaComponent } from './components/ejercicios-lista/ejercicios-lista.component';
 import { CardEjerciciosComponent } from './components/card-ejercicios/card-ejercicios.component';
-
 import { RoutinesComponent } from './components/routines/routines.component';
 import { CardRoutinesComponent } from './components/card-routines/card-routines.component';
-
 import { ContactUsComponent } from './side-menu/contact-us/contact-us.component';
 import { RutinaComponent } from './components/rutina/rutina.component';
 import { RutinasRapidasComponent } from './components/rutinas-rapidas/rutinas-rapidas.component';
+import { ModalRoutineEvalComponent } from './components/modal-routine-eval/modal-routine-eval.component';
+import { CardEjerciciosRutinasComponent } from './components/card-ejercicios-rutinas/card-ejercicios-rutinas.component';
+
 
 
 
@@ -82,7 +84,10 @@ const ngWizardConfig: NgWizardConfig = {
     CardRoutinesComponent,
     ContactUsComponent,
     RutinaComponent,
-    RutinasRapidasComponent
+    RutinasRapidasComponent,
+    ModalRoutineEvalComponent,
+    CardEjerciciosRutinasComponent
+
 
 
   ],
@@ -96,6 +101,7 @@ const ngWizardConfig: NgWizardConfig = {
     FormsModule,
     MatSnackBarModule,
     AuthModule.forRoot({ ...env.auth }),
+    NgbModule
   ],
   
   providers: [ AuthGuard],
