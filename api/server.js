@@ -178,5 +178,16 @@ app.get("/ejerciciosrutinas/:idRutina",function(req,res){
     })
 })
 
+app.get("/rutina/:idRutina", function(req,res){
+    const id = req.params.idRutina
+    Rutinas.findOne({ where: {id: id} }).then(function(rutina) {
+        if (rutina != null){
+            res.status(200).json({response:rutina})
+        } else {
+            res.status(404).json({response:"rutina no encontrado"})
+        }
+
+    })
+})
 
 
