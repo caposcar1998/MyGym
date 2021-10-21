@@ -863,7 +863,7 @@ async function crearRutina(idUsuario,diasGym,horasGym,tiempo,repeticiones,dia,fo
     console.log(foto)
     rutina = {}
     await Rutinas.create({
-        nombre:dia + ": " + diasGym+ ": " + horasGym ,
+        nombre:dia ,
         intensidad:repeticiones,
         tiempo:tiempo,
         idUsuario: idUsuario,
