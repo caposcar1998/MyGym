@@ -30,7 +30,7 @@ export class ModalRoutineEvalService {
   }
 
   removeRoutine(idRoutine:string){
-    console.log("A eliminar");
+    console.log("A eliminar Rutina con id: " + idRoutine);
     let deleteUrl = this.urlR+'/rutina/'+idRoutine;
     return this.http.delete(deleteUrl);
 

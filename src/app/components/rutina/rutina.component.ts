@@ -16,7 +16,6 @@ export class RutinaComponent implements OnInit {
 
   ngOnInit(): void {
     
-    console.log('ID EJERCICIO O RUTINA: ' + this.id)
     this.rutinaService.findExercies(this.id).subscribe(data=>
       {this.ejercicios = data["response"],console.log(this.ejercicios)})
   }
