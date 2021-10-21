@@ -67,7 +67,6 @@ export class StepsService {
   }
 
   createRutines(personalData:string,bodyType:string,objetivo:string,id:string){
-
     let postUrl = this.url+"/"+"rutinas";
     const personal = JSON.parse(personalData);
     const body = JSON.parse(bodyType)

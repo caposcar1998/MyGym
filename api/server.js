@@ -232,7 +232,6 @@ app.get("/rutinas/:idUsuario",function(req,res){
         } else {
             res.status(404).json({response:"Ejercicio no encontrado"})
         }
-
     })
 })
 
