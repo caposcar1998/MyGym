@@ -1,0 +1,73 @@
+<ng-template #content let-modal>
+    <div class="modal-header text-white">
+        <h3>Evaluar Rutina</h3>
+        <button class="close" arial-label="close" type="button" (click)="modal.dismiss()">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="modal-body">
+        <h3>Califica la rutina con los siguientes atributos</h3>
+        <form #f="ngForm" (ngSubmit)="onFilledForm(f)">
+            <div class="form-group  mt-4">
+                <label for="generalRating">Calificación general de la rutina</label>
+                <select class="form-select" id="generalRating" name="generalRating" ngModel required>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                  <option value="10">10</option>
+                </select>
+            </div>
+            <div class="form-group  mt-4">
+                <label for="isTiring">¿Qué tan cansada fue la rutina? </label>
+                <select class="form-select" id="isTiring" name="isTiring" ngModel required>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                  <option value="10">10</option>
+                </select>
+            </div>
+            <div class="form-group  mt-4">
+                <label for="isEasy">¿Qué tan difícil fue la rutina? </label>
+                <select class="form-select" id="isEasy" name="isEasy" ngModel required>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                  <option value="10">10</option>
+                </select>
+            </div>
+  
+        </form>
+
+        
+    </div>
+    <div *ngIf="f.valid; else success">
+        <p style="color: green; margin-left: 1.5vh;"><span >&nbsp;</span>Se han contestado los datos correctamente. </p>
+      </div>
+      <ng-template #success>
+          <p style="color: red;  margin-left: 1.5vh;"><span>&nbsp;</span>Para continuar necesitas contestar los datos. </p>
+    </ng-template>
+    <div class="modal-footer ">
+        <button type="button" class="btn btn-success" [disabled]="!f.valid " (click)="modal.close()">Calificar</button>
+    </div>
+
+</ng-template>
+
+<button type="button" class="btn btn-info" (click)="openM(content)">Evaluar Rutina</button>

@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ModalComponent } from './modal.component';
+import { ModalRoutineEvalComponent } from './modal-routine-eval.component';
 
-describe('ModalComponent', () => {
-  let component: ModalComponent;
-  let fixture: ComponentFixture<ModalComponent>;
+describe('ModalRoutineEvalComponent', () => {
+  let component: ModalRoutineEvalComponent;
+  let fixture: ComponentFixture<ModalRoutineEvalComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ModalComponent ]
+      declarations: [ ModalRoutineEvalComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ModalComponent);
+    fixture = TestBed.createComponent(ModalRoutineEvalComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

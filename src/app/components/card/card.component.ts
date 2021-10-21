@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 @Component({
   selector: 'app-card',
   templateUrl: './card.component.html',
@@ -19,8 +20,9 @@ export class CardComponent implements OnInit {
   descripcion: string;
   @Input()
   idRutina: number;
+  
 
-  evaluateModal:string = "Evaluar rutina"; 
+
 
   constructor(private router: Router) { }
 
