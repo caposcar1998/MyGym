@@ -47,6 +47,7 @@ export class HomeComponent implements OnInit {
         this.tiempo = "Tiempo por ejercicio: "+this.rutina["tiempo"] + " minutos"
         this.descripcion = "Intensidad "+this.rutina['intensidad']
         this.idRutina = this.rutina["id"]
+        this.foto = this.rutina["foto"]
       }
         )
     }

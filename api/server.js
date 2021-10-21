@@ -130,6 +130,18 @@ app.get("/ejercicios",function(req,res){
     
 })
 
+app.get("/ejercicio/:id",function(req,res){
+    const id = req.params.id
+    Ejercicios.findOne({ where: {id: id} }).then(function(ejercicio) {
+        if (ejercicio != null){
+            res.status(200).json({response:ejercicio})
+        } else {
+            res.status(404).json({response:"Ejercicio no encontrado"})
+        }
+
+    })
+})
+
 app.get("/rutinas/rutina/:idUsuario",function(req,res){
     const id = req.params.idUsuario
     Rutinas.findOne({ where: {idUsuario: id} }).then(function(ejercicio) {
@@ -166,5 +178,16 @@ app.get("/ejerciciosrutinas/:idRutina",function(req,res){
     })
 })
 
+app.get("/rutina/:idRutina", function(req,res){
+    const id = req.params.idRutina
+    Rutinas.findOne({ where: {id: id} }).then(function(rutina) {
+        if (rutina != null){
+            res.status(200).json({response:rutina})
+        } else {
+            res.status(404).json({response:"rutina no encontrado"})
+        }
+
+    })
+})
 
 
