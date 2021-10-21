@@ -1,13 +1,15 @@
-<div class="card mb-2 mr-2" style="width: 18rem;">
-    <div class="card-title">
-        <strong>Nombre :</strong> <p>{{nombre}} </p>
-        <strong>Equipo :</strong> <p> {{equipo}} </p>
-    </div>
+<div class="{{size}}" style="float:left">
+    <div class="card mb-2">
+        <img class="card-img-top"
+        src={{foto}} alt="Card image cap">
         <div class="card-body">
-        <strong>Descripción :</strong> <p class="card-text"> {{descripcion}}</p>
-        <strong>Tipo :</strong> <p class="card-text">{{tipo}}</p>
-        <strong>Parte Principal :</strong> <p class="card-text"> {{principal}}</p>
-        <strong>Parte Secundaria:</strong> <p class="card-text"> {{secundaria}}</p>
-        <strong>Parte Terciaria :</strong> <p class="card-text"> {{terciaria}}</p>
+        <h4 class="card-title">Nombre: {{nombre}}</h4>
+        <h4 class="card-title">Equipo: {{equipo}}</h4>
+        <p class="card-text">Descripcion: {{descripcion}}</p>
+        <p class="card-text">Tipo: {{tipo}}</p>
+        <p class="card-text">Parte Principal: {{principal}}</p>
+        <p class="card-text">Parte Secundaria: {{secundaria}}</p>
+        <p class="card-text">Parte Terciaria {{terciaria}}</p>
         </div>
-</div>
+    </div>
+    </div>
