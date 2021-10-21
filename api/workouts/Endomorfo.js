@@ -861,11 +861,12 @@ async function agregarCardio(tiempoCardio, idRutina){
 
 
 
-async function crearRutina(idUsuario,tiempo, intensidad,foto,dia,parteCuerpo){
+async function crearRutina(idUsuario,diasGym,horasGym,tiempo,repeticiones,dia,foto){
+    console.log(foto)
     rutina = {}
     await Rutinas.create({
-        nombre:dia + ": " + parteCuerpo ,
-        intensidad:intensidad,
+        nombre:dia + ": " + diasGym+ ": " + horasGym ,
+        intensidad:repeticiones,
         tiempo:tiempo,
         idUsuario: idUsuario,
         foto: foto
