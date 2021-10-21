@@ -32,7 +32,7 @@ export class RutinasRapidasComponent implements OnInit {
     return new Array(i);
 }
   getRoutines(id:string){
-    let getUrl = this.url+"/"+"rutinas/" + id;
+    let getUrl = this.url+"/"+"rutinas/" + 1;
     return this.http.get<GetRutinas>(getUrl);
   }
 
