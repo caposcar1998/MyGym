@@ -41,6 +41,7 @@ import { ContactUsComponent } from './side-menu/contact-us/contact-us.component'
 import { RutinaComponent } from './components/rutina/rutina.component';
 import { ModalRoutineEvalComponent } from './components/modal-routine-eval/modal-routine-eval.component';
 import { CardEjerciciosRutinasComponent } from './components/card-ejercicios-rutinas/card-ejercicios-rutinas.component';
+import { RoutineEvalComponent } from './components/routine-eval/routine-eval.component';
 
 
 
@@ -84,7 +85,8 @@ const ngWizardConfig: NgWizardConfig = {
     ContactUsComponent,
     RutinaComponent,
     ModalRoutineEvalComponent,
-    CardEjerciciosRutinasComponent
+    CardEjerciciosRutinasComponent,
+    RoutineEvalComponent
 
 
 

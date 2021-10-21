@@ -10,6 +10,7 @@ import { EditProfileComponent } from './edit-profile/edit-profile.component';
 import { RoutinesComponent } from './components/routines/routines.component';
 import { ContactUsComponent } from './side-menu/contact-us/contact-us.component';
 import { RutinaComponent } from './components/rutina/rutina.component';
+import { RoutineEvalComponent } from './components/routine-eval/routine-eval.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent, canActivate:[AuthGuard] },
@@ -22,6 +23,7 @@ const routes: Routes = [
   { path: "routines", component: RoutinesComponent},
   { path: "contactanos", component: ContactUsComponent},
   { path: "rutina/:id/ejercicios", component: RutinaComponent},
+  { path: "evalRutinas", component: RoutineEvalComponent}
 ];
 
 @NgModule({
