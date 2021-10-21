@@ -96,16 +96,14 @@ app.get("/usuarios/:correo",function(req,res){
 
 app.delete('/rutinas/rutina/:idRutina', function(req, res){
     const idToDelete = req.params.idRutina;
-    Rutinas.findOne({where: {id: idToDelete}}).then(function(routine) {
-        if(routine){
-            console.log("La rutina existe")
-            Rutinas.destroy(routine).then(()=>{
-                res.status(201).json({response: 'Rutina destruida'})
-            }).catch((error)=>{
-                res.status(500).json({error: error});
-            })
-        }
-    })
+    console.log("Id to delete: " + idToDelete);
+    Rutinas.destroy({
+        where: {id: idToDelete}
+    }).then(()=>{
+        res.status(201).json({response: 'Rutina destruida'})
+    }).catch((error)=>{
+        res.status(500).json({error: error});
+    })    
 })
 
 app.post("/usuarios/:correo",function(req,res){
