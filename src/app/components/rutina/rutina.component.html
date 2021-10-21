@@ -8,13 +8,13 @@
     </div>
     
         <div class="content p-4 p-md-5 pt-5">  
-                <div class="text-center"> <h1>Rutina</h1></div>
-                
+
+                <div class="text-center"> <h1>{{rutinaInfo['nombre']}}</h1></div>
             <div class="container">
                  <div class="row">
                     <div class="col-6" *ngFor="let item of ejercicios">
-                      
-                      <app-card-ejercicios
+                      <app-card-ejercicios-rutinas
+
                       [size]=""
                       [foto]=item.foto
                       [nombre]=item.nombre
@@ -23,11 +23,14 @@
                       [tipo]=item.tipo
                       [descripcion]=item.descripcion
                       [secundaria]=item.parteSecundaria
-                      [terciaria]=item.parteTerciaria
+                      [tipo]=item.tipo
+                      [repeticiones]=item.repeticiones
+                      [series]=item.series
+                      [tiempo]=item.tiempo
+                      [terciaria]=item.terciaria
                       >
-                      
-                      </app-card-ejercicios>
-                        
+
+                      </app-card-ejercicios-rutinas>
                     </div>
                     <div class="col-6-lg">
                       <app-modal-routine-eval [routineId]=id></app-modal-routine-eval>
