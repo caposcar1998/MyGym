@@ -1,5 +1,3 @@
-
-
 module.exports = (sequelize, DataTypes) => {
     const EvaluacionRutinas = sequelize.define("EvaluacionRutinas",{
         calificacion:{

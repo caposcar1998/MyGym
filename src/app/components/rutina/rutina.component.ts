@@ -10,14 +10,14 @@ import { RutinaService } from './rutina.service';
 export class RutinaComponent implements OnInit {
   
   ejercicios= []
-
+  id = this.route.snapshot.params['id']
   constructor(private route: ActivatedRoute,private rutinaService: RutinaService) { }
 
 
   ngOnInit(): void {
-    const id = this.route.snapshot.params['id'];
-    console.log(id)
-    this.rutinaService.findExercies(id).subscribe(data=>
+    
+    console.log('ID EJERCICIO O RUTINA: ' + this.id)
+    this.rutinaService.findExercies(this.id).subscribe(data=>
       {this.ejercicios = data["response"],console.log(this.ejercicios)})
   }
 

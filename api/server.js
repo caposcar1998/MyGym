@@ -14,7 +14,8 @@ const ectomorfo = require("./workouts/Ectomorfo.js")
 const endomorfo = require("./workouts/Endomorfo.js")
 const mesoformo = require("./workouts/Mesomorfo.js")
 const {Rutinas} = require("./models")
-const {EjerciciosRutinas} = require("./models")
+const {EjerciciosRutinas} = require("./models");
+const { EvaluacionRutinas } = require("./models");
 
 var distDir = __dirname + "/dist/";
 app.use(express.static(distDir));
@@ -41,6 +42,27 @@ app.post("/usuarios",function(req,res){
     })
 });
 
+app.post("/evaluacionrutinas", function(req,res){
+    console.log("Llegué");
+    const calificacion = req.body.calificacion;
+    const cansancio = req.body.cansancio;
+    const dificultad = req.body.dificultad;
+    const idRutina = req.body.idRutina;
+    const idUsuario = req.body.idUsuario;
+    EvaluacionRutinas.create({
+        calificacion: calificacion,
+        cansancio : cansancio,
+        dificultad : dificultad,
+        idRutina: idRutina,
+        idUsuario: idUsuario
+    }).then((eval)=>{
+        res.status(201).json({response: "Creado con éxito"})
+    }).catch((error)=>{
+        res.status(500).json({Error: error})
+    })
+});
+
+
 app.get("/usuarios/:correo",function(req,res){
     const paraCorreo = req.params.correo 
     Usuarios.findOne({ where: {correo: paraCorreo} }).then(function(user) {
@@ -52,6 +74,20 @@ app.get("/usuarios/:correo",function(req,res){
         }
 
     })
+})
+
+app.delete('/rutinas/rutina/:idRutina', function(req, res){
+    console.log("Rutina delete");
+    const idToDelete = req.params.idRutina
+    Rutinas.findOne({where: {id: idToDelete}}).then(function(routine) {
+        if(routine){
+            Rutinas.destroy(routine);
+            res.status(200).json({response: "Se ha eliminado correctamente el usuario"});
+        }else{
+            res.status(500).json({response:"Error al eliminar rutina"});
+        }
+    }) 
+        
 })
 
 app.post("/usuarios/:correo",function(req,res){
@@ -74,6 +110,8 @@ app.post("/usuarios/:correo",function(req,res){
         }
     })
 })
+
+
 
 app.put("/usuarios/:idUsuario",function(req,res){
     const id = req.params.idUsuario
@@ -166,5 +204,13 @@ app.get("/ejerciciosrutinas/:idRutina",function(req,res){
     })
 })
 
-
-
+// app.get("/evalucionesRutinas/:idUsuario", function(req,res){
+//     const id = req.params.idUsuario
+//     EvaluacionRutinas.findAll({ where: {idUsuario: id} }).then(function(evaluacion){
+//         if(evaluacion != null){
+//             res.status(200).json({ response:evaluacion })
+//         } else {
+//             res.status(404).json({response: "Evaluación no encontrada"})
+//         }
+//     })
+// 

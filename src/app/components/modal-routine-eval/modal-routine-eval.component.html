@@ -59,10 +59,10 @@
         
     </div>
     <div *ngIf="f.valid; else success">
-        <p style="color: green; margin-left: 1.5vh;"><span >&nbsp;</span>Se han contestado los datos correctamente. </p>
+        <p style="color: green; margin-left: 1.5vh;"><span ></span>Se han contestado los datos correctamente. </p>
       </div>
       <ng-template #success>
-          <p style="color: red;  margin-left: 1.5vh;"><span>&nbsp;</span>Para continuar necesitas contestar los datos. </p>
+          <p style="color: red;  margin-left: 1.5vh;"><span></span>Para continuar necesitas contestar los datos. </p>
     </ng-template>
     <div class="modal-footer ">
         <button type="button" class="btn btn-info" [disabled]="!f.valid " (click)="onFilledForm(f)">Calificar</button>

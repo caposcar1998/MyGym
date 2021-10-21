@@ -34,12 +34,12 @@ fs
         db[model.name] = model;
         counter = counter + 1
     } else if( counter ==3){
-      const model = require(path.join(__dirname, "EjerciciosRutinas.js"))(sequelize, Sequelize.DataTypes);
-      db[model.name] = model;
-      counter = counter +1
+        const model = require(path.join(__dirname, "EjerciciosRutinas.js"))(sequelize, Sequelize.DataTypes);
+        db[model.name] = model;
+        counter = counter + 1
     } else if( counter == 4){
-      const model = require(path.join(__dirname, "EvaluacionRutinas.js"))(sequelize, Sequelize.DataTypes);
-      db[model.name] = model;
+        const model = require(path.join(__dirname, "EvaluacionRutinas.js"))(sequelize, Sequelize.DataTypes);
+        db[model.name] = model;
     }
 
 
