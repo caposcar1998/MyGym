@@ -22,6 +22,8 @@ module.exports = (sequelize, DataTypes) => {
                 model: "rutinas",
                 key: "id"
             },
+            onUpdate: 'CASCADE',
+            onDelete: 'CASCADE',
         },
         idUsuario:{
             type:DataTypes.INTEGER(11),

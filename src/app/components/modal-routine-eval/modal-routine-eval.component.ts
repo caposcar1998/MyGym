@@ -46,12 +46,8 @@ export class ModalRoutineEvalComponent implements OnInit {
     
     console.log("Evaluar rutina: " + JSON.stringify(this.values))
     this.modalService.addEvaluation(localStorage.getItem('evalData'), localStorage.getItem('id')).subscribe(data=>
-      localStorage.removeItem('evalData'));
-      window.alert("Se ha calificado la rutina"); 
-    this.modalService.removeRoutine(this.routineId);
-    console.log("A eliminar rutina con id: ", this.routineId);
-    
-    this.router.navigate(['/home']);
+      this.removeRoutine());
+
   }
 
   getData(user: any){
@@ -59,6 +55,15 @@ export class ModalRoutineEvalComponent implements OnInit {
       console.log('User.id en modal' + user.id)
       this.id = user.id;
     }
+
+  }
+
+  removeRoutine(){
+    localStorage.removeItem('evalData')
+    this.modalService.removeRoutine(this.routineId).subscribe(data =>{
+      console.log("A eliminar rutina con id: ", this.routineId);
+      this.router.navigate(['/home']);
+    });
 
   }
 

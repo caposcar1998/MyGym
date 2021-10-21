@@ -20,6 +20,8 @@ module.exports = (sequelize, DataTypes) => {
                 model: "usuarios",
                 key: "id"
             },
+            onUpdate: 'CASCADE',
+            onDelete: 'CASCADE',
         },
         foto:{
             type:DataTypes.STRING
