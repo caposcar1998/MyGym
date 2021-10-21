@@ -40,6 +40,7 @@ import { CardRoutinesComponent } from './components/card-routines/card-routines.
 
 import { ContactUsComponent } from './side-menu/contact-us/contact-us.component';
 import { RutinaComponent } from './components/rutina/rutina.component';
+import { CardEjerciciosRutinasComponent } from './components/card-ejercicios-rutinas/card-ejercicios-rutinas.component';
 
 
 
@@ -80,7 +81,8 @@ const ngWizardConfig: NgWizardConfig = {
     RoutinesComponent,
     CardRoutinesComponent,
     ContactUsComponent,
-    RutinaComponent
+    RutinaComponent,
+    CardEjerciciosRutinasComponent
 
 
   ],

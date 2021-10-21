@@ -7,10 +7,17 @@ import { Observable } from 'rxjs';
 export class RutinaService {
   
   private url= 'http://localhost:8080/ejerciciosrutinas'
+  private urlExercies= 'http://localhost:8080/ejercicio'
   constructor(private http: HttpClient) { }
 
   findExercies(idEntrada:String){
     let getUrl = this.url+"/"+idEntrada;
     return this.http.get(getUrl)
   }
+
+  findOneExercise(id:String){
+    let getUrl = this.urlExercies+"/"+id;
+    return this.http.get(getUrl);
+  }
+
 }

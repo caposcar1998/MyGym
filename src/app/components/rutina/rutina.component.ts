@@ -16,9 +16,29 @@ export class RutinaComponent implements OnInit {
 
   ngOnInit(): void {
     const id = this.route.snapshot.params['id'];
-    console.log(id)
     this.rutinaService.findExercies(id).subscribe(data=>
-      {this.ejercicios = data["response"],console.log(this.ejercicios)})
+      {this.ejercicios = data["response"] ,this.anadirValoresFaltantes()})
+      
+
+  }
+
+  anadirValoresFaltantes(): void{
+    this.ejercicios.forEach(val => {
+      console.log(val['id'])
+      this.rutinaService.findOneExercise(val.idEjercicio).subscribe(data =>{
+        val["descripcion"] = data['response']['descripcion']
+        val["partePrincipal"] = data['response']['partePrincipal']
+        val["parteSecundaria"] = data['response']['parteSecundaria']
+        val["terciaria"] = data['response']['parteTerciaria']
+        val["tipo"] = data['response']['tipo']
+        val["nombre"] = data['response']['nombre']
+        val["equipo"] = data['response']['equipo']
+        console.log(val)
+      })
+    })
+
+    
+
   }
 
 }
