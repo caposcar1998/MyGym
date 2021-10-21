@@ -10,12 +10,21 @@ import { RutinaService } from './rutina.service';
 export class RutinaComponent implements OnInit {
   
   ejercicios= []
+
+  id = this.route.snapshot.params['id']
+
   rutinaInfo = {}
+
 
   constructor(private route: ActivatedRoute,private rutinaService: RutinaService) { }
 
 
   ngOnInit(): void {
+
+    
+    this.rutinaService.findExercies(this.id).subscribe(data=>
+      {this.ejercicios = data["response"],console.log(this.ejercicios)})
+
     const id = this.route.snapshot.params['id'];
     this.rutinaService.findExercies(id).subscribe(data=>
       {this.ejercicios = data["response"] ,this.anadirValoresFaltantes()})
@@ -41,6 +50,7 @@ export class RutinaComponent implements OnInit {
     })
 
     
+
 
   }
 

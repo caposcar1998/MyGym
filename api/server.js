@@ -14,7 +14,8 @@ const ectomorfo = require("./workouts/Ectomorfo.js")
 const endomorfo = require("./workouts/Endomorfo.js")
 const mesoformo = require("./workouts/Mesomorfo.js")
 const {Rutinas} = require("./models")
-const {EjerciciosRutinas} = require("./models")
+const {EjerciciosRutinas} = require("./models");
+const { EvaluacionRutinas } = require("./models");
 
 var distDir = __dirname + "/dist/";
 app.use(express.static(distDir));
@@ -41,7 +42,46 @@ app.post("/usuarios",function(req,res){
     })
 });
 
+app.post("/evaluacionrutinas", function(req,res){
+    const calificacion = req.body.calificacion;
+    const cansancio = req.body.cansancio;
+    const dificultad = req.body.dificultad;
+    const idRutina = req.body.idRutina;
+    const idUsuario = req.body.idUsuario;
+    EvaluacionRutinas.findOne({ where: {idRutina: idRutina, idUsuario: idUsuario} }).then(function(eval){
+        if(!eval){
+            EvaluacionRutinas.create({
+                calificacion: calificacion,
+                cansancio : cansancio,
+                dificultad : dificultad,
+                idRutina: idRutina,
+                idUsuario: idUsuario
+            }).then((eval)=>{
+                res.status(201).json({response: "Creado con éxito"})
+            }).catch((error)=>{
+                res.status(500).json({Error: error})
+            })
+        }else{
+            EvaluacionRutinas.update({
+                calificacion: calificacion,
+                cansancio : cansancio,
+                dificultad : dificultad,
+                idRutina: idRutina,
+                idUsuario: idUsuario
+                }, 
+                {where: {id:eval.id}
+                }).then((eval)=>{
+                    res.status(201).json({response: "Actualizado con éxito"})
+                }).catch((error)=>{
+                    res.status(500).json({Error: error})
+                })
+        }
+    })
+});
+
+
 app.get("/usuarios/:correo",function(req,res){
+    //Para borrar la referencia de la rutina al calificarla
     const paraCorreo = req.params.correo 
     Usuarios.findOne({ where: {correo: paraCorreo} }).then(function(user) {
         if (user != null){
@@ -52,6 +92,18 @@ app.get("/usuarios/:correo",function(req,res){
         }
 
     })
+})
+
+app.delete('/rutinas/rutina/:idRutina', function(req, res){
+    const idToDelete = req.params.idRutina;
+    console.log("Id to delete: " + idToDelete);
+    Rutinas.destroy({
+        where: {id: idToDelete}
+    }).then(()=>{
+        res.status(201).json({response: 'Rutina destruida'})
+    }).catch((error)=>{
+        res.status(500).json({error: error});
+    })    
 })
 
 app.post("/usuarios/:correo",function(req,res){
@@ -74,6 +126,8 @@ app.post("/usuarios/:correo",function(req,res){
         }
     })
 })
+
+
 
 app.put("/usuarios/:idUsuario",function(req,res){
     const id = req.params.idUsuario
@@ -178,6 +232,18 @@ app.get("/ejerciciosrutinas/:idRutina",function(req,res){
     })
 })
 
+
+app.get("/evalucionRutinas/:idUsuario", function(req,res){
+    const id = req.params.idUsuario
+    EvaluacionRutinas.findAll({ where: {idUsuario: id} }).then(function(evaluacion){
+        if(evaluacion != null){
+            res.status(200).json({ response:evaluacion })
+        } else {
+            res.status(404).json({response: "Evaluación no encontrada"})
+        }
+    })
+})
+
 app.get("/rutina/:idRutina", function(req,res){
     const id = req.params.idRutina
     Rutinas.findOne({ where: {id: id} }).then(function(rutina) {
@@ -189,5 +255,6 @@ app.get("/rutina/:idRutina", function(req,res){
 
     })
 })
+
 
 

@@ -11,7 +11,6 @@ import { RoutinesComponent } from './components/routines/routines.component';
 import { ContactUsComponent } from './side-menu/contact-us/contact-us.component';
 import { RutinaComponent } from './components/rutina/rutina.component';
 
-
 const routes: Routes = [
   { path: 'home', component: HomeComponent, canActivate:[AuthGuard] },
   { path: 'secure', component: SecureComponent},
@@ -22,7 +21,7 @@ const routes: Routes = [
   { path: "ejerciciosLista", component: EjerciciosListaComponent},
   { path: "routines", component: RoutinesComponent},
   { path: "contactanos", component: ContactUsComponent},
-  { path: "rutina/:id/ejercicios", component: RutinaComponent}
+  { path: "rutina/:id/ejercicios", component: RutinaComponent},
 ];
 
 @NgModule({
