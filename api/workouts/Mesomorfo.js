@@ -69,7 +69,7 @@ function calcularEjerciciosDiaHoras(diasGym, horasGym, nombreUsuario, tipoRutina
                 ejercicioAleatorio("Biceps", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
                 ejercicioAleatorio("Pectorales", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
                 ejercicioAleatorio("Cuadriceps", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
-                agregarCardio(tiempoCardio, res.id).then(() => console.log(pasa))
+                agregarCardio(tiempoCardio, res.id).then(() => console.log("entra"))
             })
 
         }else if (horasGym == 2 || horasGym == 2.5){
@@ -83,7 +83,7 @@ function calcularEjerciciosDiaHoras(diasGym, horasGym, nombreUsuario, tipoRutina
                 ejercicioAleatorio("Glúteos", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
                 ejercicioAleatorio("Abdomen", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
                 ejercicioAleatorio("Hombros", res.id,repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
-                agregarCardio(tiempoCardio, res.id).then(() => console.log(pasa))
+                agregarCardio(tiempoCardio, res.id).then(() => console.log("entra"))
             })
         }else if (horasGym == 3 || horasGym == 3.5){
             //Query 12 ejercicios de todo
@@ -100,7 +100,7 @@ function calcularEjerciciosDiaHoras(diasGym, horasGym, nombreUsuario, tipoRutina
                 ejercicioAleatorio("Glúteos", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
                 ejercicioAleatorio("Abdomen", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
                 ejercicioAleatorio("Hombros", res.id,repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
-                agregarCardio(tiempoCardio, res.id).then(() => console.log(pasa))
+                agregarCardio(tiempoCardio, res.id).then(() => console.log("entra"))
             })
         }else if (horasGym == 4 || horasGym == 4.5){
             //Query 15 ejercicios de todo
@@ -120,7 +120,7 @@ function calcularEjerciciosDiaHoras(diasGym, horasGym, nombreUsuario, tipoRutina
                 ejercicioAleatorio("Glúteos", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
                 ejercicioAleatorio("Abdomen", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
                 ejercicioAleatorio("Hombros", res.id,repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
-                agregarCardio(tiempoCardio, res.id).then(() => console.log(pasa))
+                agregarCardio(tiempoCardio, res.id).then(() => console.log("entra"))
             })
         }
     }else if (diasGym == 2){
@@ -132,7 +132,7 @@ function calcularEjerciciosDiaHoras(diasGym, horasGym, nombreUsuario, tipoRutina
                 ejercicioAleatorio("Biceps", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
                 ejercicioAleatorio("Pectorales", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
                 ejercicioAleatorio("Cuadriceps", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
-                agregarCardio(tiempoCardio, res.id).then(() => console.log(pasa))
+                agregarCardio(tiempoCardio, res.id).then(() => console.log("entra"))
             })
             crearRutina(idUsuario, diasGym, horasGym, tiempo, repeticiones,"1 dia","https://i.blogs.es/c8d354/autocarga/450_1000.jpg").then(res => {
                 ejercicioAleatorio("Abdomen", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
@@ -140,7 +140,7 @@ function calcularEjerciciosDiaHoras(diasGym, horasGym, nombreUsuario, tipoRutina
                 ejercicioAleatorio("Todo", res.id).then(() => {console.log("entra")})
                 ejercicioAleatorio("Cuadriceps", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
                 ejercicioAleatorio("Cuadriceps", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
-                agregarCardio(tiempoCardio, res.id).then(() => console.log(pasa))
+                agregarCardio(tiempoCardio, res.id).then(() => console.log("entra"))
             })
         }else if (horasGym == 2 || horasGym == 2.5){
             //Query 8 arriba y 8 abajo
@@ -153,7 +153,7 @@ function calcularEjerciciosDiaHoras(diasGym, horasGym, nombreUsuario, tipoRutina
                 ejercicioAleatorio("Biceps", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
                 ejercicioAleatorio("Pectorales", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
                 ejercicioAleatorio("Cuadriceps", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
-                agregarCardio(tiempoCardio, res.id).then(() => console.log(pasa))
+                agregarCardio(tiempoCardio, res.id).then(() => console.log("entra"))
             })
             crearRutina(idUsuario, diasGym, horasGym, tiempo, repeticiones,"1 dia","https://i.blogs.es/c8d354/autocarga/450_1000.jpg").then(res => {
                 ejercicioAleatorio("Abdomen", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
@@ -164,7 +164,7 @@ function calcularEjerciciosDiaHoras(diasGym, horasGym, nombreUsuario, tipoRutina
                 ejercicioAleatorio("Biceps", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
                 ejercicioAleatorio("Pectorales", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
                 ejercicioAleatorio("Cuadriceps", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
-                agregarCardio(tiempoCardio, res.id).then(() => console.log(pasa))
+                agregarCardio(tiempoCardio, res.id).then(() => console.log("entra"))
             })
         }else if (horasGym == 3 || horasGym == 3.5){
             crearRutina(idUsuario, diasGym, horasGym, tiempo, repeticiones,"1 dia","https://cf.ltkcdn.net/ejercicio/images/std/255707-800x533r1-Upper-Body-Workout.jpg").then(res => {
@@ -178,7 +178,7 @@ function calcularEjerciciosDiaHoras(diasGym, horasGym, nombreUsuario, tipoRutina
                 ejercicioAleatorio("Cuadriceps", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
                 ejercicioAleatorio("Pectorales", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
                 ejercicioAleatorio("Cuadriceps", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
-                agregarCardio(tiempoCardio, res.id).then(() => console.log(pasa))
+                agregarCardio(tiempoCardio, res.id).then(() => console.log("entra"))
             })
             crearRutina(idUsuario, diasGym, horasGym, tiempo, repeticiones,"1 dia","https://i.blogs.es/c8d354/autocarga/450_1000.jpg").then(res => {
                 ejercicioAleatorio("Abdomen", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
@@ -191,7 +191,7 @@ function calcularEjerciciosDiaHoras(diasGym, horasGym, nombreUsuario, tipoRutina
                 ejercicioAleatorio("Cuadriceps", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
                 ejercicioAleatorio("Pectorales", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
                 ejercicioAleatorio("Cuadriceps", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
-                agregarCardio(tiempoCardio, res.id).then(() => console.log(pasa))
+                agregarCardio(tiempoCardio, res.id).then(() => console.log("entra"))
             })
             
         }else if (horasGym == 4 || horasGym == 4.5){
@@ -212,7 +212,7 @@ function calcularEjerciciosDiaHoras(diasGym, horasGym, nombreUsuario, tipoRutina
                 ejercicioAleatorio("Cuadriceps", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
                 ejercicioAleatorio("Pectorales", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
                 ejercicioAleatorio("Cuadriceps", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
-                agregarCardio(tiempoCardio, res.id).then(() => console.log(pasa))
+                agregarCardio(tiempoCardio, res.id).then(() => console.log("entra"))
             })
             crearRutina(idUsuario, diasGym, horasGym, tiempo, repeticiones,"1 dia","https://i.blogs.es/c8d354/autocarga/450_1000.jpg").then(res => {
                 ejercicioAleatorio("Abdomen", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
@@ -230,7 +230,7 @@ function calcularEjerciciosDiaHoras(diasGym, horasGym, nombreUsuario, tipoRutina
                 ejercicioAleatorio("Cuadriceps", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
                 ejercicioAleatorio("Pectorales", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
                 ejercicioAleatorio("Cuadriceps", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
-                agregarCardio(tiempoCardio, res.id).then(() => console.log(pasa))
+                agregarCardio(tiempoCardio, res.id).then(() => console.log("entra"))
             })
         }
 
@@ -243,7 +243,7 @@ function calcularEjerciciosDiaHoras(diasGym, horasGym, nombreUsuario, tipoRutina
                 ejercicioAleatorio("Bíceps", res.id).then(() => {console.log("entra")})
                 ejercicioAleatorio("Biceps", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
                 ejercicioAleatorio("Bíceps", res.id).then(() => {console.log("entra")})
-                agregarCardio(tiempoCardio, res.id).then(() => console.log(pasa))
+                agregarCardio(tiempoCardio, res.id).then(() => console.log("entra"))
             })
             crearRutina(idUsuario, diasGym, horasGym, tiempo, repeticiones,"1 dia","https://blog.smartfit.com.mx/wp-content/uploads/2020/10/ejercicios-espalda-baja-gimnasio-destacada.png").then(res => {
                 ejercicioAleatorio("Pectorales", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
@@ -251,7 +251,7 @@ function calcularEjerciciosDiaHoras(diasGym, horasGym, nombreUsuario, tipoRutina
                 ejercicioAleatorio("Pectorales", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
                 ejercicioAleatorio("Pectorales", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
                 ejercicioAleatorio("Abdomen", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
-                agregarCardio(tiempoCardio, res.id).then(() => console.log(pasa))
+                agregarCardio(tiempoCardio, res.id).then(() => console.log("entra"))
             })
             crearRutina(idUsuario, diasGym, horasGym, tiempo, repeticiones,"1 dia","https://e00-elmundo.uecdn.es/assets/multimedia/imagenes/2019/07/12/15629301078089.jpg").then(res => {
                 ejercicioAleatorio("Abdomen", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
@@ -259,7 +259,7 @@ function calcularEjerciciosDiaHoras(diasGym, horasGym, nombreUsuario, tipoRutina
                 ejercicioAleatorio("Todo", res.id).then(() => {console.log("entra")})
                 ejercicioAleatorio("Cuadriceps", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
                 ejercicioAleatorio("Cuadriceps", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
-                agregarCardio(tiempoCardio, res.id).then(() => console.log(pasa))
+                agregarCardio(tiempoCardio, res.id).then(() => console.log("entra"))
             })
             return {tiempoEjercicio: "8 min"}
         }else if (horasGym == 2 || horasGym == 2.5){
@@ -273,7 +273,7 @@ function calcularEjerciciosDiaHoras(diasGym, horasGym, nombreUsuario, tipoRutina
                 ejercicioAleatorio("Bíceps", res.id).then(() => {console.log("entra")})
                 ejercicioAleatorio("Biceps", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
                 ejercicioAleatorio("Bíceps", res.id).then(() => {console.log("entra")})
-                agregarCardio(tiempoCardio, res.id).then(() => console.log(pasa))
+                agregarCardio(tiempoCardio, res.id).then(() => console.log("entra"))
             })
             crearRutina(idUsuario, diasGym, horasGym, tiempo, repeticiones,"1 dia","https://blog.smartfit.com.mx/wp-content/uploads/2020/10/ejercicios-espalda-baja-gimnasio-destacada.png").then(res => {
                 ejercicioAleatorio("Pectorales", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
@@ -284,7 +284,7 @@ function calcularEjerciciosDiaHoras(diasGym, horasGym, nombreUsuario, tipoRutina
                 ejercicioAleatorio("Bíceps", res.id).then(() => {console.log("entra")})
                 ejercicioAleatorio("Biceps", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
                 ejercicioAleatorio("Bíceps", res.id).then(() => {console.log("entra")})
-                agregarCardio(tiempoCardio, res.id).then(() => console.log(pasa))
+                agregarCardio(tiempoCardio, res.id).then(() => console.log("entra"))
             })
             crearRutina(idUsuario, diasGym, horasGym, tiempo, repeticiones,"1 dia","https://e00-elmundo.uecdn.es/assets/multimedia/imagenes/2019/07/12/15629301078089.jpg").then(res => {
                 ejercicioAleatorio("Abdomen", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
@@ -295,7 +295,7 @@ function calcularEjerciciosDiaHoras(diasGym, horasGym, nombreUsuario, tipoRutina
                 ejercicioAleatorio("Bíceps", res.id).then(() => {console.log("entra")})
                 ejercicioAleatorio("Biceps", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
                 ejercicioAleatorio("Bíceps", res.id).then(() => {console.log("entra")})
-                agregarCardio(tiempoCardio, res.id).then(() => console.log(pasa))
+                agregarCardio(tiempoCardio, res.id).then(() => console.log("entra"))
             })
             return {tiempoEjercicio: "12 min"}
         }else if (horasGym == 3 || horasGym == 3.5){
@@ -311,7 +311,7 @@ function calcularEjerciciosDiaHoras(diasGym, horasGym, nombreUsuario, tipoRutina
                 ejercicioAleatorio("Bíceps", res.id).then(() => {console.log("entra")})
                 ejercicioAleatorio("Biceps", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
                 ejercicioAleatorio("Bíceps", res.id).then(() => {console.log("entra")})
-                agregarCardio(tiempoCardio, res.id).then(() => console.log(pasa))
+                agregarCardio(tiempoCardio, res.id).then(() => console.log("entra"))
             })
             crearRutina(idUsuario, diasGym, horasGym, tiempo, repeticiones,"1 dia","https://blog.smartfit.com.mx/wp-content/uploads/2020/10/ejercicios-espalda-baja-gimnasio-destacada.png"
             ).then(res => {
@@ -325,7 +325,7 @@ function calcularEjerciciosDiaHoras(diasGym, horasGym, nombreUsuario, tipoRutina
                 ejercicioAleatorio("Bíceps", res.id).then(() => {console.log("entra")})
                 ejercicioAleatorio("Biceps", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
                 ejercicioAleatorio("Bíceps", res.id).then(() => {console.log("entra")})
-                agregarCardio(tiempoCardio, res.id).then(() => console.log(pasa))
+                agregarCardio(tiempoCardio, res.id).then(() => console.log("entra"))
             })
             crearRutina(idUsuario, diasGym, horasGym, tiempo, repeticiones,"1 dia","https://e00-elmundo.uecdn.es/assets/multimedia/imagenes/2019/07/12/15629301078089.jpg").then(res => {
                 ejercicioAleatorio("Abdomen", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
@@ -338,7 +338,7 @@ function calcularEjerciciosDiaHoras(diasGym, horasGym, nombreUsuario, tipoRutina
                 ejercicioAleatorio("Bíceps", res.id).then(() => {console.log("entra")})
                 ejercicioAleatorio("Biceps", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
                 ejercicioAleatorio("Bíceps", res.id).then(() => {console.log("entra")})
-                agregarCardio(tiempoCardio, res.id).then(() => console.log(pasa))
+                agregarCardio(tiempoCardio, res.id).then(() => console.log("entra"))
             })
             return {tiempoEjercicio: "14 min"}
         }else if (horasGym == 4 || horasGym == 4.5){
@@ -355,7 +355,7 @@ function calcularEjerciciosDiaHoras(diasGym, horasGym, nombreUsuario, tipoRutina
                 ejercicioAleatorio("Bíceps", res.id).then(() => {console.log("entra")})
                 ejercicioAleatorio("Biceps", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
                 ejercicioAleatorio("Bíceps", res.id).then(() => {console.log("entra")})
-                agregarCardio(tiempoCardio, res.id).then(() => console.log(pasa))
+                agregarCardio(tiempoCardio, res.id).then(() => console.log("entra"))
             })
             crearRutina(idUsuario, diasGym, horasGym, tiempo, repeticiones,"1 dia","https://blog.smartfit.com.mx/wp-content/uploads/2020/10/ejercicios-espalda-baja-gimnasio-destacada.png").then(res => {
                 ejercicioAleatorio("Pectorales", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
@@ -370,7 +370,7 @@ function calcularEjerciciosDiaHoras(diasGym, horasGym, nombreUsuario, tipoRutina
                 ejercicioAleatorio("Bíceps", res.id).then(() => {console.log("entra")})
                 ejercicioAleatorio("Biceps", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
                 ejercicioAleatorio("Bíceps", res.id).then(() => {console.log("entra")})
-                agregarCardio(tiempoCardio, res.id).then(() => console.log(pasa))
+                agregarCardio(tiempoCardio, res.id).then(() => console.log("entra"))
             })
             crearRutina(idUsuario, diasGym, horasGym, tiempo, repeticiones,"1 dia","https://e00-elmundo.uecdn.es/assets/multimedia/imagenes/2019/07/12/15629301078089.jpg").then(res => {
                 ejercicioAleatorio("Abdomen", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
@@ -385,7 +385,7 @@ function calcularEjerciciosDiaHoras(diasGym, horasGym, nombreUsuario, tipoRutina
                 ejercicioAleatorio("Bíceps", res.id).then(() => {console.log("entra")})
                 ejercicioAleatorio("Biceps", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
                 ejercicioAleatorio("Bíceps", res.id).then(() => {console.log("entra")})
-                agregarCardio(tiempoCardio, res.id).then(() => console.log(pasa))
+                agregarCardio(tiempoCardio, res.id).then(() => console.log("entra"))
             })
             return {tiempoEjercicio: "14 min"}
         }
@@ -398,7 +398,7 @@ function calcularEjerciciosDiaHoras(diasGym, horasGym, nombreUsuario, tipoRutina
                 ejercicioAleatorio("Bíceps", res.id).then(() => {console.log("entra")})
                 ejercicioAleatorio("Biceps", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
                 ejercicioAleatorio("Bíceps", res.id).then(() => {console.log("entra")})
-                agregarCardio(tiempoCardio, res.id).then(() => console.log(pasa))
+                agregarCardio(tiempoCardio, res.id).then(() => console.log("entra"))
             })
             crearRutina(idUsuario, diasGym, horasGym, tiempo, repeticiones,"1 dia","https://www.cambiatufisico.com/wp-content/uploads/rutina-pecho-pectoral-superior.jpg").then(res => {
                 ejercicioAleatorio("Pectorales", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
@@ -406,7 +406,7 @@ function calcularEjerciciosDiaHoras(diasGym, horasGym, nombreUsuario, tipoRutina
                 ejercicioAleatorio("Pectorales", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
                 ejercicioAleatorio("Pectorales", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
                 ejercicioAleatorio("Abdomen", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
-                agregarCardio(tiempoCardio, res.id).then(() => console.log(pasa))
+                agregarCardio(tiempoCardio, res.id).then(() => console.log("entra"))
             })
             crearRutina(idUsuario, diasGym, horasGym, tiempo, repeticiones,"1 dia","https://e00-elmundo.uecdn.es/assets/multimedia/imagenes/2019/07/12/15629301078089.jpg").then(res => {
                 ejercicioAleatorio("Abdomen", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
@@ -414,7 +414,7 @@ function calcularEjerciciosDiaHoras(diasGym, horasGym, nombreUsuario, tipoRutina
                 ejercicioAleatorio("Todo", res.id).then(() => {console.log("entra")})
                 ejercicioAleatorio("Cuadriceps", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
                 ejercicioAleatorio("Cuadriceps", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
-                agregarCardio(tiempoCardio, res.id).then(() => console.log(pasa))
+                agregarCardio(tiempoCardio, res.id).then(() => console.log("entra"))
             })
             crearRutina(idUsuario, diasGym, horasGym, tiempo, repeticiones,"1 dia","https://www.runtastic.com/blog/wp-content/uploads/2018/02/Copy-of-thumbnail_blog_1200x800-5-1024x683.jpg").then(res => {
                 ejercicioAleatorio("Abdomen", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
@@ -422,7 +422,7 @@ function calcularEjerciciosDiaHoras(diasGym, horasGym, nombreUsuario, tipoRutina
                 ejercicioAleatorio("Todo", res.id).then(() => {console.log("entra")})
                 ejercicioAleatorio("Abdomen", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
                 ejercicioAleatorio("Abdomen", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
-                agregarCardio(tiempoCardio, res.id).then(() => console.log(pasa))
+                agregarCardio(tiempoCardio, res.id).then(() => console.log("entra"))
             })
             //Query 5 brazo y hombro, 5 espalda, 5 pecho, 5 pierna
             return {tiempoEjercicio: "8 min"}
@@ -437,7 +437,7 @@ function calcularEjerciciosDiaHoras(diasGym, horasGym, nombreUsuario, tipoRutina
                 ejercicioAleatorio("Bíceps", res.id).then(() => {console.log("entra")})
                 ejercicioAleatorio("Biceps", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
                 ejercicioAleatorio("Bíceps", res.id).then(() => {console.log("entra")})
-                agregarCardio(tiempoCardio, res.id).then(() => console.log(pasa))
+                agregarCardio(tiempoCardio, res.id).then(() => console.log("entra"))
             })
             crearRutina(idUsuario, diasGym, horasGym, tiempo, repeticiones,"1 dia","https://www.cambiatufisico.com/wp-content/uploads/rutina-pecho-pectoral-superior.jpg").then(res => {
                 ejercicioAleatorio("Pectorales", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
@@ -448,7 +448,7 @@ function calcularEjerciciosDiaHoras(diasGym, horasGym, nombreUsuario, tipoRutina
                 ejercicioAleatorio("Bíceps", res.id).then(() => {console.log("entra")})
                 ejercicioAleatorio("Biceps", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
                 ejercicioAleatorio("Bíceps", res.id).then(() => {console.log("entra")})
-                agregarCardio(tiempoCardio, res.id).then(() => console.log(pasa))
+                agregarCardio(tiempoCardio, res.id).then(() => console.log("entra"))
             })
             crearRutina(idUsuario, diasGym, horasGym, tiempo, repeticiones,"1 dia","https://e00-elmundo.uecdn.es/assets/multimedia/imagenes/2019/07/12/15629301078089.jpg"
             ).then(res => {
@@ -460,7 +460,7 @@ function calcularEjerciciosDiaHoras(diasGym, horasGym, nombreUsuario, tipoRutina
                 ejercicioAleatorio("Bíceps", res.id).then(() => {console.log("entra")})
                 ejercicioAleatorio("Biceps", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
                 ejercicioAleatorio("Bíceps", res.id).then(() => {console.log("entra")})
-                agregarCardio(tiempoCardio, res.id).then(() => console.log(pasa))
+                agregarCardio(tiempoCardio, res.id).then(() => console.log("entra"))
             })
             crearRutina(idUsuario, diasGym, horasGym, tiempo, repeticiones,"1 dia","https://www.runtastic.com/blog/wp-content/uploads/2018/02/Copy-of-thumbnail_blog_1200x800-5-1024x683.jpg").then(res => {
                 ejercicioAleatorio("Abdomen", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
@@ -471,7 +471,7 @@ function calcularEjerciciosDiaHoras(diasGym, horasGym, nombreUsuario, tipoRutina
                 ejercicioAleatorio("Bíceps", res.id).then(() => {console.log("entra")})
                 ejercicioAleatorio("Biceps", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
                 ejercicioAleatorio("Bíceps", res.id).then(() => {console.log("entra")})
-                agregarCardio(tiempoCardio, res.id).then(() => console.log(pasa))
+                agregarCardio(tiempoCardio, res.id).then(() => console.log("entra"))
             })
             return {tiempoEjercicio: "12 min"}
         }else if (horasGym == 3 || horasGym == 3.5){
@@ -485,7 +485,7 @@ function calcularEjerciciosDiaHoras(diasGym, horasGym, nombreUsuario, tipoRutina
                 ejercicioAleatorio("Bíceps", res.id).then(() => {console.log("entra")})
                 ejercicioAleatorio("Biceps", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
                 ejercicioAleatorio("Bíceps", res.id).then(() => {console.log("entra")})
-                agregarCardio(tiempoCardio, res.id).then(() => console.log(pasa))
+                agregarCardio(tiempoCardio, res.id).then(() => console.log("entra"))
             })
             crearRutina(idUsuario, diasGym, horasGym, tiempo, repeticiones,"1 dia","https://www.cambiatufisico.com/wp-content/uploads/rutina-pecho-pectoral-superior.jpg").then(res => {
                 ejercicioAleatorio("Abdomen", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
@@ -498,7 +498,7 @@ function calcularEjerciciosDiaHoras(diasGym, horasGym, nombreUsuario, tipoRutina
                 ejercicioAleatorio("Bíceps", res.id).then(() => {console.log("entra")})
                 ejercicioAleatorio("Biceps", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
                 ejercicioAleatorio("Bíceps", res.id).then(() => {console.log("entra")})
-                agregarCardio(tiempoCardio, res.id).then(() => console.log(pasa))
+                agregarCardio(tiempoCardio, res.id).then(() => console.log("entra"))
             })
             crearRutina(idUsuario, diasGym, horasGym, tiempo, repeticiones,"1 dia","https://e00-elmundo.uecdn.es/assets/multimedia/imagenes/2019/07/12/15629301078089.jpg").then(res => {
                 ejercicioAleatorio("Abdomen", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
@@ -511,7 +511,7 @@ function calcularEjerciciosDiaHoras(diasGym, horasGym, nombreUsuario, tipoRutina
                 ejercicioAleatorio("Bíceps", res.id).then(() => {console.log("entra")})
                 ejercicioAleatorio("Biceps", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
                 ejercicioAleatorio("Bíceps", res.id).then(() => {console.log("entra")})
-                agregarCardio(tiempoCardio, res.id).then(() => console.log(pasa))
+                agregarCardio(tiempoCardio, res.id).then(() => console.log("entra"))
             })
             return {tiempoEjercicio: "14 min"}
         }else if (horasGym == 4 || horasGym == 4.5){
@@ -527,7 +527,7 @@ function calcularEjerciciosDiaHoras(diasGym, horasGym, nombreUsuario, tipoRutina
                 ejercicioAleatorio("Bíceps", res.id).then(() => {console.log("entra")})
                 ejercicioAleatorio("Biceps", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
                 ejercicioAleatorio("Bíceps", res.id).then(() => {console.log("entra")})
-                agregarCardio(tiempoCardio, res.id).then(() => console.log(pasa))
+                agregarCardio(tiempoCardio, res.id).then(() => console.log("entra"))
             })
             crearRutina(idUsuario, diasGym, horasGym, tiempo, repeticiones,"1 dia","https://blog.smartfit.com.mx/wp-content/uploads/2020/10/ejercicios-espalda-baja-gimnasio-destacada.png").then(res => {
                 ejercicioAleatorio("Abdomen", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
@@ -540,7 +540,7 @@ function calcularEjerciciosDiaHoras(diasGym, horasGym, nombreUsuario, tipoRutina
                 ejercicioAleatorio("Bíceps", res.id).then(() => {console.log("entra")})
                 ejercicioAleatorio("Biceps", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
                 ejercicioAleatorio("Bíceps", res.id).then(() => {console.log("entra")})
-                agregarCardio(tiempoCardio, res.id).then(() => console.log(pasa))
+                agregarCardio(tiempoCardio, res.id).then(() => console.log("entra"))
             })
             crearRutina(idUsuario, diasGym, horasGym, tiempo, repeticiones,"1 dia","https://www.runtastic.com/blog/wp-content/uploads/2018/02/Copy-of-thumbnail_blog_1200x800-5-1024x683.jpg").then(res => {
                 ejercicioAleatorio("Abdomen", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
@@ -553,7 +553,7 @@ function calcularEjerciciosDiaHoras(diasGym, horasGym, nombreUsuario, tipoRutina
                 ejercicioAleatorio("Bíceps", res.id).then(() => {console.log("entra")})
                 ejercicioAleatorio("Biceps", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
                 ejercicioAleatorio("Bíceps", res.id).then(() => {console.log("entra")})
-                agregarCardio(tiempoCardio, res.id).then(() => console.log(pasa))
+                agregarCardio(tiempoCardio, res.id).then(() => console.log("entra"))
             })
             return {tiempoEjercicio: "14 min"}
         }
@@ -567,7 +567,7 @@ function calcularEjerciciosDiaHoras(diasGym, horasGym, nombreUsuario, tipoRutina
                 ejercicioAleatorio("Biceps", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
                 ejercicioAleatorio("Biceps", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
                 ejercicioAleatorio("Biceps", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
-                agregarCardio(tiempoCardio, res.id).then(() => console.log(pasa))
+                agregarCardio(tiempoCardio, res.id).then(() => console.log("entra"))
             })
             crearRutina(idUsuario, diasGym, horasGym, tiempo, repeticiones,"1 dia","https://www.cambiatufisico.com/wp-content/uploads/rutina-pecho-pectoral-superior.jpg").then(res => {
                 ejercicioAleatorio("Pectorales", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
@@ -575,7 +575,7 @@ function calcularEjerciciosDiaHoras(diasGym, horasGym, nombreUsuario, tipoRutina
                 ejercicioAleatorio("Pectorales", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
                 ejercicioAleatorio("Pectorales", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
                 ejercicioAleatorio("Pectorales", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
-                agregarCardio(tiempoCardio, res.id).then(() => console.log(pasa))
+                agregarCardio(tiempoCardio, res.id).then(() => console.log("entra"))
             })
             crearRutina(idUsuario, diasGym, horasGym, tiempo, repeticiones,"1 dia","https://e00-elmundo.uecdn.es/assets/multimedia/imagenes/2019/07/12/15629301078089.jpg").then(res => {
                 ejercicioAleatorio("Cuadriceps", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
@@ -583,7 +583,7 @@ function calcularEjerciciosDiaHoras(diasGym, horasGym, nombreUsuario, tipoRutina
                 ejercicioAleatorio("Cuadriceps", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
                 ejercicioAleatorio("Cuadriceps", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
                 ejercicioAleatorio("Cuadriceps", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
-                agregarCardio(tiempoCardio, res.id).then(() => console.log(pasa))
+                agregarCardio(tiempoCardio, res.id).then(() => console.log("entra"))
             })
             crearRutina(idUsuario, diasGym, horasGym, tiempo, repeticiones,"Todos dias", "https://i.ytimg.com/vi/0PumJ_Z0MuQ/maxresdefault.jpg").then(res => {
                 ejercicioAleatorio("Todo", res.id).then(() => {console.log("entra")})
@@ -591,7 +591,7 @@ function calcularEjerciciosDiaHoras(diasGym, horasGym, nombreUsuario, tipoRutina
                 ejercicioAleatorio("Todo", res.id).then(() => {console.log("entra")})
                 ejercicioAleatorio("Todo", res.id).then(() => {console.log("entra")})
                 ejercicioAleatorio("Todo", res.id).then(() => {console.log("entra")})
-                agregarCardio(tiempoCardio, res.id).then(() => console.log(pasa))
+                agregarCardio(tiempoCardio, res.id).then(() => console.log("entra"))
             })
             crearRutina(idUsuario, diasGym, horasGym, tiempo, repeticiones,"1 dia","https://www.runtastic.com/blog/wp-content/uploads/2018/02/Copy-of-thumbnail_blog_1200x800-5-1024x683.jpg").then(res => {
                 ejercicioAleatorio("Abdomen", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
@@ -599,7 +599,7 @@ function calcularEjerciciosDiaHoras(diasGym, horasGym, nombreUsuario, tipoRutina
                 ejercicioAleatorio("Abdomen", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
                 ejercicioAleatorio("Abdomen", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
                 ejercicioAleatorio("Abdomen", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
-                agregarCardio(tiempoCardio, res.id).then(() => console.log(pasa))
+                agregarCardio(tiempoCardio, res.id).then(() => console.log("entra"))
             })
             return {tiempoEjercicio: "8 min"}
         }else if (horasGym == 2 || horasGym == 2.5){
@@ -613,7 +613,7 @@ function calcularEjerciciosDiaHoras(diasGym, horasGym, nombreUsuario, tipoRutina
                 ejercicioAleatorio("Biceps", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
                 ejercicioAleatorio("Biceps", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
                 ejercicioAleatorio("Biceps", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
-                agregarCardio(tiempoCardio, res.id).then(() => console.log(pasa))
+                agregarCardio(tiempoCardio, res.id).then(() => console.log("entra"))
             })
             crearRutina(idUsuario, diasGym, horasGym, tiempo, repeticiones,"1 dia","https://www.cambiatufisico.com/wp-content/uploads/rutina-pecho-pectoral-superior.jpg").then(res => {
                 ejercicioAleatorio("Pectorales", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
@@ -624,7 +624,7 @@ function calcularEjerciciosDiaHoras(diasGym, horasGym, nombreUsuario, tipoRutina
                 ejercicioAleatorio("Pectorales", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
                 ejercicioAleatorio("Pectorales", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
                 ejercicioAleatorio("Pectorales", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
-                agregarCardio(tiempoCardio, res.id).then(() => console.log(pasa))
+                agregarCardio(tiempoCardio, res.id).then(() => console.log("entra"))
             })
             crearRutina(idUsuario, diasGym, horasGym, tiempo, repeticiones,"1 dia","https://e00-elmundo.uecdn.es/assets/multimedia/imagenes/2019/07/12/15629301078089.jpg").then(res => {
                 ejercicioAleatorio("Cuadriceps", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
@@ -635,7 +635,7 @@ function calcularEjerciciosDiaHoras(diasGym, horasGym, nombreUsuario, tipoRutina
                 ejercicioAleatorio("Cuadriceps", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
                 ejercicioAleatorio("Cuadriceps", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
                 ejercicioAleatorio("Cuadriceps", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
-                agregarCardio(tiempoCardio, res.id).then(() => console.log(pasa))
+                agregarCardio(tiempoCardio, res.id).then(() => console.log("entra"))
             })
             crearRutina(idUsuario, diasGym, horasGym, tiempo, repeticiones,"Todos dias", "https://i.ytimg.com/vi/0PumJ_Z0MuQ/maxresdefault.jpg").then(res => {
                 ejercicioAleatorio("Todo", res.id).then(() => {console.log("entra")})
@@ -646,7 +646,7 @@ function calcularEjerciciosDiaHoras(diasGym, horasGym, nombreUsuario, tipoRutina
                 ejercicioAleatorio("Todo", res.id).then(() => {console.log("entra")})
                 ejercicioAleatorio("Todo", res.id).then(() => {console.log("entra")})
                 ejercicioAleatorio("Todo", res.id).then(() => {console.log("entra")})
-                agregarCardio(tiempoCardio, res.id).then(() => console.log(pasa))
+                agregarCardio(tiempoCardio, res.id).then(() => console.log("entra"))
             })
             crearRutina(idUsuario, diasGym, horasGym, tiempo, repeticiones,"1 dia","https://www.runtastic.com/blog/wp-content/uploads/2018/02/Copy-of-thumbnail_blog_1200x800-5-1024x683.jpg").then(res => {
                 ejercicioAleatorio("Abdomen", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
@@ -657,7 +657,7 @@ function calcularEjerciciosDiaHoras(diasGym, horasGym, nombreUsuario, tipoRutina
                 ejercicioAleatorio("Abdomen", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
                 ejercicioAleatorio("Abdomen", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
                 ejercicioAleatorio("Abdomen", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
-                agregarCardio(tiempoCardio, res.id).then(() => console.log(pasa))
+                agregarCardio(tiempoCardio, res.id).then(() => console.log("entra"))
             })
             return {tiempoEjercicio: "12 min"}
         }else if (horasGym == 3 || horasGym == 3.5){
@@ -673,7 +673,7 @@ function calcularEjerciciosDiaHoras(diasGym, horasGym, nombreUsuario, tipoRutina
                 ejercicioAleatorio("Biceps", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
                 ejercicioAleatorio("Biceps", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
                 ejercicioAleatorio("Biceps", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
-                agregarCardio(tiempoCardio, res.id).then(() => console.log(pasa))
+                agregarCardio(tiempoCardio, res.id).then(() => console.log("entra"))
             })
             crearRutina(idUsuario, diasGym, horasGym, tiempo, repeticiones,"1 dia","https://www.cambiatufisico.com/wp-content/uploads/rutina-pecho-pectoral-superior.jpg").then(res => {
                 ejercicioAleatorio("Pectorales", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
@@ -686,7 +686,7 @@ function calcularEjerciciosDiaHoras(diasGym, horasGym, nombreUsuario, tipoRutina
                 ejercicioAleatorio("Pectorales", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
                 ejercicioAleatorio("Pectorales", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
                 ejercicioAleatorio("Pectorales", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
-                agregarCardio(tiempoCardio, res.id).then(() => console.log(pasa))
+                agregarCardio(tiempoCardio, res.id).then(() => console.log("entra"))
             })
             crearRutina(idUsuario, diasGym, horasGym, tiempo, repeticiones,"1 dia","https://e00-elmundo.uecdn.es/assets/multimedia/imagenes/2019/07/12/15629301078089.jpg").then(res => {
                 ejercicioAleatorio("Cuadriceps", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
@@ -699,7 +699,7 @@ function calcularEjerciciosDiaHoras(diasGym, horasGym, nombreUsuario, tipoRutina
                 ejercicioAleatorio("Cuadriceps", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
                 ejercicioAleatorio("Cuadriceps", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
                 ejercicioAleatorio("Cuadriceps", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
-                agregarCardio(tiempoCardio, res.id).then(() => console.log(pasa))
+                agregarCardio(tiempoCardio, res.id).then(() => console.log("entra"))
             })
             crearRutina(idUsuario, diasGym, horasGym, tiempo, repeticiones,"Todos dias", "https://i.ytimg.com/vi/0PumJ_Z0MuQ/maxresdefault.jpg").then(res => {
                 ejercicioAleatorio("Todo", res.id).then(() => {console.log("entra")})
@@ -712,7 +712,7 @@ function calcularEjerciciosDiaHoras(diasGym, horasGym, nombreUsuario, tipoRutina
                 ejercicioAleatorio("Todo", res.id).then(() => {console.log("entra")})
                 ejercicioAleatorio("Todo", res.id).then(() => {console.log("entra")})
                 ejercicioAleatorio("Todo", res.id).then(() => {console.log("entra")})
-                agregarCardio(tiempoCardio, res.id).then(() => console.log(pasa))
+                agregarCardio(tiempoCardio, res.id).then(() => console.log("entra"))
             })
             crearRutina(idUsuario, diasGym, horasGym, tiempo, repeticiones,"1 dia","https://www.runtastic.com/blog/wp-content/uploads/2018/02/Copy-of-thumbnail_blog_1200x800-5-1024x683.jpg").then(res => {
                 ejercicioAleatorio("Abdomen", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
@@ -725,7 +725,7 @@ function calcularEjerciciosDiaHoras(diasGym, horasGym, nombreUsuario, tipoRutina
                 ejercicioAleatorio("Abdomen", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
                 ejercicioAleatorio("Abdomen", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
                 ejercicioAleatorio("Abdomen", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
-                agregarCardio(tiempoCardio, res.id).then(() => console.log(pasa))
+                agregarCardio(tiempoCardio, res.id).then(() => console.log("entra"))
             })
             return {tiempoEjercicio: "14 min"}
         }else if (horasGym == 4 || horasGym == 4.5){
@@ -743,7 +743,7 @@ function calcularEjerciciosDiaHoras(diasGym, horasGym, nombreUsuario, tipoRutina
                 ejercicioAleatorio("Biceps", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
                 ejercicioAleatorio("Biceps", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
                 ejercicioAleatorio("Biceps", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
-                agregarCardio(tiempoCardio, res.id).then(() => console.log(pasa))
+                agregarCardio(tiempoCardio, res.id).then(() => console.log("entra"))
             })
             crearRutina(idUsuario, diasGym, horasGym, tiempo, repeticiones,"1 dia","https://www.cambiatufisico.com/wp-content/uploads/rutina-pecho-pectoral-superior.jpg").then(res => {
                 ejercicioAleatorio("Pectorales", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
@@ -759,7 +759,7 @@ function calcularEjerciciosDiaHoras(diasGym, horasGym, nombreUsuario, tipoRutina
                 ejercicioAleatorio("Pectorales", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
                 ejercicioAleatorio("Pectorales", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
                 ejercicioAleatorio("Pectorales", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
-                agregarCardio(tiempoCardio, res.id).then(() => console.log(pasa))
+                agregarCardio(tiempoCardio, res.id).then(() => console.log("entra"))
             })
             crearRutina(idUsuario, diasGym, horasGym, tiempo, repeticiones,"1 dia","https://e00-elmundo.uecdn.es/assets/multimedia/imagenes/2019/07/12/15629301078089.jpg").then(res => {
                 ejercicioAleatorio("Cuadriceps", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
@@ -774,7 +774,7 @@ function calcularEjerciciosDiaHoras(diasGym, horasGym, nombreUsuario, tipoRutina
                 ejercicioAleatorio("Cuadriceps", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
                 ejercicioAleatorio("Cuadriceps", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
                 ejercicioAleatorio("Cuadriceps", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
-                agregarCardio(tiempoCardio, res.id).then(() => console.log(pasa))
+                agregarCardio(tiempoCardio, res.id).then(() => console.log("entra"))
             })
             crearRutina(idUsuario, diasGym, horasGym, tiempo, repeticiones,"1 dia", "https://i.ytimg.com/vi/0PumJ_Z0MuQ/maxresdefault.jpg").then(res => {
                 ejercicioAleatorio("Todo", res.id).then(() => {console.log("entra")})
@@ -789,7 +789,7 @@ function calcularEjerciciosDiaHoras(diasGym, horasGym, nombreUsuario, tipoRutina
                 ejercicioAleatorio("Todo", res.id).then(() => {console.log("entra")})
                 ejercicioAleatorio("Todo", res.id).then(() => {console.log("entra")})
                 ejercicioAleatorio("Todo", res.id).then(() => {console.log("entra")})
-                agregarCardio(tiempoCardio, res.id).then(() => console.log(pasa))
+                agregarCardio(tiempoCardio, res.id).then(() => console.log("entra"))
                 
             })
             crearRutina(idUsuario, diasGym, horasGym, tiempo, repeticiones,"1 dia","https://www.runtastic.com/blog/wp-content/uploads/2018/02/Copy-of-thumbnail_blog_1200x800-5-1024x683.jpg").then(res => {
@@ -805,7 +805,7 @@ function calcularEjerciciosDiaHoras(diasGym, horasGym, nombreUsuario, tipoRutina
                 ejercicioAleatorio("Abdomen", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
                 ejercicioAleatorio("Abdomen", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
                 ejercicioAleatorio("Abdomen", res.id, repeticiones, series, tiempo, peso).then(() => {console.log("entra")})
-                agregarCardio(tiempoCardio, res.id).then(() => console.log(pasa))
+                agregarCardio(tiempoCardio, res.id).then(() => console.log("entra"))
             })
             return {tiempoEjercicio: "14 min"}
         }
@@ -845,14 +845,16 @@ async function agregarCardio(tiempoCardio, idRutina){
             peso:0,
             repeticiones:0,
             series:0,
-            tiempo: tiempoCardio,
+            tiempo: 25,
             idRutina: idRutina,
             idEjercicio: ejercicio.id,
             foto: ejercicio.foto,
             video: ejercicio.video
         }).then((creado)=>{
             console.log(creado)
-        })  
+        }).catch((error)=>{
+            console.log(error)
+        })    
     })
 }
 
