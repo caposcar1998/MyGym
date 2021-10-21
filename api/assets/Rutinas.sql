@@ -1,0 +1,9 @@
+INSERT INTO `Rutinas` (`id`, `nombre`, `intensidad`, `tiempo`, `idUsuario`, `foto`, `video`, `createdAt`, `updatedAt`) VALUES
+(3, 'Rutina Definición, Tren Superior', 5, 90, 1, 'https://www.publicdomainpictures.net/pictures/280000/nahled/gym-silhouette.jpg', '', '2021-10-21 00:58:49', '2021-10-21 00:58:49'),
+(4, 'Rutina Definición, Tren Inferior', 7, 30, 1, 'https://i.pinimg.com/236x/71/ec/b2/71ecb24e11292c3893460f5de97bedba.jpg', '', '2021-10-21 00:58:49', '2021-10-21 00:58:49'),
+(5, 'Rutina Pérdida de Peso, Tren Inferior', 8, 50, 1, 'https://cdn.pixabay.com/photo/2019/05/06/18/16/woman-4183803_960_720.png', '', '2021-10-21 00:58:49', '2021-10-21 00:58:49'),
+(6, 'Rutina Ganancia de Músculo, Tren Superior', 7, 60, 1, 'https://www.publicdomainpictures.net/pictures/290000/velka/weight-lifting-silhouette.jpg', '', '2021-10-21 00:58:49', '2021-10-21 00:58:49'),
+(7, 'Rutina Resistencia, Tren Medio', 2, 60, 1, 'https://www.nutritraveler.cl/wp-content/uploads/2017/12/44e22c9bfe5bf32bda14e8b29d55493b-fitness-woman-silhouette-doing-abs-by-vexels-1.png', '', '2021-10-21 00:58:49', '2021-10-21 00:58:49'),
+(8, 'Rutina Ganancia de Músculo, Tren Inferior', 9, 45, 1, 'https://thumbs.dreamstime.com/b/powerlifter-joven-del-atleta-87595064.jpg', '', '2021-10-21 00:58:49', '2021-10-21 00:58:49'),
+(9, 'Rutina Ganancia de Músculo, Tren Medio', 8, 35, 1, 'https://us.123rf.com/450wm/artinspiring/artinspiring1609/artinspiring160900007/63558339-aislado-negro-silueta-de-un-hombre-haciendo-abdominales-sobre-fondo-blanco-crujidos-reversos-ejercic.jpg?ver=6', '', '2021-10-21 00:58:49', '2021-10-21 00:58:49'),
+(10, 'Rutina Resistencia, Tren Completo', 8, 60, 1, 'https://previews.123rf.com/images/ms10/ms101604/ms10160400135/56107386-corriendo-silueta-del-hombre-sprint-carrera-rápida-corredor-comienza-a-funcionar-comienzo-.jpg', '', '2021-10-21 00:58:49', '2021-10-21 00:58:49');
