@@ -65,9 +65,9 @@
           <p style="color: red;  margin-left: 1.5vh;"><span>&nbsp;</span>Para continuar necesitas contestar los datos. </p>
     </ng-template>
     <div class="modal-footer ">
-        <button type="button" class="btn btn-success" [disabled]="!f.valid " (click)="modal.close()">Calificar</button>
+        <button type="button" class="btn btn-info" [disabled]="!f.valid " (click)="onFilledForm(f)">Calificar</button>
     </div>
 
 </ng-template>
 
-<button type="button" class="btn btn-info" (click)="openM(content)">Evaluar Rutina</button>
+<button type="button" class="btn eval-btn" (click)="openM(content)">Evaluar Rutina</button>

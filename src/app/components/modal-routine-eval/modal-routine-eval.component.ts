@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
-import {NgbModal} from '@ng-bootstrap/ng-bootstrap'
+import { NgForm } from '@angular/forms';
+import { NgbModal, NgbModalRef } from '@ng-bootstrap/ng-bootstrap'
 
 @Component({
   selector: 'app-modal-routine-eval',
@@ -8,22 +9,21 @@ import {NgbModal} from '@ng-bootstrap/ng-bootstrap'
 })
 export class ModalRoutineEvalComponent implements OnInit {
 
-  @Input()
-  modalName: string;
-  @Input()
-  contentType: boolean;
-
-  constructor(public modal:NgbModal) { }
-
-  
+  private modalRef: NgbModalRef;
+  constructor(public modalService:NgbModal) { }
 
   ngOnInit(): void {
   }
 
   openM(content){
-    this.modal.open(content,{size:'m'})
+    this.modalRef = this.modalService.open(content);
+    
   }
 
-  onFilledForm(form: any){}
+  onFilledForm(form: NgForm){
+    const value = form.value;
+    console.log("Evaluar rutina: " + form)
+    this.modalRef.close()
+  }
 
 }
