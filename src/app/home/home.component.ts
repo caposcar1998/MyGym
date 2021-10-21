@@ -44,7 +44,7 @@ export class HomeComponent implements OnInit {
         {this.rutina = data["response"],
         console.log(this.rutina),
         this.titulo = this.rutina["nombre"]
-        this.tiempo = "Tiempo por ejercicio: "+this.rutina["tiempo"] + " minutos"
+        this.tiempo = this.rutina["tiempo"]
         this.descripcion = "Intensidad "+this.rutina['intensidad']
         this.idRutina = this.rutina["id"]
         this.foto = this.rutina["foto"]
