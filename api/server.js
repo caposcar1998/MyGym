@@ -43,12 +43,16 @@ app.post("/usuarios",function(req,res){
 });
 
 app.post("/evaluacionrutinas", function(req,res){
-    console.log("Llegué");
     const calificacion = req.body.calificacion;
     const cansancio = req.body.cansancio;
     const dificultad = req.body.dificultad;
     const idRutina = req.body.idRutina;
     const idUsuario = req.body.idUsuario;
+    console.log('Calif: ' + calificacion);
+    console.log('Cansancio: ' + cansancio);
+    console.log('dificultad: ' + dificultad);
+    console.log("IdRutina " + idRutina);
+    console.log("idUsuar " + idUsuario);
     EvaluacionRutinas.create({
         calificacion: calificacion,
         cansancio : cansancio,
@@ -64,6 +68,7 @@ app.post("/evaluacionrutinas", function(req,res){
 
 
 app.get("/usuarios/:correo",function(req,res){
+    //Para borrar la referencia de la rutina al calificarla
     const paraCorreo = req.params.correo 
     Usuarios.findOne({ where: {correo: paraCorreo} }).then(function(user) {
         if (user != null){

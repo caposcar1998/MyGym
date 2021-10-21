@@ -25,14 +25,14 @@ export class ModalRoutineEvalService {
       "cansancio": parseInt(data.isTiring),
       "dificultad": parseInt(data.isEasy),
       "idRutina":data.routineId,
-      "idUsuario": data.routineUser
+      "idUsuario": data.userId
     })
   }
 
   removeRoutine(idRoutine:string){
     console.log("A eliminar");
     let deleteUrl = this.urlR+'/rutina/'+idRoutine;
-    return this.http.get(deleteUrl);
+    return this.http.delete(deleteUrl);
 
   }
 }

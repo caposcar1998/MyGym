@@ -13,7 +13,7 @@ export class ModalRoutineEvalComponent implements OnInit {
 
   @Input()
   routineId:string;
-  private id;
+  private id:string;
   private modalRef: NgbModalRef;
   private values: any =  {
     generalRating: ' ',
@@ -44,10 +44,10 @@ export class ModalRoutineEvalComponent implements OnInit {
     this.values.userId = this.id;
     localStorage.setItem('evalData', JSON.stringify(this.values));
     
-    // console.log("Evaluar rutina: " + JSON.stringify(this.values))
-    // this.modalService.addEvaluation(localStorage.getItem('evalData'), localStorage.getItem('id')).subscribe(data=>
-    //   localStorage.removeItem('evalData'));
-    //   window.alert("Se ha calificado la rutina"); 
+    console.log("Evaluar rutina: " + JSON.stringify(this.values))
+    this.modalService.addEvaluation(localStorage.getItem('evalData'), localStorage.getItem('id')).subscribe(data=>
+      localStorage.removeItem('evalData'));
+      window.alert("Se ha calificado la rutina"); 
 
     console.log("A eliminar rutina con id: ", this.routineId);
     this.modalService.removeRoutine(this.routineId);
@@ -56,6 +56,7 @@ export class ModalRoutineEvalComponent implements OnInit {
 
   getData(user: any){
     if(user.id){
+      console.log('User.id en modal' + user.id)
       this.id = user.id;
     }
 
