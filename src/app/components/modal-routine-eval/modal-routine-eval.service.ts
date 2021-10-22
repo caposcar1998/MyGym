@@ -7,7 +7,7 @@ import { AuthService } from '@auth0/auth0-angular';
 })
 export class ModalRoutineEvalService {
   private url= 'http://localhost:8080/evaluacionrutinas';
-  private urlR= 'http://localhost:8080/rutinas';
+  private urlR= 'http://localhost:8080/rutina';
 
   constructor(private http: HttpClient, public auth: AuthService) { }
 
@@ -37,6 +37,18 @@ export class ModalRoutineEvalService {
     let deleteAll = this.urlR+"/"+idRoutine
     return this.http.delete(deleteAll)
   }
+
+  getEvaluation(id:string){
+    let postUrl = this.url+'/'+id;
+    return this.http.get(postUrl)
+  }
+
+  getRoutine(id:string){
+    let postUrl = this.urlR+'/'+id;
+    return this.http.get(postUrl);
+  }
+
+
 }
 
 

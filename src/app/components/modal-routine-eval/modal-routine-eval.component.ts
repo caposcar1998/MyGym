@@ -27,6 +27,9 @@ export class ModalRoutineEvalComponent implements OnInit {
 
   ngOnInit(): void {
     this.auth.user$.subscribe( (user) => (this.checkUser(user)));
+    
+
+    
   }
 
   openM(content){

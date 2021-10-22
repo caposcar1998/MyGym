@@ -42,6 +42,7 @@ import { RutinaComponent } from './components/rutina/rutina.component';
 import { RutinasRapidasComponent } from './components/rutinas-rapidas/rutinas-rapidas.component';
 import { ModalRoutineEvalComponent } from './components/modal-routine-eval/modal-routine-eval.component';
 import { CardEjerciciosRutinasComponent } from './components/card-ejercicios-rutinas/card-ejercicios-rutinas.component';
+import { RoutineEvalComponent } from './components/routine-eval/routine-eval.component';
 
 
 
@@ -86,7 +87,8 @@ const ngWizardConfig: NgWizardConfig = {
     RutinaComponent,
     RutinasRapidasComponent,
     ModalRoutineEvalComponent,
-    CardEjerciciosRutinasComponent
+    CardEjerciciosRutinasComponent,
+    RoutineEvalComponent
 
 
 

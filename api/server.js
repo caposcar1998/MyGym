@@ -248,7 +248,7 @@ app.get("/ejerciciosrutinas/:idRutina",function(req,res){
 })
 
 
-app.get("/evalucionRutinas/:idUsuario", function(req,res){
+app.get("/evaluacionrutinas/:idUsuario", function(req,res){
     const id = req.params.idUsuario
     EvaluacionRutinas.findAll({ where: {idUsuario: id} }).then(function(evaluacion){
         if(evaluacion != null){
@@ -270,6 +270,7 @@ app.get("/rutina/:idRutina", function(req,res){
 
     })
 })
+
 
 
 
