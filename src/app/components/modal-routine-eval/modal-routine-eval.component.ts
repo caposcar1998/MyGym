@@ -49,7 +49,7 @@ export class ModalRoutineEvalComponent implements OnInit {
     
     console.log("Evaluar rutina: " + JSON.stringify(this.values))
     this.modalService.addEvaluation(localStorage.getItem('evalData'), localStorage.getItem('id')).subscribe(data=>
-      this.removeRoutine());
+      console.log(data));
 
   }
 
