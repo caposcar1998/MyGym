@@ -16,15 +16,26 @@ export class CarruselComponent implements OnInit {
   tiempo: string = "60"
   descripcion: string = "Para unos brazos de acero"
   rutinas = []
+  tama = 0
+  personalData = ""
+  bodyType = ""
+  objetivo = ""
+  id = "1"
 
   ngOnInit(): void {
     this.getAllRoutines()
+    if(this.rutinas.length == 0){
+      this.carruselService.createRutines(this.personalData,this.bodyType,this.objetivo,this.id).subscribe(data =>{})
+    }else{
+      console.log("si hay")
+    }
   }
 
   getAllRoutines(){
       this.carruselService.findAllRutines(parseInt(localStorage.getItem("id"))).subscribe(data =>
         {this.rutinas = data["response"],
-        console.log(this.rutinas)
+        console.log(this.rutinas),
+        this.tama = this.rutinas.length
       }
         )
     
