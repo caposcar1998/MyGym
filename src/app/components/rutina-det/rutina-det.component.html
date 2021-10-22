@@ -1,0 +1,147 @@
+<div class="wrapper d-flex align-items-stretch col">
+    <div class="sidebar">
+      <app-side-menu></app-side-menu>
+    </div>
+    <div class="container">
+      <div class="content p-4 p-md-5 pt-5 row" *ngIf="emptyEstiramiento">  
+        <div class="text-center">
+          <h1>Estiramiento</h1>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-6" *ngFor="let item of ejerciciosAPasarEstiramiento">
+              <app-card-ejercicios
+                        [size]=""
+                        [foto] = item.foto
+                        [nombre]=item.nombre
+                        [equipo]=item.equipo
+                        [descripcion] = item.descripcion
+                        [principal]=item.partePrincipal
+                        [tipo]=item.tipo
+                        [secundaria]=item.parteSecundaria
+                        [terciaria]=item.parteTerciaria
+                        >
+              </app-card-ejercicios>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container" *ngIf="emptyEstiramiento">
+        <div class="row">
+          <div class="col-6" *ngFor="let item of ejerciciosAPasarEstiramiento; index as i">
+            <div>
+              <h4 class="col text-center" >{{ejerciciosEstiramientoSeries[i]}}</h4>
+              <h4 class="col text-center" >{{repeticionesEstiramientoSeries[i]}}</h4>
+              <h4 class="col text-center" >{{tiempoEstiramientoSeries[i]}}</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="content p-4 p-md-5 pt-5 row" *ngIf="emptyFortalecimiento">  
+        <div class="text-center">
+          <h1>Fortalecimiento</h1>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-6" *ngFor="let item2 of ejerciciosAPasarFortalecimiento">
+              <app-card-ejercicios
+                        [size]=""
+                        [foto] = item2.foto
+                        [nombre]=item2.nombre
+                        [equipo]=item2.equipo
+                        [descripcion] = item2.descripcion
+                        [principal]=item2.partePrincipal
+                        [tipo]=item2.tipo
+                        [secundaria]=item2.parteSecundaria
+                        [terciaria]=item2.parteTerciaria
+                        >
+              </app-card-ejercicios>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container" *ngIf="emptyFortalecimiento">
+        <div class="row">
+          <div class="col-6" *ngFor="let item of ejerciciosAPasarFortalecimiento; index as i">
+            <div>
+              <h4 class="col text-center" >{{ejerciciosFortalecimientoSeries[i]}}</h4>
+              <h4 class="col text-center" >{{repeticionesFortalecimientoSeries[i]}}</h4>
+              <h4 class="col text-center" >{{tiempoFortalecimientoSeries[i]}}</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <div class="content p-4 p-md-5 pt-5 row" *ngIf="emptyCardio">  
+        <div class="text-center">
+          <h1>Cardio</h1>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-6" *ngFor="let item2 of ejerciciosAPasarCardio">
+              <app-card-ejercicios
+                        [size]=""
+                        [foto] = item2.foto
+                        [nombre]=item2.nombre
+                        [equipo]=item2.equipo
+                        [descripcion] = item2.descripcion
+                        [principal]=item2.partePrincipal
+                        [tipo]=item2.tipo
+                        [secundaria]=item2.parteSecundaria
+                        [terciaria]=item2.parteTerciaria
+                        >
+              </app-card-ejercicios>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container" *ngIf="emptyCardio">
+        <div class="row">
+          <div class="col-6" *ngFor="let item of ejerciciosAPasarCardio; index as i">
+            <div>
+              <h4 class="col text-center" >{{ejerciciosCardioSeries[i]}}</h4>
+              <h4 class="col text-center" >{{repeticionesCardioSeries[i]}}</h4>
+              <h4 class="col text-center" >{{tiempoCardioSeries[i]}}</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="content p-4 p-md-5 pt-5 row" *ngIf="emptyVolumen">  
+        <div class="text-center">
+          <h1>Volumen</h1>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-6" *ngFor="let item2 of ejerciciosAPasarMusculo">
+              <app-card-ejercicios
+                        [size]=""
+                        [foto] = item2.foto
+                        [nombre]=item2.nombre
+                        [equipo]=item2.equipo
+                        [descripcion] = item2.descripcion
+                        [principal]=item2.partePrincipal
+                        [tipo]=item2.tipo
+                        [secundaria]=item2.parteSecundaria
+                        [terciaria]=item2.parteTerciaria
+                        >
+              </app-card-ejercicios>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container" *ngIf="emptyVolumen">
+        <div class="row">
+          <div class="col-6" *ngFor="let item of ejerciciosAPasarCardio; index as i">
+            <div>
+              <h4 class="col text-center" >{{ejerciciosVolumenSeries[i]}}</h4>
+              <h4 class="col text-center" >{{repeticionesVolumenSeries[i]}}</h4>
+              <h4 class="col text-center" >{{tiempoVolumenSeries[i]}}</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>         
+</div>
+
