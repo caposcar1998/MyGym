@@ -1,0 +1,23 @@
+<!-- Es para las estrellas -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<div class="wrapper d-flex align-items-stretch" >
+    <div class="sidebar">
+      <app-side-menu></app-side-menu>
+    </div>
+</div>
+<div class="content p-4 p-md-5 pt-5">
+  <div class="row" *ngFor="let item of dataRutinas">
+    <div class="card mb-2 ">
+      <div class="card-body text-center">
+        <img src={{item.foto}} class="img-fluid rounded text-center" width="130px">
+        <h4 class="card-title">Nombre de la Rutina: {{ item.nombre}}</h4>
+        <h4 class="card-title">Intensidad:</h4>
+        <span class="fa fa-star checked" *ngFor="let item of counter(item.intensidad)"></span>
+        <span class="fa fa-star" *ngFor="let item of counter(9 - item.intensidad)"></span>
+        <h4 class="card-text">Tiempo: </h4>
+            <p>{{ item.tiempo }} Minutos</p>
+            <button class="btn btn-primary" (click)="sendToPage(item.id)">Mostrar ejercicios</button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -97,13 +97,29 @@ app.get("/usuarios/:correo",function(req,res){
 app.delete('/rutinas/rutina/:idRutina', function(req, res){
     const idToDelete = req.params.idRutina;
     console.log("Id to delete: " + idToDelete);
+
+    EjerciciosRutinas.destroy({where: {idRutina: idToDelete}}).then(()=>{
+        res.status(201).json({response: 'Rutina destruida'})
+
+    }).catch((error)=>{
+        res.status(500).json({error: error});
+    })
+
+
+
+   
+})
+
+app.delete('/rutinas/:idRutina', function(req,res){
+    const idToDelete = req.params.idRutina;
     Rutinas.destroy({
-        where: {id: idToDelete}
+        where: {id: idToDelete},force: true
     }).then(()=>{
         res.status(201).json({response: 'Rutina destruida'})
     }).catch((error)=>{
         res.status(500).json({error: error});
-    })    
+    }) 
+
 })
 
 app.post("/usuarios/:correo",function(req,res){
@@ -216,7 +232,6 @@ app.get("/rutinas/:idUsuario",function(req,res){
         } else {
             res.status(404).json({response:"Ejercicio no encontrado"})
         }
-
     })
 })
 

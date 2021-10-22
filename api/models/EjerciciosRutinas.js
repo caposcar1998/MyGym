@@ -29,6 +29,8 @@ module.exports = (sequelize, DataTypes) => {
                 model: "rutinas",
                 key: "id"
             },
+            onUpdate: 'CASCADE',
+            onDelete: 'CASCADE',
         },
         idEjercicio:{
             type:DataTypes.INTEGER(11),
@@ -37,6 +39,8 @@ module.exports = (sequelize, DataTypes) => {
                 model: "ejercicios",
                 key: "id"
             },
+            onUpdate: 'CASCADE',
+            onDelete: 'CASCADE',
         },
         foto:{
             type:DataTypes.STRING
