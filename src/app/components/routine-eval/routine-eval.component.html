@@ -1,1 +1,57 @@
-<p>routine-eval works!</p>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<div class="wrapper d-flex align-items-stretch">
+    <div class="sidebar">
+      <app-side-menu></app-side-menu>
+    </div>
+    <div class="content p-4 p-md-5 pt-5">
+        <div class="container">
+            <div class="main-body ">
+                <nav aria-label="breadcrumb" class="main-breadcrumb mb-5 mt-5 text-center">
+                    <figcaption><h1><b>Rating Rutinas</b></h1></figcaption>
+                </nav>
+                <div class="rating-table">
+                    <table class="table">
+                        <thead class="thead-eval text-center">
+                            <tr>
+                            <th scope="col">Rutina</th>
+                            <th scope="col">Calificación General</th>
+                            <th scope="col">Nivel Cansancio</th>
+                            <th scope="col">Dificultad</th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-center">
+                            <tr *ngFor="let singleEvaluation of evaluations; let i = index;">
+                                <th scope="row">{{idNames[i]}}</th>
+                                <td> 
+                                    <ng-container *ngFor="let i of [].constructor(singleEvaluation.calificacion)">
+                                        <i class="fa fa-star checked"></i>
+                                    </ng-container>
+                                    <br>
+                                    {{singleEvaluation.calificacion}}/10
+                                </td>
+                                <td> 
+                                    <ng-container *ngFor="let i of [].constructor(singleEvaluation.cansancio)">
+                                        <i class="fa fa-battery-quarter checked"></i>
+                                    </ng-container>
+                                    <br>
+                                    {{singleEvaluation.cansancio}}/10
+                                </td>
+                                <td> 
+                                    <ng-container *ngFor="let i of [].constructor(singleEvaluation.dificultad)">
+                                        <i class="fa fa-check checked"></i>
+                                    </ng-container>
+                                    <br>
+                                    {{singleEvaluation.dificultad}}/10
+                                </td>
+
+                            </tr>
+                        </tbody>
+                        </table>
+                        
+                        
+                        
+                </div>
+                    
+
+    </div>
+</div>
