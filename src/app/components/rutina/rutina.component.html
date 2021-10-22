@@ -31,9 +31,9 @@
                     <div class="col-6-lg">
                       <app-modal-routine-eval [routineId]=id></app-modal-routine-eval>
                       <span style="margin-right: 4.0vh;"></span>
-                      <button class="btn btn-warning btn-outline" type="button">Enviar a correo</button>
+                      <button class="btn btn-warning btn-outline" (click)="sendRoutine()" type="button">Enviar a correo</button>
                       <span style="margin-right: 4.0vh;"></span>
-                      <button class="btn btn-danger">El otro boton</button>
+                      <button class="btn btn-danger" (click)="removeRoutine()">Eliminar</button>
 
                     </div>
     

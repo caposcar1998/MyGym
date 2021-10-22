@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { RutinaService } from './rutina.service';
-
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-rutina',
   templateUrl: './rutina.component.html',
@@ -16,7 +16,7 @@ export class RutinaComponent implements OnInit {
   rutinaInfo = {}
 
 
-  constructor(private route: ActivatedRoute,private rutinaService: RutinaService) { }
+  constructor(private route: ActivatedRoute,private rutinaService: RutinaService, private router: Router) { }
 
 
   ngOnInit(): void {
@@ -49,9 +49,24 @@ export class RutinaComponent implements OnInit {
       })
     })
 
-    
+  }
+
+  removeRoutine(){
+    localStorage.removeItem('evalData')
+    this.rutinaService.removeRoutine(this.id).subscribe(data =>{
+      console.log("A eliminar rutina con id: ", this.id);
+      this.router.navigate(['/home']);
+    });
 
 
+
+  }
+
+  sendRoutine(){
+
+    this.rutinaService.sendMessage("oscarcontrerascap@gmail.com",this.rutinaInfo['nombre'],"","<h1>Tu rutina</h1>").subscribe(data =>{
+      alert("Se manda la rutina al mail")
+    })
   }
 
 }
