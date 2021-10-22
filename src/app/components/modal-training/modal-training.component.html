@@ -1,0 +1,33 @@
+<ng-template #content let-modal>
+    <div class="modal-header text-white">
+        <h3>Equipo de entrenamiento</h3>
+        <button class="close" arial-label="close" type="button" (click)="modal.dismiss()">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="modal-body">
+        <h3>Selecciona el o los equipos  con el que NO cuentas</h3>
+        <form #f="ngForm" (ngSubmit)="onFilledForm(f)">
+            <label for="discardTeam">Esto es para adecuarte mejores ejercicios </label>
+            <div *ngFor="let equipo of equipos; let i = index" class="form-group  mt-4">
+                <input type="checkbox" name="discardTeam" [value]="equipo"> {{equipo}}
+            </div>
+        
+  
+        </form>
+
+        
+    </div>
+    <div *ngIf="f.valid; else success">
+        <p style="color: green; margin-left: 1.5vh;"><span ></span>Se han contestado los datos correctamente. </p>
+      </div>
+      <ng-template #success>
+          <p style="color: red;  margin-left: 1.5vh;"><span></span>Para continuar necesitas contestar los datos. </p>
+    </ng-template>
+    <div class="modal-footer ">
+        <button type="button" class="btn btn-info" [disabled]="!f.valid " (click)="onFilledForm(f)">Calificar</button>
+    </div>
+
+</ng-template>
+
+<button type="button" class="btn eval-btn" (click)="openM(content)">Verificar Equipo de ejercicio</button>

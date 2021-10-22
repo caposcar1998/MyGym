@@ -10,7 +10,7 @@ import { Router } from '@angular/router';
 export class RutinaComponent implements OnInit {
   
   ejercicios= []
-
+  equipos = []
   id = this.route.snapshot.params['id']
   tableToSend = ""
   infoRoutineSend = ""
@@ -33,6 +33,10 @@ export class RutinaComponent implements OnInit {
       this.rutinaInfo = (data['response'])
     })
 
+   
+
+
+
   }
 
   anadirValoresFaltantes(): void{
@@ -47,6 +51,7 @@ export class RutinaComponent implements OnInit {
         val["nombre"] = data['response']['nombre']
         val["equipo"] = data['response']['equipo']
         console.log(val)
+        this.equipos.push(val["equipo"]);
         this.infoRoutineSend = this.infoRoutineSend + `
         <tr>
         <td>${val["nombre"]}</td>
