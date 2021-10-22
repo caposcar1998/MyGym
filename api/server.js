@@ -106,6 +106,19 @@ app.get("/usuarios/:correo",function(req,res){
     })
 })
 
+app.get("/usuariosId/:idUsuario",function(req,res){
+    const idUsuario = req.params.idUsuario 
+    Usuarios.findOne({ where: {id: idUsuario} }).then(function(user) {
+        if (user != null){
+            const resultUser = JSON.stringify(user)
+            res.status(200).json({response:resultUser})
+        } else {
+            res.status(404).json({response:"Usuario no encontrado"})
+        }
+
+    })
+})
+
 app.delete('/rutinas/rutina/:idRutina', function(req, res){
     const idToDelete = req.params.idRutina;
     console.log("Id to delete: " + idToDelete);
@@ -154,6 +167,8 @@ app.post("/usuarios/:correo",function(req,res){
         }
     })
 })
+
+
 
 
 
@@ -304,3 +319,39 @@ app.post("/mandarMensaje", function(req,res){
 
 
 
+
+app.post("/rutinas/nuevaRutina",function(req,res){
+    console.log("body")
+    console.log(req.body)
+    const id = req.body.idUsuario
+    console.log(id)
+    const nombre = req.body.nombre
+
+    const tipoCuerpo = req.body.tipoCuerpo
+    const diasGym = req.body.diasGym
+    const horasGym = req.body.horasGym
+    const intensidad = req.body.intensidad
+
+    const objetivoCuerpo = req.body.objetivoCuerpo
+
+    console.log(tipoCuerpo)
+
+            if (tipoCuerpo == "Ectomorfo"){
+                ectomorfo.crearRutinaEctomorfo(objetivoCuerpo, diasGym, horasGym, intensidad, id, nombre).then(resu =>
+                 {res.status(200).json({Mensaje:"se crea"})}
+                 )
+             } else if (tipoCuerpo == "Endomorfo"){
+                 endomorfo.crearRutinaEndomorfo(objetivoCuerpo, diasGym, horasGym, intensidad, id, nombre).then(resu =>
+                     {res.status(200).json({Mensaje:"se crea"})}
+                     )
+             } else{
+                 mesoformo.crearRutinaMesoformo(objetivoCuerpo, diasGym, horasGym, intensidad, id, nombre).then(resu =>
+                     {res.status(200).json({Mensaje:"se crea"})}
+                     )
+             }
+       
+
+        //Generar rutina
+
+        
+})
