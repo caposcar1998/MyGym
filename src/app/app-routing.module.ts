@@ -27,9 +27,7 @@ const routes: Routes = [
   { path: "routines", component: RoutinesComponent},
   { path: "contactanos", component: ContactUsComponent},
   { path: "rutina/:id/ejercicios", component: RutinaComponent},
-
   { path: "evalRutinas", component: RoutineEvalComponent},
-
   { path: "rutinasRapidas", component: RutinasRapidasComponent}
 
 ];

@@ -31,6 +31,7 @@ export class RutinaComponent implements OnInit {
       {this.ejercicios = data["response"] ,this.anadirValoresFaltantes()})
     this.rutinaService.findOneRoutine(id).subscribe(data => {
       this.rutinaInfo = (data['response'])
+      console.log(this.rutinaInfo);
     })
 
   }
@@ -39,6 +40,7 @@ export class RutinaComponent implements OnInit {
     this.ejercicios.forEach(val => {
       console.log(val['id'])
       this.rutinaService.findOneExercise(val.idEjercicio).subscribe(data =>{
+        val["foto"] = data['response']['foto']
         val["descripcion"] = data['response']['descripcion']
         val["partePrincipal"] = data['response']['partePrincipal']
         val["parteSecundaria"] = data['response']['parteSecundaria']
