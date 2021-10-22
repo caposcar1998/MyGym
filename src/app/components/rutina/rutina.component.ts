@@ -12,7 +12,8 @@ export class RutinaComponent implements OnInit {
   ejercicios= []
 
   id = this.route.snapshot.params['id']
-
+  tableToSend = ""
+  infoRoutineSend = ""
   rutinaInfo = {}
 
 
@@ -46,6 +47,17 @@ export class RutinaComponent implements OnInit {
         val["nombre"] = data['response']['nombre']
         val["equipo"] = data['response']['equipo']
         console.log(val)
+        this.infoRoutineSend = this.infoRoutineSend + `
+        <tr>
+        <td>${val["nombre"]}</td>
+        <td>${val["descripcion"]}</td>
+        <td>${val["equipo"]}</td>
+        <td>${val["partePrincipal"]}</td>
+        <td>${val["repeticiones"] }</td>
+        <td>${val["series"] }</td>
+        <td>${val["tiempo"] }</td>
+
+      </tr>`
       })
     })
 
@@ -63,8 +75,19 @@ export class RutinaComponent implements OnInit {
   }
 
   sendRoutine(){
-
-    this.rutinaService.sendMessage("oscarcontrerascap@gmail.com",this.rutinaInfo['nombre'],"","<h1>Tu rutina</h1>").subscribe(data =>{
+    this.tableToSend= `<table> 
+    <tr>
+      <th>Nombre</th>
+      <th>Descripcion</th>
+      <th>Equipo</th>
+      <th>Parte principal</th>
+      <th>Repeticiones</th>
+      <th>Series</th>
+      <th>Tiempo</th>
+    </tr>
+    ${this.infoRoutineSend}
+  </table>`
+    this.rutinaService.sendMessage("manuoh09@gmail.com",this.rutinaInfo['nombre'],"",this.tableToSend).subscribe(data =>{
       alert("Se manda la rutina al mail")
     })
   }
