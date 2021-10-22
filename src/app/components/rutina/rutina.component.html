@@ -28,15 +28,23 @@
 
                       </app-card-ejercicios-rutinas>
                     </div>
-                    <div class="col-6-lg">
-                      <app-modal-routine-eval [routineId]=id></app-modal-routine-eval>
-                      <span style="margin-right: 4.0vh;"></span>
-                      <button class="btn btn-warning btn-outline" (click)="sendRoutine()" type="button">Enviar a correo</button>
-                      <span style="margin-right: 4.0vh;"></span>
-                      <button class="btn btn-danger" (click)="removeRoutine()">Eliminar</button>
 
+                  <div class="container">
+                    <div class="row">
+                      <div class="col-sm">
+                        <app-modal-routine-eval [routineId]=id></app-modal-routine-eval>
+                      </div>
+                      <div class="col-sm">
+                        <h3>Correo a enviar la rutina</h3>
+                        <input type="text" name="name" class="form-control" placeholder="correo" #mail>
+                        <button class="btn btn-warning btn-outline" (click)="sendRoutine(mail.value)" type="button">Enviar</button>
+                      </div>
+                      <div class="col-sm">
+                        <button class="btn btn-danger" (click)="removeRoutine()">Eliminar</button>
+                      </div>
                     </div>
-    
+                  </div>
+                </div>
                   </div>
             
 

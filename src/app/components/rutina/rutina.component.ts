@@ -15,7 +15,7 @@ export class RutinaComponent implements OnInit {
   tableToSend = ""
   infoRoutineSend = ""
   rutinaInfo = {}
-
+  mail = ""
 
   constructor(private route: ActivatedRoute,private rutinaService: RutinaService, private router: Router) { }
 
@@ -76,7 +76,7 @@ export class RutinaComponent implements OnInit {
 
   }
 
-  sendRoutine(){
+  sendRoutine(mail){
     this.tableToSend= `<table> 
     <tr>
       <th>Nombre</th>
@@ -89,7 +89,8 @@ export class RutinaComponent implements OnInit {
     </tr>
     ${this.infoRoutineSend}
   </table>`
-    this.rutinaService.sendMessage("manuoh09@gmail.com",this.rutinaInfo['nombre'],"",this.tableToSend).subscribe(data =>{
+  this.mail = mail
+    this.rutinaService.sendMessage(this.mail,this.rutinaInfo['nombre'],"",this.tableToSend).subscribe(data =>{
       alert("Se manda la rutina al mail")
     })
   }
