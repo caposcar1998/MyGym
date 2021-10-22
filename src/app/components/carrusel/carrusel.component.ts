@@ -17,18 +17,35 @@ export class CarruselComponent implements OnInit {
   descripcion: string = "Para unos brazos de acero"
   rutinas = []
   tama = 0
-  personalData = ""
-  bodyType = ""
-  objetivo = ""
+  personalData = {}
+  bodyType = {}
+  objetivo = {}
   id = "1"
 
   ngOnInit(): void {
     this.getAllRoutines()
-    if(this.rutinas.length == 0){
-      this.carruselService.createRutines(this.personalData,this.bodyType,this.objetivo,this.id).subscribe(data =>{})
-    }else{
-      console.log("si hay")
-    }
+  }
+
+  createNew(): void{
+    this.carruselService.getUserInfo(localStorage.getItem("id")).subscribe(data => {
+
+      this.personalData['nombre'] = JSON.parse(data['response']).nombre
+      this.bodyType['body'] = JSON.parse(data['response']).tipoCuerpo
+      this.objetivo['goalm'] = JSON.parse(data['response']).objetivoCuerpo
+      this.objetivo['daysForWeek'] = JSON.parse(data['response']).diasGym
+      this.objetivo['hours'] = JSON.parse(data['response']).horasGym
+      this.objetivo['intesity'] = JSON.parse(data['response']).intensidad
+      console.log(JSON.stringify(this.personalData))
+      console.log(JSON.stringify(this.bodyType))
+      console.log(JSON.stringify(this.objetivo))
+      this.carruselService.createRutines(JSON.stringify(this.personalData),JSON.stringify(this.bodyType),JSON.stringify(this.objetivo),localStorage.getItem("id")).subscribe(data =>{
+        console.log("entra")
+        console.log(localStorage.getItem("id"))
+        window.location.reload()
+      })
+
+    })
+
   }
 
   getAllRoutines(){
@@ -40,5 +57,7 @@ export class CarruselComponent implements OnInit {
         )
     
   }
+
+
 
 }
