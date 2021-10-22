@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MatSnackBar } from "@angular/material/snack-bar";
+import { Router } from '@angular/router';
+import { ContactUsService } from './contact-us.service';
 @Component({
   selector: 'app-contact-us',
   templateUrl: './contact-us.component.html',
@@ -11,7 +13,7 @@ export class ContactUsComponent implements OnInit {
   public mail : string;
   public mensaje : string;
   public asunto : string;
-  constructor(public snackBarError: MatSnackBar) { }
+  constructor(public snackBarError: MatSnackBar,private contact: ContactUsService,private router: Router) { }
   ngOnInit(): void {
   }
 
@@ -23,10 +25,10 @@ export class ContactUsComponent implements OnInit {
     this.mail = mail
     this.asunto = asunto
     this.mensaje = mensaje
-    console.log(this.nombre)
-    console.log(this.mail)
-    console.log(this.asunto)
-    console.log(this.mensaje)
+    this.contact.sendMessage(mail,asunto,mensaje).subscribe(data=>{
+      alert("Mensaje mandado con exito")
+      this.router.navigate(['/home'])
+    })
   }
 
   openErrorDialog(error){

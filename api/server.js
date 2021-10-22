@@ -4,6 +4,17 @@ var app = express();
 var db = require("./models")
 app.use(bodyParser.json());
 const cors= require("cors")
+const nodemailer = require('nodemailer');
+const transporter = nodemailer.createTransport({
+    name:"smtp.gmail.com",
+    host: 'smtp.gmail.com',
+    port: 587,
+    auth: {
+        user: 'oscardevcaposcar@gmail.com',
+        pass: 'labichota'
+    }
+});
+
 var corsOptions = {
     origin:"*",
     optionSuccessStatus: 200,
@@ -16,6 +27,7 @@ const mesoformo = require("./workouts/Mesomorfo.js")
 const {Rutinas} = require("./models")
 const {EjerciciosRutinas} = require("./models");
 const { EvaluacionRutinas } = require("./models");
+
 
 var distDir = __dirname + "/dist/";
 app.use(express.static(distDir));
@@ -268,6 +280,24 @@ app.get("/rutina/:idRutina", function(req,res){
             res.status(404).json({response:"rutina no encontrado"})
         }
 
+    })
+})
+
+app.post("/mandarMensaje", function(req,res){
+    const {to,subject,text, html} = req.body
+    const mailData = {
+        from: 'oscardevcaposcar@gmail.com',  // sender address
+          to: to,   // list of receivers
+          subject: subject,
+          text: text,
+          html: html,
+        };
+
+    transporter.sendMail(mailData, (error, info) =>{
+        if (error) {
+            res.status(500).json({response:error})
+        }
+        res.status(201).json({response:"Correo enviado"})
     })
 })
 
