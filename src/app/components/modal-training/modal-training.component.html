@@ -10,7 +10,7 @@
         <form #f="ngForm" (ngSubmit)="onFilledForm(f)">
             <label for="discardTeam">Esto es para adecuarte mejores ejercicios </label>
             <div *ngFor="let equipo of equipos; let i = index" class="form-group  mt-4">
-                <input type="checkbox" name="discardTeam" [value]="equipo"> {{equipo}}
+                <input type="checkbox" id="discardTeam" name="discardTeam" [value]="equipo"> {{equipo}}
             </div>
         
   
@@ -25,7 +25,7 @@
           <p style="color: red;  margin-left: 1.5vh;"><span></span>Para continuar necesitas contestar los datos. </p>
     </ng-template>
     <div class="modal-footer ">
-        <button type="button" class="btn btn-info" [disabled]="!f.valid " (click)="onFilledForm(f)">Calificar</button>
+        <button type="button" class="btn btn-info" [disabled]="!f.valid " (click)="onFilledForm(f)">Enviar</button>
     </div>
 
 </ng-template>
