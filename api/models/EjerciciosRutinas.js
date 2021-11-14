@@ -1,7 +1,7 @@
 
 
 module.exports = (sequelize, DataTypes) => {
-    const EjerciciosRutinas = sequelize.define("EjerciciosRutinas",{
+    const EjerciciosRutinas = sequelize.define("ejerciciosRutinas",{
         peso:{
             type:DataTypes.DOUBLE,
             allowNull: false,
