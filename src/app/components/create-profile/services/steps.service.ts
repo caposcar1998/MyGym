@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { StepModel } from '../models/step.model';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { environment } from '../../../../environments/environment.prod';
 
 const STEPS = [
   { name: 'Crear perfil', stepIndex: 1, isComplete: true, description: 'Para iniciar tu camino en MyGym, requerimos de tus datos personales con el fin de poder crear rutinas personalizadas y planes de trabajo.' },
@@ -15,7 +16,7 @@ const STEPS = [
 })
 export class StepsService {
   
-  private url= 'http://localhost:8080/usuarios'
+  private url= environment.apiUrl+'usuarios'
   steps$: BehaviorSubject<StepModel[]> = new BehaviorSubject<StepModel[]>(STEPS);
   currentStep$: BehaviorSubject<StepModel> = new BehaviorSubject<StepModel>(null);
 

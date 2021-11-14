@@ -2,6 +2,8 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { ActivatedRoute } from '@angular/router';
+import { environment } from '../../../environments/environment.prod';
+
 @Injectable({
   providedIn: 'root'
 })
@@ -9,11 +11,11 @@ export class RutinaService {
   idRutina : number =  this.activeRoute.snapshot.params.id;
   dataRutinas : any;
   ejercicios : any[]
-  private url= 'http://localhost:8080/ejerciciosrutinas'
-  private urlExercies= 'http://localhost:8080/ejercicio'
-  private urlRutina = 'http://localhost:8080/rutina'
-  private urlR= 'http://localhost:8080/rutinas';
-  private urlS = 'http://localhost:8080/mandarMensaje'
+  private url= environment.apiUrl+'ejerciciosrutinas'
+  private urlExercies= environment.apiUrl+'ejercicio'
+  private urlRutina = environment.apiUrl+'rutina'
+  private urlR= environment.apiUrl+'rutinas';
+  private urlS = environment.apiUrl+'mandarMensaje'
   constructor(private http: HttpClient, private activeRoute: ActivatedRoute) { }
 
   ngOnInit(): void {

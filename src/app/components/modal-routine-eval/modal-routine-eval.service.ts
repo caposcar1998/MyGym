@@ -1,18 +1,19 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { AuthService } from '@auth0/auth0-angular';
+import { environment } from '../../../environments/environment.prod';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ModalRoutineEvalService {
-  private url= 'http://localhost:8080/evaluacionrutinas';
-  private urlR= 'http://localhost:8080/rutina';
+  private url= environment.apiUrl+'evaluacionrutinas';
+  private urlR= environment.apiUrl+'rutina';
 
   constructor(private http: HttpClient, public auth: AuthService) { }
 
   findUser(mail:String){
-    let getUrl = 'http://localhost:8080/usuarios'+"/"+mail;
+    let getUrl = environment.apiUrl+'usuarios'+"/"+mail;
     return this.http.get(getUrl)
   }
 

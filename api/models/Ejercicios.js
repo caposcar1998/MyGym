@@ -1,6 +1,6 @@
 
 module.exports = (sequelize, DataTypes) => {
-    const Ejercicios = sequelize.define("Ejercicios",{
+    const Ejercicios = sequelize.define("ejercicios",{
         nombre:{
             type:DataTypes.STRING,
             allowNull: false,

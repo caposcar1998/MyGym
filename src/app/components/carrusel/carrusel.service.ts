@@ -1,14 +1,15 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { environment } from '../../../environments/environment.prod';
 @Injectable({
   providedIn: 'root'
 })
 export class CarruselService {
 
-  private urlR = 'http://localhost:8080/rutinas'
-  private url= 'http://localhost:8080/usuariosId'
-  private urlN = 'http://localhost:8080/rutinas/nuevaRutina'
+  private urlR = environment.apiUrl+'rutinas'
+  private url= environment.apiUrl+'usuariosId'
+  private urlN = environment.apiUrl+'rutinas/nuevaRutina'
   
   constructor(private http: HttpClient) { }
 
