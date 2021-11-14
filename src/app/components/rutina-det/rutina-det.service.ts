@@ -1,12 +1,13 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { GetEjercicios } from './models/ejercicios.model';
+import { environment } from '../../../environments/environment.prod';
 
 @Injectable({
   providedIn: 'root'
 })
 export class RutinaDetService {
-  private url= 'http://localhost:8080/ejerciciosrutinas'
+  private url= environment.apiUrl+'ejerciciosrutinas'
   constructor(private http: HttpClient) { }
 
   findExercies(idEntrada:String){
@@ -15,7 +16,7 @@ export class RutinaDetService {
   }
 
   findEjercicios(){
-    let getUrl = "http://localhost:8080/ejercicios";
+    let getUrl = environment.apiUrl+"ejercicios";
     return this.http.get<GetEjercicios>(getUrl)
   }
 }
