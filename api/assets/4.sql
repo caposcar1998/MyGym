@@ -1,4 +1,4 @@
-INSERT INTO `EjerciciosRutinas` (`id`, `peso`, `repeticiones`, `series`, `tiempo`, `idRutina`, `idEjercicio`, `foto`, `video`, `createdAt`, `updatedAt`) VALUES
+INSERT INTO `ejerciciosRutinas` (`id`, `peso`, `repeticiones`, `series`, `tiempo`, `idRutina`, `idEjercicio`, `foto`, `video`, `createdAt`, `updatedAt`) VALUES
 (1, 6, 7, 2, 5, 4, 11, '', '', '2021-10-21 00:58:26', '2021-10-21 00:58:26'),
 (2, 12, 15, 3, 25, 6, 12, '', '', '2021-10-21 00:58:26', '2021-10-21 00:58:26'),
 (3, 0, 15, 2, 15, 4, 8, '', '', '2021-10-21 00:58:26', '2021-10-21 00:58:26'),
