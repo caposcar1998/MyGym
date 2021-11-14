@@ -44,7 +44,7 @@ import { ModalRoutineEvalComponent } from './components/modal-routine-eval/modal
 import { CardEjerciciosRutinasComponent } from './components/card-ejercicios-rutinas/card-ejercicios-rutinas.component';
 import { RoutineEvalComponent } from './components/routine-eval/routine-eval.component';
 import { RutinaDetComponent } from './components/rutina-det/rutina-det.component';
-
+import { DataTablesModule } from "angular-datatables";
 
 
 
@@ -105,7 +105,8 @@ const ngWizardConfig: NgWizardConfig = {
     FormsModule,
     MatSnackBarModule,
     AuthModule.forRoot({ ...env.auth }),
-    NgbModule
+    NgbModule,
+    DataTablesModule 
   ],
   
   providers: [ AuthGuard],

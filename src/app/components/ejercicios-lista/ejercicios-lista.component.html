@@ -4,27 +4,31 @@
     <app-side-menu></app-side-menu>
   </div>
   <div class="content p-4 p-md-5 pt-5">
-
-  <h1>Ejercicios</h1>
-<div class="container">
-  <div class="row">
-    <div class="col-6" *ngFor="let item of lista">
-       <app-card-ejercicios
-       [size]=""
-       [foto]=item.foto
-       [nombre]=item.nombre
-       [equipo]=item.equipo
-       [principal]=item.partePrincipal
-       [tipo]=item.tipo
-       [descripcion]=item.descripcion
-       [secundaria]=item.parteSecundaria
-       [terciaria]=item.parteTerciaria
-       >
-       </app-card-ejercicios>
-    </div>
-    
+    <table datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger" class="table table-hover">
+      <thead>
+        <tr>
+          <th scope="col">Foto</th>
+          <th scope="col">Nombre</th>
+          <th scope="col">Equipo</th>
+          <th scope="col">Descripción</th>
+          <th scope="col">Tipo</th>
+          <th scope="col">Parte Principal</th>
+          <th scope="col">Parte Secundaria</th>
+          <th scope="col">Parte Terciaria</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of lista">
+          <th scope="col"><img class="card-img-top" src={{item.foto}} alt="Card image cap"></th>
+          <th scope="col">{{ item.nombre }}</th>
+          <th scope="col">{{ item.equipo }}</th>
+          <th scope="col">{{ item.descripcion }}</th>
+          <th scope="col">{{ item.tipo }}</th>
+          <th scope="col">{{ item.partePrincipal }}</th>
+          <th scope="col">{{ item.parteSecundaria }}</th>
+          <th scope="col">{{ item.parteTerciaria }}</th>
+        </tr>
+      </tbody>
+    </table>
   </div>
-</div>
-
-
 </div>
