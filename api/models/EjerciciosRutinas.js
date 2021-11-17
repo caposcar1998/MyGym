@@ -26,7 +26,7 @@ module.exports = (sequelize, DataTypes) => {
             type:DataTypes.INTEGER(11),
             allowNull: false,
             references:{
-                model: "rutinas",
+                model: "Rutinas",
                 key: "id"
             },
             onUpdate: 'CASCADE',
@@ -36,7 +36,7 @@ module.exports = (sequelize, DataTypes) => {
             type:DataTypes.INTEGER(11),
             allowNull: false,
             references:{
-                model: "ejercicios",
+                model: "Ejercicios",
                 key: "id"
             },
             onUpdate: 'CASCADE',

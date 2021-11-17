@@ -19,7 +19,7 @@ module.exports = (sequelize, DataTypes) => {
             type:DataTypes.INTEGER(11),
             allowNull: false,
             references:{
-                model: "rutinas",
+                model: "Rutinas",
                 key: "id"
             },
             onUpdate: 'CASCADE',
@@ -29,7 +29,7 @@ module.exports = (sequelize, DataTypes) => {
             type:DataTypes.INTEGER(11),
             allowNull: false,
             references:{
-                model: "usuarios",
+                model: "Usuarios",
                 key: "id"
             },
         },

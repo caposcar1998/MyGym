@@ -17,7 +17,7 @@ module.exports = (sequelize, DataTypes) => {
             type:DataTypes.INTEGER(11),
             allowNull: false,
             references:{
-                model: "usuarios",
+                model: "Usuarios",
                 key: "id"
             },
             onUpdate: 'CASCADE',
