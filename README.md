@@ -42,6 +42,7 @@ ORM
 3) Node 14
 
 [nginx y node](https://aws.plainenglish.io/deploying-a-nodejs-application-in-aws-ec2-c1618b9b3874)
+[anadir SSL](https://www.techrepublic.com/article/how-to-enable-ssl-on-nginx/)
 
 ```
 ##
