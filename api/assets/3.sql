@@ -1,4 +1,4 @@
-INSERT INTO `rutinas` (`id`, `nombre`, `intensidad`, `tiempo`, `idUsuario`, `foto`, `video`, `createdAt`, `updatedAt`) VALUES
+INSERT INTO `Rutinas` (`id`, `nombre`, `intensidad`, `tiempo`, `idUsuario`, `foto`, `video`, `createdAt`, `updatedAt`) VALUES
 (3, 'Rutina Definición, Tren Superior', 5, 90, 1, 'https://www.publicdomainpictures.net/pictures/280000/nahled/gym-silhouette.jpg', '', '2021-10-21 00:58:49', '2021-10-21 00:58:49'),
 (4, 'Rutina Definición, Tren Inferior', 7, 30, 1, 'https://i.pinimg.com/236x/71/ec/b2/71ecb24e11292c3893460f5de97bedba.jpg', '', '2021-10-21 00:58:49', '2021-10-21 00:58:49'),
 (5, 'Rutina Pérdida de Peso, Tren Inferior', 8, 50, 1, 'https://cdn.pixabay.com/photo/2019/05/06/18/16/woman-4183803_960_720.png', '', '2021-10-21 00:58:49', '2021-10-21 00:58:49'),

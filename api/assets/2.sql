@@ -1,5 +1,5 @@
 INSERT INTO 
-	ejercicios(nombre, equipo, tipo,partePrincipal,parteSecundaria,parteTerciaria,foto,descripcion)
+	Ejercicios(nombre, equipo, tipo,partePrincipal,parteSecundaria,parteTerciaria,foto,descripcion)
 VALUES
 	("Elevaciones lateral de pie con mancuerna","Mancuernas","Peso libre","Hombros","Biceps","Triceps","https://www.entrenamientos.com/media/cache/exercise_750/uploads/exercise/elevacion-lateral-de-hombros-con-mancuernas-2992.png","Levante los brazos en el lateral hasta que las mancuernas queden en altura a los hombros"),
 	("Remo vertical con barra","Barra","Peso libre","Hombros","Trapecio","Biceps","https://i.blogs.es/18b6f6/remo-cuello/450_1000.jpg","levanta la barra en la dirección de la abrbilla, dejando los codos lo más alto posible"),
