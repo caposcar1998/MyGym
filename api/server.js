@@ -322,7 +322,7 @@ app.post("/mandarMensaje", function(req,res){
 })
 
 app.post("/autoMensaje", function(req,res){
-    cron.schedule('40 14 * * * ', () => {
+    cron.schedule('0 8 * * * ', () => {
         console.log('Email sent')
         const {to,subject,text, html} = req.body
         const mailData = {
