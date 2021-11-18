@@ -16,6 +16,7 @@ export class RutinaService {
   private urlRutina = environment.apiUrl+'rutina'
   private urlR= environment.apiUrl+'rutinas';
   private urlS = environment.apiUrl+'mandarMensaje'
+  private urlA = environment.apiUrl+'autoMensaje'
   constructor(private http: HttpClient, private activeRoute: ActivatedRoute) { }
 
   ngOnInit(): void {
@@ -53,6 +54,16 @@ export class RutinaService {
 
   sendMessage(mail,subject,body,htmlBody){
     let urlPost = this.urlS
+    return this.http.post(urlPost,{
+      "to":mail,
+      "subject":subject,
+      "text":body,
+      "html":htmlBody,
+    })
+  }
+
+  automateMessage(mail,subject,body,htmlBody){
+    let urlPost = this.urlA
     return this.http.post(urlPost,{
       "to":mail,
       "subject":subject,

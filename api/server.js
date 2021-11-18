@@ -3,6 +3,7 @@ var bodyParser = require("body-parser");
 var app = express();
 var db = require("./models")
 app.use(bodyParser.json());
+const cron = require('node-cron');
 const cors= require("cors")
 const nodemailer = require('nodemailer');
 const transporter = nodemailer.createTransport({
@@ -299,13 +300,15 @@ app.get("/rutina/:idRutina", function(req,res){
 })
 
 app.post("/mandarMensaje", function(req,res){
+    
+    
     const {to,subject,text, html} = req.body
     const mailData = {
         from: 'oscardevcaposcar@gmail.com',  // sender address
-          to: to,   // list of receivers
-          subject: subject,
-          text: text,
-          html: html,
+            to: to,   // list of receivers
+            subject: subject,
+            text: text,
+            html: html,
         };
 
     transporter.sendMail(mailData, (error, info) =>{
@@ -314,6 +317,30 @@ app.post("/mandarMensaje", function(req,res){
         }
         res.status(201).json({response:"Correo enviado"})
     })
+
+
+})
+
+app.post("/autoMensaje", function(req,res){
+    cron.schedule('40 14 * * * ', () => {
+        console.log('Email sent')
+        const {to,subject,text, html} = req.body
+        const mailData = {
+            from: 'oscardevcaposcar@gmail.com',  // sender address
+              to: to,   // list of receivers
+              subject: subject,
+              text: text,
+              html: html,
+            };
+    
+        transporter.sendMail(mailData, (error, info) =>{
+            if (error) {
+                res.status(500).json({response:error})
+            }
+            res.status(201).json({response:"Correo enviado"})
+        })
+    });
+
 })
 
 
