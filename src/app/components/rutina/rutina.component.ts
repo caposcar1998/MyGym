@@ -95,4 +95,25 @@ export class RutinaComponent implements OnInit {
     })
   }
 
+  automateRoutine(mail){
+    this.tableToSend= `<table> 
+    <tr>
+      <th>Nombre</th>
+      <th>Descripcion</th>
+      <th>Equipo</th>
+      <th>Parte principal</th>
+      <th>Repeticiones</th>
+      <th>Series</th>
+      <th>Tiempo</th>
+    </tr>
+    ${this.infoRoutineSend}
+  </table>`
+  this.mail = mail
+    this.rutinaService.automateMessage(this.mail,this.rutinaInfo['nombre'],"",this.tableToSend).subscribe(data =>{
+      
+    });
+    alert('Se ha automatizado esta rutina')
+  
+  }
+
 }

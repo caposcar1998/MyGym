@@ -38,7 +38,9 @@
                         <h3>Correo a enviar la rutina</h3>
                         <input type="text" name="name" class="form-control" placeholder="correo" #mail>
                         <button class="btn btn-warning btn-outline" (click)="sendRoutine(mail.value)" type="button">Enviar</button>
+                        <button class="btn btn-info btn-outline" (click)="automateRoutine(mail.value)" type="button">Automatizar rutina</button>                        
                       </div>
+                 
                       <div class="col-sm">
                         <button class="btn btn-danger" (click)="removeRoutine()">Eliminar</button>
                       </div>
